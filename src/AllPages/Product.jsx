@@ -1,8 +1,13 @@
 import React from 'react'
+import Services from '../Components/Services'
 
 function Product() {
   return (
-    <div>Product</div>
+   <>
+   <Services/>
+   
+   
+   </>
   )
 }
 
