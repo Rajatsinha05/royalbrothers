@@ -130,12 +130,14 @@ function NavBar() {
                     }}
                   >
                     <img
-                      style={{ width: "65px" }}
+                      style={{ width: "68px" }}
                       src="https://d36g7qg6pk2cm7.cloudfront.net/assets/icons/user-profile-menu-70666577f1d7fbe6bba1f46ceacdb2e4abdbb2575014670cf9afbfbf35376c25.png"
                       alt=""
                     />
-                    <p>Aditya</p>
-                    <i class="fa-solid fa-angle-down"></i>
+                    <div style={{display:"flex",justifyContent:"space-between",width:"100%",alignItems:"center"}}>
+                      <p>Aditya</p>
+                      <i class="fa-solid fa-angle-down"></i>
+                    </div>
                   </div>
                   <div
                     className="divSelectDropdown"
