@@ -15,7 +15,7 @@ function NavBar() {
         </div>
         <div className="navbarContact">
           <p>
-            +917795687594 / +919019595595 | <a href="">Chat now</a>
+          <i class="fa-solid fa-phone"></i> +917795687594 / +919019595595 | <a href="">Chat now</a>
           </p>
         </div>
         <div className="navbar">
