@@ -7,6 +7,7 @@ import BikeCard from './BikeCard';
 
 
 function Services() {
+    let data=useSelector((store)=>store.bikes)
 useEffect(()=>{
 
 
@@ -15,27 +16,29 @@ get();
 },[])
 
 
-let [data,setData]=useState([])
+
 let dispacth=useDispatch()
+
+
 let get=async()=>{
 
 let res=await fetch(`https://royalbrothers.cyclic.app/products`)
 let  result=await res.json();
-// console.log(result)
-// SetData(dispacth,result.data)
-setData(result)
+console.log(result)
+SetData(dispacth,result)
+
 
 }
 
 
 
-// let data=useSelector((store)=>store.bikes)
+
 // console.log('data: ', data);
 
   return (
   <>
   
-  {data.map((ele,idx)=><BikeCard {...ele} key={idx}/>)}
+  {data.length>0 && data.map((ele,idx)=><BikeCard {...ele} key={idx}/>)}
   
   
   </>

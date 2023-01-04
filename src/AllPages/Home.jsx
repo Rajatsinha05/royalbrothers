@@ -1,8 +1,13 @@
 import React from 'react'
-
+import AutoComplete from '../Components/AutoComplete'
 function Home() {
   return (
-    <div>Home</div>
+    <div>
+
+
+<AutoComplete/>
+
+    </div>
   )
 }
 

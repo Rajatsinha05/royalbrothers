@@ -1,12 +1,14 @@
 import { Book, Get_Data } from "./ActionType";
 
 function SetData(dispacth,data){
+// console.log(data)
+
 
 dispacth({
 
 
     type:Get_Data,
-    paload:data
+    payload:data
 })
 }
 
