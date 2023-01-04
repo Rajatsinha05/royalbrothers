@@ -1,10 +1,13 @@
 import { useDisclosure } from "@chakra-ui/react";
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import PlacementExample from "./NavbarSlider";
 
 function NavBar() {
+  const [disStyle,setDisStyle] = useState({display:"none"})
+  const [disStyle1,setDisStyle1] = useState({display:"none"})
+  
   return (
     <>
       <div id="mainParentNavbar">
@@ -15,7 +18,8 @@ function NavBar() {
         </div>
         <div className="navbarContact">
           <p>
-          <i class="fa-solid fa-phone"></i> +917795687594 / +919019595595 | <a href="">Chat now</a>
+            <i class="fa-solid fa-phone"></i> +917795687594 / +919019595595 |{" "}
+            <a href="">Chat now</a>
           </p>
         </div>
         <div className="navbar">
@@ -37,21 +41,50 @@ function NavBar() {
               <Link to={"/"}>
                 <p>Tarrif</p>
               </Link>
-              <select name="" className="navbarMenuButtonDiv">
-                <option value="">Whats new?</option>
-
-                {/* <option value=""><Link>Store</Link></option>
-                   <option value=""><Link>Inter-city travel</Link></option> */}
-              </select>
+              <div style={{width:"150px"}}>
+                <div className="navbarMenuButtonDiv"  onMouseEnter={e => {
+                     setDisStyle({display: 'block'});
+                 }}
+                 onMouseLeave={e => {
+                     setDisStyle({display:'none'})
+                 }}>
+                  <p>What's new?</p> <i class="fa-solid fa-angle-down"></i>
+                </div>
+                <div className="divSelectDropdown" style={disStyle} onMouseEnter={e => {
+                     setDisStyle({display: 'block'});
+                 }}
+                 onMouseLeave={e => {
+                     setDisStyle({display:'none'})
+                 }}>
+                  <p><Link to={'/'}>Store</Link></p>
+                  <hr />
+                  <p><Link to={'/'}>Inter-city travel</Link></p>
+                </div>
+              </div>
               <Link to={"/"}>
                 <p>Offers</p>
               </Link>
-              <select name="" className="navbarMenuButtonDiv">
-                <option value="">Partner with us</option>
 
-                {/* <option value=""><Link to={'/'}>Earn with us</Link></option>
-                   <option value=""><Link to={'/'}>Own a franchise</Link></option> */}
-              </select>
+              <div style={{width:"170px"}}>
+                <div className="navbarMenuButtonDiv"  onMouseEnter={e => {
+                     setDisStyle1({display: 'block'});
+                 }}
+                 onMouseLeave={e => {
+                     setDisStyle1({display:'none'})
+                 }}>
+                  <p>Partner with us</p> <i class="fa-solid fa-angle-down"></i>
+                </div>
+                <div className="divSelectDropdown" style={disStyle1} onMouseEnter={e => {
+                     setDisStyle1({display: 'block'});
+                 }}
+                 onMouseLeave={e => {
+                     setDisStyle1({display:'none'})
+                 }}>
+                  <p><Link to={'/'}>Earn with us</Link></p>
+                  <hr />
+                  <p><Link to={'/'}>Own a franchise</Link></p>
+                </div>
+              </div>
             </div>
             <div className="navbarButtons">
               <button id="locationButton">
