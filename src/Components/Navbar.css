@@ -182,6 +182,9 @@
   justify-content: space-between;
   align-items: center;
 }
+.navbarUserDisplay:hover{
+  background-color: #fed24d;
+}
 
 .navbarUserDropDown{
   display: flex;
