@@ -1,4 +1,5 @@
-import styles from '../AllPages/css/footer.module.css';
+
+import styles from './Signup/css/footer.module.css';
 import Bar from "./bar"
 export default function Footer(){
     return(
