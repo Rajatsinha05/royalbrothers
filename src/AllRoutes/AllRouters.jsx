@@ -7,11 +7,17 @@ import Cart from '../AllPages/Cart'
 import Rbxsubscription from '../AllPages/Rbxsubscription'
 import Payments from '../AllPages/Payments'
 import Product from '../AllPages/Product'
+import SignUp from '../AllPages/Signup'
+import { useSelector } from 'react-redux'
 function AllRouters() {
+
+
   return (
+
+    
   <Routes>
 <Route path='/' element={<Home/>}/>
-
+<Route path= '/signup' element={<SignUp />} />
 <Route path='/login' element={<Login/>}/>
 <Route path='/cart' element={<Cart/>}/>
 <Route path='/rbx' element={<Rbxsubscription/>}/>
