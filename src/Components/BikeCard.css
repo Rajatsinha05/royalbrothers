@@ -121,19 +121,22 @@ justify-content: space-around;
   display: flex;
   justify-content: space-between;
   padding: 10px 20px;
+
 }
 #container_outer > div:first-of-type{
 width: 24%;
 height: 100vh;
 
-border: 2px solid red;
-
+/* border: 2px solid red; */
+border: .5px solid black;
+position: sticky !important;
 overflow: hidden;
+
 }
 #container_outer > div:last-of-type{
   width: 72%;
   height: 100vh;
-  border: 2px solid rgb(31, 7, 168);
+  /* border: 2px solid rgb(31, 7, 168); */
   padding: 0px 30px;
 
   }

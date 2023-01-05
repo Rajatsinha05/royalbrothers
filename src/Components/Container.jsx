@@ -1,76 +1,250 @@
-import React,{useState} from 'react'
-import Services from './Services'
-import './BikeCard.css'
-import Datepicker from './Datepicker'
+import React, { useState } from "react";
+import Services from "./Services";
+import "./BikeCard.css";
+import Datepicker from "./Datepicker";
+import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
+  Checkbox,
+  FormControl,
+  FormControlLabel,
+  FormGroup,
+  Radio,
+  RadioGroup,
+  Typography,
+} from "@mui/material";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
+
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { Box } from "@mui/system";
+
 function Container() {
+  let handleCat = () => {};
 
-const [date, setDate] = useState(new Date())
-console.log(date)
+  let handleSortlth = () => {};
 
-console.log();
-const [time, setTime] = useState(new Date().toTimeString().substring(0, 5));
-return (
+  let type2;
+
+  let sortbyPrice = () => {};
+
+  return (
     <div id="container_outer">
-    
-    <div>
-{/* <Datepicker/> */}
+      <div>
+        {/* <Datepicker/> */}
 
+        <Box position="sticky">
+          <Accordion>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel2a-content"
+              id="panel2a-header"
+            >
+              <Typography>Bikes</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography>
+                <FormGroup>
+                  <FormControlLabel
+                    name="tic"
+                    control={
+                      <Checkbox checked={type2 === "Skin Care" ? true : false} />
+                    }
+                    label="KTM"
+                    onClick={() => handleCat("Skin Care")}
+                  />
+                  <FormControlLabel
+                    name="tic2"
+                    control={
+                      <Checkbox checked={type2 === "Lip care" ? true : false} />
+                    }
+                    label="BMW"
+                    onClick={() => handleCat("Lip care")}
+                  />
+                  <FormControlLabel
+                    name="tic2"
+                    control={
+                      <Checkbox checked={type2 === "hAIR" ? true : false} />
+                    }
+                    label="Yezadi"
+                    onClick={() => handleCat("HAIR")}
+                  />
+                  <FormControlLabel
+                    name="tic2"
+                    control={
+                      <Checkbox checked={type2 === "Perfumes" ? true : false} />
+                    }
+                    label="Duke"
+                    onClick={() => handleCat("Perfumes")}
+                  />
+                  <FormControlLabel
+                    name="tic2"
+                    control={
+                      <Checkbox checked={type2 == "makeup" ? true : false} />
+                    }
+                    label="Bajaj"
+                    onClick={() => handleCat("makeup")}
+                  />
+                  <FormControlLabel
+                    name="tic2"
+                    control={
+                      <Checkbox checked={type2 == "EVERYDAY" ? true : false} />
+                    }
+                    label="hero"
+                    onClick={() => handleCat("EVERYDAY")}
+                  />
+                  <FormControlLabel
+                    name="tic2"
+                    control={<Checkbox disabled />}
+                    label="Tvs"
+                  />
+                </FormGroup>
+              </Typography>
+            </AccordionDetails>
+          </Accordion>
 
+          <Accordion expanded>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+            >
+              <Typography>Sort By : Popularity</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography>
+                <FormControl>
+                  <RadioGroup
+                    aria-labelledby="demo-radio-buttons-group-label"
+                    defaultValue="female"
+                    name="radio-buttons-group"
+                  >
+                    <FormControlLabel
+                      value="female"
+                      control={<Radio />}
+                      label="Popularity"
+                    />
+                    <FormControlLabel
+                      value="male"
+                      control={<Radio />}
+                      label="Discount"
+                    />
+                    <FormControlLabel
+                      value="name"
+                      control={<Radio />}
+                      label="Name"
+                      onClick={() => handleSortlth("asc")}
+                    />
+                    <FormControlLabel
+                      value="newArrivals"
+                      control={<Radio />}
+                      label="New Arrivals"
+                    />
+                    <FormControlLabel
+                      value="lth"
+                      control={<Radio />}
+                      label="Price Low To High"
+                      onClick={() => handleSortlth("lth")}
+                    />
+                    <FormControlLabel
+                      value="htl"
+                      control={<Radio />}
+                      label="Price High To Low"
+                      onClick={() => handleSortlth("htl")}
+                    />
+                    <FormControlLabel
+                      value="rating"
+                      control={<Radio />}
+                      label="Ratings"
+                    />
+                  </RadioGroup>
+                </FormControl>
+              </Typography>
+            </AccordionDetails>
+          </Accordion>
 
+          <Accordion>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel3a-content"
+              id="panel3a-header"
+            >
+              <Typography>Type</Typography>
+            </AccordionSummary>
 
-<div>
-  
-<h2>Filter</h2>
+            <AccordionDetails>
+              <Typography>
+                <FormControl>
+                  <RadioGroup
+                    aria-labelledby="demo-radio-buttons-group-label"
+                    defaultValue="female"
+                    name="radio-buttons-group"
+                  >
+                    <FormControlLabel
+                      value="female"
+                      control={<Radio />}
+                      label="Scoty"
+                    />
+                    <FormControlLabel
+                      value="male"
+                      control={<Radio />}
+                      label="Bike"
+                    />
+                  </RadioGroup>
+                </FormControl>
+              </Typography>
+            </AccordionDetails>
+          </Accordion>
 
-<p>Price-Low to high</p>
-<p>Price-High-to-low</p>
-</div>
+          <Accordion expanded>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel2a-content"
+              id="panel2a-header"
+            >
+              <Typography>Price Range</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography>
+                <FormGroup>
+                  <FormControlLabel
+                    name="tic"
+                    control={<Checkbox />}
+                    label="Rs. 0 - Rs . 499"
+                    onClick={() => sortbyPrice(0, 499)}
+                  />
+                  <FormControlLabel
+                    name="tic2"
+                    control={<Checkbox />}
+                    label="Rs. 500 - Rs . 999"
+                    onClick={() => sortbyPrice(500, 999)}
+                  />
+                  <FormControlLabel
+                    name="tic2"
+                    control={<Checkbox />}
+                    label="Rs. 1000 - Rs . 1999"
+                    onClick={() => sortbyPrice(1000, 1999)}
+                  />
+                  <FormControlLabel
+                    name="tic2"
+                    control={<Checkbox />}
+                    label="Rs. 2000 - Above"
+                    onClick={() => sortbyPrice(2000, 9999999)}
+                  />
+                </FormGroup>
+              </Typography>
+            </AccordionDetails>
+          </Accordion>
+        </Box>
+      </div>
 
-<div>
-<p>Select date and Time</p>
-{/* <input type="date" value="20"/> */}
-<input
-      type="date"
-      min={new Date()}
-      defaultValue={date.toISOString().substring(0, 10)}
-      onChange={(e) => setDate(e.target.value)}
-    />
-
-
-
-
-  
-    <input
-      type="time"
-      step="1800"
-      min="08:00"
-      max="18:00"
-      defaultValue={time}
-      onChange={(e) => setTime(e.target.value)}
-    />
-  
-
-</div>
-
-</div>
-
-
-
-
-
-
-    <div id="parent_box">
-
-
-    <Services/>
-
+      <div id="parent_box">
+        <Services />
+      </div>
     </div>
-
-
-    
-
-    </div>
-  )
+  );
 }
 
-export default Container
+export default Container;
