@@ -8,7 +8,8 @@ import Rbxsubscription from '../AllPages/Rbxsubscription'
 import Payments from '../AllPages/Payments'
 import Product from '../AllPages/Product'
 import SignUp from '../AllPages/Signup'
-import { useSelector } from 'react-redux'
+import { useSelector } from 'react-redux';
+import OTP from '../AllPages/Otp'
 function AllRouters() {
 
 
@@ -19,6 +20,7 @@ function AllRouters() {
 <Route path='/' element={<Home/>}/>
 <Route path= '/signup' element={<SignUp />} />
 <Route path='/login' element={<Login/>}/>
+<Route path='/otp' element={<OTP/>}/>
 <Route path='/cart' element={<Cart/>}/>
 <Route path='/rbx' element={<Rbxsubscription/>}/>
 <Route path='/payment' element={<Payments/>}/>

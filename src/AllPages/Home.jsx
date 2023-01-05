@@ -7,6 +7,7 @@ function Home() {
     <>
     <Link to="/signup">Signup Page</Link>
       <Link to="/login">Login Page</Link>
+      <Link to="/otp">Otp</Link>
       </>
   )
 }
