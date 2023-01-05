@@ -1,6 +1,7 @@
 import { useDisclosure } from "@chakra-ui/react";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Loader from "./Loader";
 import "./Navbar.css";
 import PlacementExample from "./NavbarSlider";
 
@@ -9,9 +10,19 @@ function NavBar() {
   const [disStyle1, setDisStyle1] = useState({ display: "none" });
   const [loginDis, setLoginDis] = useState({ display: "none" });
   const [loggedIn, setLoggedIn] = useState(true);
+  const [loaderCom, setLoaderCom] = useState(false);
+  
+  function logoutFun(){
+    setLoaderCom(true);
+    setTimeout(() => {
+      setLoggedIn(false);
+      setLoaderCom(false);
+    }, 1000);
+  }
 
   return (
     <>
+      {loaderCom ? <Loader /> : ""}
       <div id="mainParentNavbar">
         <div className="navbarYellow">
           <p>
@@ -134,7 +145,14 @@ function NavBar() {
                       src="https://d36g7qg6pk2cm7.cloudfront.net/assets/icons/user-profile-menu-70666577f1d7fbe6bba1f46ceacdb2e4abdbb2575014670cf9afbfbf35376c25.png"
                       alt=""
                     />
-                    <div style={{display:"flex",justifyContent:"space-between",width:"100%",alignItems:"center"}}>
+                    <div
+                      style={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        width: "100%",
+                        alignItems: "center",
+                      }}
+                    >
                       <p>Aditya</p>
                       <i class="fa-solid fa-angle-down"></i>
                     </div>
@@ -177,8 +195,7 @@ function NavBar() {
                         alt=""
                       />
                       <p
-                        onClick={() => {
-                          setLoggedIn(false);
+                        onClick={() => {logoutFun()
                         }}
                       >
                         Logout

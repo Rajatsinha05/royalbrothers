@@ -4,7 +4,7 @@ import BikeCard from "./BikeCard";
 function OurFleet() {
   return (
     <div style={{ marginBottom: "20px" }}>
-      <h1 style={{ fontSize: "30px", textAlign: "center"}}>Our Fleet</h1>
+      <h1 style={{ fontSize: "30px", textAlign: "center"}}>OUR FLEET</h1>
       <div style={{width:"50px",background:"#fed24d",margin:"auto",height:"5px"}}></div>
       <div
         style={{
