@@ -1,3 +1,9 @@
+
+.subscription-page-pk{
+    color: rgb(51, 51, 51);
+    font-family: "Muli", sans-serif;
+    font-weight: 400;
+}
 .hero-pk{
     background-image: url(https://d36g7qg6pk2cm7.cloudfront.net/assets/long_term/RBX_landing_web-8b84ff099c1cd0851362d28adccdcc8ca829a0fc36a2e3c5c01e1ce4764f0a7a.jpg);
     height: 80vh;
@@ -73,7 +79,8 @@
 /* How it works style */
 
 .hiw-pk{
-    padding: 2rem;
+    padding: 3rem;
+    border: 1px solid red;
 }
 
 .hiw-heading-pk{
@@ -98,28 +105,34 @@
     display: flex;
     align-items: baseline;
     justify-content: space-evenly;
+    /* justify-content: space-between; */
     padding: 2rem;
     flex-wrap: wrap;
+    border: 1px solid red;
 }
 .hiw-items-pk{
-    text-align: center;
     position: relative;
-    width: 14rem;
+    width: 11rem;
     margin: 1rem 0;
+    text-align: center;
+    border: 1px solid teal;
+    padding: auto 20px;
 }
 .hiw-image-pk{
-    height: 4rem;
+    height: 3rem;
+    margin: auto;
 }
 .hiw-desc-pk{
-    font-weight: 600;
-    font-size: 1.2rem;
-    text-align: center;
+    font-weight: 500;
+    font-size: 1rem;
+    margin: 1rem auto;
+    /* text-align: center; */
 }
 .hiw-image-arrow-pk{
     position: absolute;
     top: 2rem;
-    width: 2rem;
-    right: -2rem;
+    width: 1.5rem;
+    right: -1.5rem;
 }
 
 /* section rent from us styles */
@@ -225,8 +238,8 @@
     text-decoration: none;
     letter-spacing: .5px;
     cursor: pointer;
-    height: 36px;
-    line-height: 36px;
+    height: 30px;
+    line-height: 30px;
     padding: 0 16px;
     text-transform: uppercase;
     border: none;
@@ -241,7 +254,7 @@
     border-radius: 6px;
     color: #000;
     display: block;
-    margin: 0 auto;
+    margin: 1rem auto;
     font-weight: 700;
     font-size: 1rem;
     text-transform: inherit;
@@ -262,7 +275,7 @@
     text-align: center;
     text-transform: uppercase;
     font-size: 1.5rem;
-    font-weight: 600 !important;
+    font-weight: 500 !important;
 }
 .faq-heading-pk::after{
     border-bottom: 3px solid #fed250;
@@ -277,7 +290,7 @@
 .faq-container-pk{
     width: 60vw;
     margin: 0 auto;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 .faq-tab-pk{
     width: 100%;
@@ -285,7 +298,7 @@
     align-items: center;
     text-align: center;
     justify-content: space-around;
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 .tab-button-pk{
     background-color: #fff;
@@ -322,7 +335,8 @@
     padding-left: 0;
 }
 .faq-questios-pk{
-    font-weight: 500;
+    font-weight: 400;
+    font-size: 14px;
     position: relative;
     border-bottom: 1px solid #ddd;
     background-color: transparent;
@@ -340,6 +354,8 @@
 }
 .faq-answer-pk{
     padding: 1rem;
+    font-weight: 400;
+    font-size: 14px;
     background-color: #fff6db;
     border-radius: 6px;
     display: none;
