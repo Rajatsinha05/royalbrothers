@@ -1,6 +1,6 @@
 import React from 'react'
-import './BikeCard.css'
-import AutoComplete from '../Components/AutoComplete'
+import './BikeCardPage.css'
+import AutoComplete from './AutoComplete'
 
 
 function BikeCard({img,name,price}) {

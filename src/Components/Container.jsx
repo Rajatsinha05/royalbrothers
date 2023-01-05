@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Services from "./Services";
-import "./BikeCard.css";
+import "./BikeCardPage.css";
 import Datepicker from "./Datepicker";
 import {
   Accordion,
