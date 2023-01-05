@@ -6,7 +6,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 function Rbxsubscription() {
   return (
-    <div>
+    <div className='subscription-page-pk'>
       <section className='hero-pk'></section>
       {/* <section className='hero-mobile-pk'>
         <div className='hero-mobile-card-pk'>
@@ -49,7 +49,7 @@ function Rbxsubscription() {
       </section> */}
 
       {/* section how it works start */}
-      <section className='hit-pk'>
+      <section className='hiw-pk'>
         <h3 className='hiw-heading-pk'>How it Works</h3>
         <div className='hiw-flex-pk'>
           <div className='hiw-items-pk'>
@@ -170,34 +170,11 @@ function Rbxsubscription() {
         <div className='faq-container-pk'>
           <div className='faq-tab-pk'>
             <div className='tab-button-pk'><NavLink to='bookingrelated' className='tab-button-link-pk'>Booking Related</NavLink></div>
-            <div className='tab-button-pk'><NavLink className='tab-button-link-pk'>Service Related</NavLink></div>
-            <div className='tab-button-pk'><NavLink className='tab-button-link-pk'>Vehicle Related</NavLink></div>
+            <div className='tab-button-pk'><NavLink to='servicerelated' className='tab-button-link-pk'>Service Related</NavLink></div>
+            <div className='tab-button-pk'><NavLink to='vehiclerelated' className='tab-button-link-pk'>Vehicle Related</NavLink></div>
           </div>
           <div className='faq-content-container-pk'>
-            {/* <div className='faq-content-child-pk'>
-              <ul className='faq-ul-pk'>
-                <li>
-                  <div className='faq-questios-pk'>
-                    What happens if I go beyond the monthly km limit?
-                    <span class="material-icons"><ExpandMoreIcon /></span>
-                  </div>
-                  <div className='faq-answer-pk'>
-                    <span>There is a monthly limit on kilometres based on which bike you have selected. Any extra kms being utilized will be charged extra. Both, the km limit and the additional charge will be defined on the bike’s tariff page.</span>
-                  </div>
-                </li>
-                <li>
-                <div className='faq-questios-pk'>
-                    What happens if I go beyond the monthly km limit?
-                    <span class="material-icons"><ExpandMoreIcon /></span>
-                  </div>
-                  <div className='faq-answer-pk'>
-                    <span>There is a monthly limit on kilometres based on which bike you have selected. Any extra kms being utilized will be charged extra. Both, the km limit and the additional charge will be defined on the bike’s tariff page.</span>
-                  </div>
-                </li>
-              </ul>
-            </div> */}
-            {/* <div className='faq-content-child-pk'></div>
-            <div className='faq-content-child-pk'></div> */}
+
             <Outlet />
 
           </div>
