@@ -5,7 +5,7 @@ function Home() {
     <div>
 
 
-<AutoComplete/>
+home
 
     </div>
   )
