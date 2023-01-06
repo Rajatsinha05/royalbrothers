@@ -1,24 +1,11 @@
 import React, { useEffect, useState } from "react";
 import BikeCard from "./BikeCard";
+import { bikeData } from "./FourData";
 
 function OurFleet() {
   const [durationValue, setDurationValue] = useState("Hourly");
   const [disStyle, setDisStyle] = useState({ display: "none" });
-  
-  
-  // useEffect(()=>{
-    // if(durationValue==="7 days"){
-  //   setPrice();
-  // }else if (durationValue==="15 days"){
-  //   setPrice();
-  // }else if (durationValue==="1 month"){
-  //   setPrice();
-  // }else if (durationValue==="3 month"){
-  //   setPrice();
-  // }else{
-  //   setPrice("$18/hour");
-  // }
-  // },[durationValue])
+  const [charge,setCharge] = useState("hourly");
 
   return (
     <div style={{ margin: "20px 0" }}>
@@ -40,7 +27,7 @@ function OurFleet() {
           margin: "20px",
         }}
       >
-        <p style={{marginRight:"15px"}}>Duration</p>
+        <p style={{ marginRight: "15px" }}>Duration</p>
         <div style={{ width: "150px" }}>
           <div
             className="durationButton"
@@ -59,35 +46,35 @@ function OurFleet() {
           >
             <p
               onClick={() => {
-                setDurationValue("Hourly");
+                setDurationValue("Hourly");setCharge("hourly");
               }}
             >
               Hourly
             </p>
             <p
               onClick={() => {
-                setDurationValue("7 days");
+                setDurationValue("7 days");setCharge("daily");
               }}
             >
               7 days
             </p>
             <p
               onClick={() => {
-                setDurationValue("15 days");
+                setDurationValue("15 days");setCharge("daily");
               }}
             >
               15 days
             </p>
             <p
               onClick={() => {
-                setDurationValue("1 month");
+                setDurationValue("1 month");setCharge("monthly");
               }}
             >
               1 month
             </p>
             <p
               onClick={() => {
-                setDurationValue("3 month");
+                setDurationValue("3 month");setCharge("monthly");
               }}
             >
               3 month
@@ -96,20 +83,13 @@ function OurFleet() {
         </div>
       </div>
       <div className="homeBikeCardDiv">
-             
-             {/* After adding data then mapping buttonCardComponent */}
-              {/* <>
-              {
-              data?.map((elem)=>{
-                <BikeCard {props}/>
-              })
-              }
-              </> */}
-
-        <BikeCard value={durationValue} />
-        <BikeCard value={durationValue} />
-        <BikeCard value={durationValue} />
-        <BikeCard value={durationValue} />
+        {/* After adding data then mapping buttonCardComponent */}
+        <>
+          {bikeData?.map((elem) => (
+            <BikeCard name={elem.name} image={elem.image} priceCharge={charge} charges={elem.charge} addButton={elem.button}
+            />
+          ))}
+        </>
       </div>
       <p
         style={{ textAlign: "center", marginTop: "15px", marginBottom: "50px" }}
