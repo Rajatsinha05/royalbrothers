@@ -1,0 +1,160 @@
+#mainParentNavbar{
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    z-index: 100;
+}
+.navbarYellow {
+  font-size: 13px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fed24d;
+}
+.navbarYellow a {
+  color: blue;
+}
+.navbarContact {
+  display: flex;
+  justify-content: flex-end;
+  height: 25px;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+}
+.navbarContact p {
+  font-size: 13px;
+}
+.navbarContact a {
+  color: blue;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0px 15px 10px -15px rgba(0, 0, 0, 0.282);
+}
+
+#rightSide{
+
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navbarIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbarIcon i {
+  margin-left: 10px;
+  margin-right: -10px;
+  font-size: 20px;
+}
+.navbarIcon img {
+  width: 90%;
+  padding: 5px 6px;
+}
+.navbar img {
+  padding: 5px 15px;
+}
+.navbar_menus a {
+  color: rgb(89, 89, 89);
+  text-decoration: none;
+  padding: 10px 20px;
+}
+.navbar_menus a:hover,
+.navbar_menus img:hover {
+  background-color: #fed24d;
+  cursor: pointer;
+}
+.navbar_menus {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+  background-color: white;
+  align-items: center;
+}
+.navbar_menus img {
+  width: 100px;
+  height: 50px;
+}
+.navbarMenuButtonDiv {
+  border: none;
+  font-size: 14px;
+  color: rgb(89, 89, 89);
+  padding: 15px 0px;
+}
+.navbarMenuButtonDiv:hover{
+    background-color: #fed24d;
+    border: none;
+}
+.navbarButtons {
+  display: flex;
+  justify-content: flex-end;
+  text-align: right;
+  align-items: center;
+}
+.navbarButtons>p{
+    margin: 0px 35px;
+    color: rgb(176, 175, 175);
+}
+#locationButton {
+  display: flex;
+  align-items: center;
+  border: 1px solid #fed24d;
+  border-radius: 3px;
+  justify-content: space-around;
+  background-color: white;
+  width: 140px;
+  height: 40px;
+}
+#locationButton:hover {
+  background-color: #fed24d;
+  cursor: pointer;
+}
+#locationButton > #locationIcon {
+  color: #fed24d;
+  font-size: 20px;
+}
+#locationButton p {
+  font-size: 14px;
+  color: rgb(89, 89, 89);
+}
+#locationButton i {
+  font-size: 18px;
+}
+#navbarLoginButton {
+  background-color: white;
+  font-size: 14px;
+  height: 40px;
+  border: none;
+  border-radius: 3px;
+  width: 70px;
+  color: rgb(89, 89, 89);
+}
+
+#navbarLoginButton:hover {
+  background-color: rgb(232, 232, 232);
+  cursor: pointer;
+}
+#navbarSignUpButton {
+  background-color: #fed24d;
+  font-size: 14px;
+  height: 40px;
+  border: none;
+  border-radius: 3px;
+  width: 70px;
+  margin-left: 10px;
+}
+
+
+
+.navbarSideDrawer hr{
+  margin: 15px 0;
+}
+
+
