@@ -7,9 +7,11 @@ import Cart from '../AllPages/Cart'
 import Rbxsubscription from '../AllPages/Rbxsubscription'
 import Payments from '../AllPages/Payments'
 import Product from '../AllPages/Product'
-import SignUp from '../AllPages/Signup'
-import { useSelector } from 'react-redux';
-import OTP from '../AllPages/Otp'
+
+import BookingRelated from '../Components/RbxSubscription/BookingRelated'
+import ServiceRelated from '../Components/RbxSubscription/ServiceRelated'
+import VehicleRelated from '../Components/RbxSubscription/VehicleRelated'
+
 function AllRouters() {
 
 
@@ -22,7 +24,11 @@ function AllRouters() {
 <Route path='/login' element={<Login/>}/>
 <Route path='/otp' element={<OTP/>}/>
 <Route path='/cart' element={<Cart/>}/>
-<Route path='/rbx' element={<Rbxsubscription/>}/>
+<Route path='/rbx' element={<Rbxsubscription/>}>
+  <Route path='bookingrelated' element={<BookingRelated />} />
+  <Route path='servicerelated' element={<ServiceRelated />} />
+  <Route path='vehiclerelated' element={<VehicleRelated />} />
+</Route>
 <Route path='/payment' element={<Payments/>}/>
 <Route path='/product' element={<Product/>}/>
 

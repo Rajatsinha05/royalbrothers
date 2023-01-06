@@ -1,25 +1,47 @@
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import {Provider} from 'react-redux';
+
+import {Provider} from 'react-redux'
+
 import {BrowserRouter} from 'react-router-dom'
 //import store  from './ReduxStrore/reducer';
 import store from './ReduxStrore/Store';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  // <React.StrictMode>
-     <Provider store={store}>
-    <BrowserRouter>
+import { ChakraProvider } from '@chakra-ui/react';
+
+import { Store } from './ReduxStrore/Store';
+
    
-    <App />
-    </BrowserRouter>
-     </Provider>
-  // </React.StrictMode>
+
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+
+
+ 
+  <React.StrictMode>
+
+    <ChakraProvider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </ChakraProvider>
+
+  </React.StrictMode>
+
+ 
+
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+
+
+
+
+
+
+
+
 

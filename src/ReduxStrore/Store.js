@@ -1,31 +1,9 @@
-import {legacy_createStore as  createStore} from  'redux';
-const initialize ={
-    users : JSON.parse(localStorage.getItem('users'))||[],
-    loggedInUser : null,
-}
 
-const reducer =(state=initialize ,action)=>{
-    switch(action.type){
-        
+import {legacy_createStore} from 'redux'
+import { reducer } from './Reducer'
 
-        case "REGISTER":
-            return {
-                ...state,
-                users:[...state.users,action.payload]
-            }
-            case "LOGIN":
-            return {
-                ...state,
-                user: action.payload
-            }
-            case "OTP":
-            return {
-                ...state,
-                user: action.payload
-            }
-        default:
-            return state;
-    }
-}
 
-export default createStore(reducer);
+
+let Store=legacy_createStore(reducer);
+export{Store}
+
