@@ -1,12 +1,17 @@
 
+
 import React from 'react'
 function Product() {
   return (
-   <div>
-   
+
+    <div>
+
+   <Container/>
    
 
-   </div>
+
+    </div>
+
   )
 }
 

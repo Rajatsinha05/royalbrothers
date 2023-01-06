@@ -1,0 +1,265 @@
+#card img{
+width: 200px;
+display: block;
+margin: auto;
+transition: 0.6s;
+
+}
+#card img:hover{
+
+    scale: 1.1
+    
+}
+
+
+#card:hover{
+
+    scale: 1.06
+}
+
+#card h2{
+
+    text-align: center;
+
+}
+
+#card{
+  position: relative;
+
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    margin: 5px;
+    padding: 15px;
+
+    transition: 0.5s;
+
+    border-radius: 10px;
+}
+
+
+#parent_box{
+display: grid;
+grid-template-columns: repeat(3,1fr);
+gap:10px
+   
+}
+#name{
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(27, 27, 27);
+    padding-top: 18px;
+}
+
+
+
+
+#pricebox{
+margin-top: 20px;
+display: flex;
+justify-content: space-around;
+/* border: 1px solid red; */
+}
+#pricebox span{
+    /* padding: 10px;  */
+    font-size: 19px;
+    font-weight: 400;
+    /* border: 1px solid rgb(121, 22, 174); */
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+
+}
+
+
+
+
+/* CSS */
+.button-37 {
+    
+  background-color: #fec51d;
+  border: 1px solid #e4af0d;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+  box-sizing: border-box;
+  color:black;
+  cursor: pointer;
+  font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  outline: none;
+  outline: 0;
+  padding: 7px 15px;
+  text-align: center;
+  transform: translateY(0);
+  transition: transform 150ms, box-shadow 150ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+}
+
+.button-37:hover {
+  box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+  transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+  .button-37 {
+    padding: 7px 40px;
+  }
+}
+
+#auto{
+
+
+  padding: 10px 15px;
+}
+
+
+#container_outer{
+
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+
+}
+#container_outer > div:first-of-type{
+width: 24%;
+height: 100vh;
+
+/* border: 2px solid red; */
+border: .5px solid black;
+position: sticky !important;
+overflow: hidden;
+
+}
+#container_outer > div:last-of-type{
+  width: 72%;
+  height: 100vh;
+  /* border: 2px solid rgb(31, 7, 168); */
+  padding: 0px 30px;
+
+  }
+.avail_at{
+
+text-align: center;
+color: grey;
+/* border: 2px solid rgb(31, 7, 168); */
+margin-top: 4px;
+font-size: 14px;
+}
+.product_img{
+
+  /* border-bottom: 2px solid lightgrey; */
+  padding-bottom: 6px;
+}
+.time_date{
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.pick_date{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  /* border: 1px solid red; */
+
+}
+
+.pick_date >span:first-of-type{
+  font-weight: bold;
+  font-size: 12px;
+}
+.pick_date >span:last-of-type{
+  /* font-weight: bold; */
+  font-size: 10px;
+  font-weight: 300;
+  margin-top: 5px;
+  color: rgb(8, 6, 6);
+}
+.pick_to{
+
+  padding: 5px 7px;
+  background-color: black;
+  color: azure;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+
+  /* border: 1px solid red; */
+}
+.price_include{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.price_include>span:last-of-type{
+
+  font-size: 10px !important;
+  color: rgb(36, 35, 35);
+}
+.price_include>span:first-of-type{
+
+  font-size: 14px !important;
+  font-weight: bold !important;
+  color: rgb(21, 20, 20);
+}
+
+.time_date{
+  padding: 15px 5px;
+  align-items: center;
+  border-bottom: 3px solid rgba(234, 231, 231, 0.57);
+  border-top: 3px solid rgba(234, 231, 231, 0.57);
+}
+
+.zero_dp{
+
+  display: flex;
+align-items: center;
+color: rgb(20, 20, 20);
+font-size: 10px;
+position: absolute;
+top: 3 !important;
+left: 2;
+
+}
+
+.zero_dp img{
+
+  height: 15px !important;
+  width: 15px !important ;
+  margin-right: 3px !important;
+}
+
+
+
+
+/* @media (min-width: 480px) {
+  #card {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:10px
+  }
+}
+@media (min-width: 360px) {
+  #card {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap:10px
+  }
+} */
+
+/* @media only screen and (min-width: 368px){
+
+  #parent_box{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:10px
+       
+    }
+
+} */
