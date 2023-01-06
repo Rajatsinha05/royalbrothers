@@ -11,6 +11,8 @@ import Product from '../AllPages/Product'
 import BookingRelated from '../Components/RbxSubscription/BookingRelated'
 import ServiceRelated from '../Components/RbxSubscription/ServiceRelated'
 import VehicleRelated from '../Components/RbxSubscription/VehicleRelated'
+import OTP from '../Components/Signup/Otp'
+import SignUp from '../Components/Signup/Signup'
 
 function AllRouters() {
 

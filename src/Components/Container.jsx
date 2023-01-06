@@ -35,7 +35,7 @@ function Container() {
       <div>
         {/* <Datepicker/> */}
 
-//         <Box position="sticky">
+{/* //         <Box position="sticky">
 //           <Accordion>
 //             <AccordionSummary
 //               expandIcon={<ExpandMoreIcon />}
@@ -237,7 +237,7 @@ function Container() {
 //               </Typography>
 //             </AccordionDetails>
 //           </Accordion>
-//         </Box>
+//         </Box> */}
       </div>
 
       <div id="parent_box">
