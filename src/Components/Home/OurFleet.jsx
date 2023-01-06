@@ -40,7 +40,7 @@ function OurFleet() {
           margin: "20px",
         }}
       >
-        <p>Duration</p>
+        <p style={{marginRight:"15px"}}>Duration</p>
         <div style={{ width: "150px" }}>
           <div
             className="durationButton"
