@@ -7,15 +7,22 @@ import Cart from '../AllPages/Cart'
 import Rbxsubscription from '../AllPages/Rbxsubscription'
 import Payments from '../AllPages/Payments'
 import Product from '../AllPages/Product'
+
 import BookingRelated from '../Components/RbxSubscription/BookingRelated'
 import ServiceRelated from '../Components/RbxSubscription/ServiceRelated'
 import VehicleRelated from '../Components/RbxSubscription/VehicleRelated'
+
 function AllRouters() {
+
+
   return (
+
+    
   <Routes>
 <Route path='/' element={<Home/>}/>
-
+<Route path= '/signup' element={<SignUp />} />
 <Route path='/login' element={<Login/>}/>
+<Route path='/otp' element={<OTP/>}/>
 <Route path='/cart' element={<Cart/>}/>
 <Route path='/rbx' element={<Rbxsubscription/>}>
   <Route path='bookingrelated' element={<BookingRelated />} />
