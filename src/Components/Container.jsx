@@ -2,24 +2,13 @@ import React, { useState } from "react";
 import Services from "./Services";
 import "./BikeCardPage.css";
 
-import {
-  Accordion,
-  AccordionDetails,
-  AccordionSummary,
-  Checkbox,
-  FormControl,
-  FormControlLabel,
-  FormGroup,
-  Radio,
-  RadioGroup,
-  Typography,
-} from "@mui/material";
 
 
 
 
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { Box } from "@mui/system";
+
+import {Accordion,AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Box, Flex, Radio, RadioGroup, Stack } from "@chakra-ui/react";
 
 function Container() {
   let handleCat = () => {};
@@ -238,6 +227,135 @@ function Container() {
 //             </AccordionDetails>
 //           </Accordion>
 //         </Box> */}
+
+<Accordion defaultIndex={[1,3]} allowMultiple position="sticky">
+  {/* filtering */}
+  <AccordionItem>
+    <h2>
+      <AccordionButton>
+        <Box as="span" flex='1' textAlign='left'>
+      Bikes
+        </Box>
+        <AccordionIcon />
+      </AccordionButton>
+    </h2>
+    <AccordionPanel pb={14}>
+    
+
+
+<RadioGroup >
+      <Stack direction='column' spacing={5}>
+        <Radio value='BMW' colorScheme='green' >BMW</Radio>
+        <Radio value='KTM'>KTM</Radio>
+        <Radio value='TVS'>TVS</Radio>
+        <Radio value='yezadi'>yezadi</Radio>
+        <Radio value='bajaj'>Bajaj</Radio>
+        <Radio value='royal'>Royal Enfiled</Radio>  
+        <Radio value='hero'>hero</Radio>
+    
+
+      </Stack>
+    </RadioGroup>
+
+    </AccordionPanel>
+  </AccordionItem>
+
+
+
+{/* sorting */}
+  <AccordionItem>
+    <h2>
+      <AccordionButton>
+        <Box as="span" flex='1' textAlign='left'>
+      Sort by :Popularity
+        </Box>
+        <AccordionIcon />
+      </AccordionButton>
+    </h2>
+    <AccordionPanel pb={4}>
+    <RadioGroup defaultValue="Popularity" >
+      <Stack direction='column' spacing={5}>
+        <Radio value='Popularity' colorScheme='green' >Popularity</Radio>
+        <Radio value='KDiscount'>Discount</Radio>
+        <Radio value='Name'>Name</Radio>
+        <Radio value='New Arrivals'>New Arrivals</Radio>
+        <Radio value='Price Low To High'>Price Low To High</Radio>
+        <Radio value='Price High To Low'>Price High To Low</Radio>  
+        <Radio value='Ratings'>Ratings</Radio>
+    
+
+      </Stack>
+    </RadioGroup>
+
+    </AccordionPanel>
+  </AccordionItem>
+
+
+
+
+
+{/* tpye */}
+  <AccordionItem>
+    <h2>
+      <AccordionButton>
+        <Box as="span" flex='1' textAlign='left'>
+     Types
+        </Box>
+        <AccordionIcon />
+      </AccordionButton>
+    </h2>
+    <AccordionPanel pb={4}>
+    <RadioGroup  >
+      <Stack direction='column' spacing={5}>
+        <Radio value='bike' colorScheme='green' >Bike</Radio>
+        <Radio value='Scooty'>Scooty</Radio>
+       
+
+      </Stack>
+    </RadioGroup>
+
+    </AccordionPanel>
+  </AccordionItem>
+
+
+
+
+  {/* sortin by price range */}
+
+  <AccordionItem>
+    <h2>
+      <AccordionButton>
+        <Box as="span" flex='1' textAlign='left'>
+      Price range
+        </Box>
+        <AccordionIcon />
+      </AccordionButton>
+    </h2>
+    <AccordionPanel pb={4}>
+    <RadioGroup  >
+      <Stack direction='column' spacing={5}>
+        <Radio value='499' colorScheme='green' >Rs. 0 - Rs . 499</Radio>
+        <Radio value='999'>Rs. 500 - Rs . 999</Radio>
+        <Radio value='1499'>Rs. 999 - Rs . 1499</Radio>
+        <Radio value='1999'>Rs. 1499 - Rs . 1999s</Radio>
+        <Radio value='2000'>Rs. 2000 - Above</Radio>
+       
+    
+
+      </Stack>
+    </RadioGroup>
+
+    </AccordionPanel>
+  </AccordionItem>
+
+</Accordion>
+
+
+
+
+
+
+
       </div>
 
       <div id="parent_box">
