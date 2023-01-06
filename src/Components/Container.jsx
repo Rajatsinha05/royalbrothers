@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Services from "./Services";
 import "./BikeCardPage.css";
-import Datepicker from "./Datepicker";
+
 import {
   Accordion,
   AccordionDetails,
@@ -15,8 +15,8 @@ import {
   Typography,
 } from "@mui/material";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
+
+
 
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { Box } from "@mui/system";
