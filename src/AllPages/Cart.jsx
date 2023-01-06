@@ -10,6 +10,9 @@ function Cart() {
     mt:'3',
     mb:'4'
   }
+
+
+
   return (
     <>
     <Box w='100%' bgColor='#fed250' align='center'>
@@ -18,13 +21,14 @@ function Cart() {
       </Text>
     </Box>
     <Center>
+    <Box>
       <Flex m='3' mt='5' wrap={{base:'nowrap'}} p='0 70px' alignItems='baseline'>
-        <Box mr='3' boxShadow={style.shadowbox} borderRadius={style.bRadius} p={style.paddingBox}>
+        <Box mr='3' boxShadow={style.shadowbox} borderRadius={style.bRadius} p={style.paddingBox} h="500">
           <Heading textTransform='uppercase' fontWeight='600' p={style.paddingText} >Summary</Heading>
           <Flex alignItems='center'>
             <Box m='2'>
-              <Image src={'https://d3vp2rl7047vsp.cloudfront.net/bike_models/images/000/000/338/medium/HERO_PLEASURE_PLUS.png?1660655867'} />
-              <Text fontSize='28px' fontWeight='500' align='center'>HeroPleasure Plus</Text>
+              <Image src={'https://d3vp2rl7047vsp.cloudfront.net/bike_models/images/000/000/338/medium/HERO_PLEASURE_PLUS.png?1660655867'}  _hover={{transform: "scale(1.1)"}}/>
+              <Text fontSize='28px' fontWeight='500' align='center'>HeroPleasure Plus</Text> 
             </Box>
             <Spacer/>
             <Box p={style.paddingBox}>
@@ -117,7 +121,7 @@ function Cart() {
             </Box>
           </Flex>
         </Box>
-        <Box boxShadow={style.shadowbox} borderRadius={style.bRadius} p={style.paddingBox} minW='400px'>
+        <Box boxShadow={style.shadowbox} borderRadius={style.bRadius} p={style.paddingBox} minW='400px' h="500px">
           <Heading textTransform='uppercase' fontWeight='600' p={style.paddingText} mb='5'>Checkout</Heading>
           <Box mb={style.mb}>
             <Flex>
@@ -184,6 +188,8 @@ function Cart() {
           </Center>
         </Box>
       </Flex>
+
+      </Box>
     </ Center>
     </>
   )
