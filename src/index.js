@@ -26,7 +26,11 @@ root.render(
 
     <ChakraProvider>
       <BrowserRouter>
+   
+   <Provider store={Store}>
+   
         <App />
+   </Provider>
       </BrowserRouter>
     </ChakraProvider>
 
