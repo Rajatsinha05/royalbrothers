@@ -1,10 +1,13 @@
 import React from "react";
 import "./Home.css";
+import DatePicker from "../Home/DatePicker.jsx"
 
 function DateSelector() {
   return (
     <>
-      <div className="dateSelectorDiv"></div>
+      <div className="dateSelectorDiv">
+        <DatePicker/>
+      </div>
       <div
         style={{
           width: "100%",

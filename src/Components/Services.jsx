@@ -7,7 +7,7 @@ import BikeCard from './BikeCardPage';
 
 
 function Services() {
-    let data=useSelector((store)=>store.bikes)
+    let data=useSelector((store)=>store.reducer.bikes)
 useEffect(()=>{
 
 
