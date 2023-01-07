@@ -13,6 +13,10 @@ function Signup (){
       const [mobile,setMobile] =useState('');
       const [password, setPassword] = useState('');
 
+    // States for checking the errors
+      const [submitted, setSubmitted] = useState(false);
+      const [error, setError] = useState(false);  
+
 
       const dispatch =useDispatch();
 
@@ -21,86 +25,27 @@ function Signup (){
             type: "REGISTER",
             payload :{
                 id :(new Date).getTime(),
-                name,email,mobile,password
+                name,email,mobile,password,otp:'1234'
             },
             
         };
+             if (name === '' || email === '' || mobile === '' || password === '') {
+                setError(true);
+                alert("Enter all the fields");
+            } else {
+                setSubmitted(true);
+                setError(false);
+                alert("Account is Created Successfully");
+                window.location.href = "./otp";
+            }
+    
+
         dispatch(registredData);
         const regiteredUsers = [];
         regiteredUsers.push(registredData.payload);
         localStorage.setItem('users',JSON.stringify(regiteredUsers));
-         alert("succes");
-         window.location.href = "./otp";
-    }
-
-    // States for checking the errors
-    //   const [submitted, setSubmitted] = useState(false);
-    //   const [error, setError] = useState(false);  
-
-
-    // Handling the name change
-    //   const handleName = (e) => {
-	//     setName(e.target.value);
-	//     setSubmitted(false);
-    //     };
-
-    // Handling the email change
-    //   const handleEmail = (e) => {
-	//    setEmail(e.target.value);
-	//    setSubmitted(false);
-    //   };
-
-    // Handling the password change
-    // const handleMobile = (e) => {
-	//     setMobile(e.target.value);
-	//     setSubmitted(false);
-    //   };  
-
-    // Handling the password change
-    //   const handlePassword = (e) => {
-	//     setPassword(e.target.value);
-	//     setSubmitted(false);
-    //   };
-      
-    // Handling the form submission
-    //    const handleSubmit = (e) => {
-	//     e.preventDefault();
-	//     if (name === '' || email === '' || mobile === '' || password === '') {
-	//     setError(true);
-	//     } else {
-	//     setSubmitted(true);
-	//     setError(false);
-	//     }
-    // }; 
-
-    
-    
-    // Showing success message
-    //    const successMessage = () => {
-	//     return (
-	//     <div
-	// 	className="success"
-	// 	style={{
-	// 	display: submitted ? '' : 'none',
-	// 	}}>
-	// 	<h3 style={{textAlign:"center",color:"green"}}>User {name} successfully registered!!</h3>
         
-	//     </div>
-	//    );
-    // };
-
-    // Showing error message if error is true
-    //    const errorMessage = () => {
-	//     return (
-	//     <div
-	// 	className="error"
-	// 	style={{
-	// 	display: error ? '' : 'none',
-	// 	}}>
-	// 	<h3 style={{textAlign:"center",color:"red"}}>Please enter all the fields</h3>
-	//     </div>
-	//     );
-    //  };
+    }
 
     return (
         <div className={styles.fullContainer}>
@@ -108,25 +53,25 @@ function Signup (){
         {/* Calling to the methods */}
 	    {/* <div className="messages">
 		  {errorMessage()}
-		  {successMessage()}
+		   {successMessage()}
 	    </div> */}
 
         <div className={styles.ParentLog}>
             <ul className={styles.login_signup_tabs}>
-                <li className={styles.tab_l6}><Link to={'/login'}>Login</Link></li>
-                <li className={styles.tab_l6}><Link to={'/signup'}>SignUp</Link></li>
+                <li className={styles.tab_log}><Link to={'/login'}>Login</Link></li>
+                <li className={styles.tab_sig}><Link to={'/signup'}>Sign Up</Link></li>
             </ul>
-            <input type="text" name="name" value={name} onChange={e => setName(e.target.value)} placeholder="Name as per Aadhaar/Passport" required></input>
-            <input type="email" name="email" onChange={e => setEmail(e.target.value)} value={email} placeholder="Email" required="required"></input>
+            <input type="text" name="name" autoComplete='off' value={name} onChange={e => setName(e.target.value)} placeholder="Name as per Aadhaar/Passport" required></input>
+            <input type="email" name="email" autoComplete='off' onChange={e => setEmail(e.target.value)} value={email} placeholder="Email" required="required"></input>
         <div className={styles.divMobile}>
             <p className={styles.countryCode}>Mobile</p>
         <div className={styles.divMobile1}>
-            <input type="text" name="mCode"  placeholder="+91" className={styles.inpTag1}></input>
-            <input type="text" name="mobile" onChange={e => setMobile(e.target.value)} value={mobile} placeholder="As Per Aadhar" className={styles.inpTag2} required></input>
+            <input type="text" name="mCode" autoComplete='off'  placeholder="+91" className={styles.inpTag1}></input>
+            <input type="text" name="mobile" autoComplete='off' onChange={e => setMobile(e.target.value)} value={mobile} placeholder="As Per Aadhar" className={styles.inpTag2} required></input>
         </div>
         </div>
-            <input type="password" name="password" onChange={e => setPassword(e.target.value)} value={password} placeholder="Password" required></input>
-
+            <input type="password" name="password" autoComplete='off' onChange={e => setPassword(e.target.value)} value={password} placeholder="Password" required></input>
+             
         <div className={styles.recapt}>
             <input type="checkbox" className={styles.inpTag3}></input>
             <p className={styles.robot}>I'm not a robot</p>
