@@ -46,12 +46,12 @@ function Signup() {
         }
         else if(password.length < 8 || password.length > 15){
             setError(true);
-            alert("Password length should be between 8 to 20");
+            alert("Password length should be between 8 to 15");
         } 
         else {
             setSubmitted(true);
             setError(false);
-            alert("Account is Created Successfully");
+            alert("Account Created Successfully");
             window.location.href = "./otp";
         }
 

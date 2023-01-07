@@ -7,7 +7,7 @@ const initialize ={
     loggedInUser : null,
 }
 
-const reducers =(state=initialize ,action )=>{
+const loginReducer =(state=initialize ,action )=>{
     switch(action.type){
         
 
@@ -35,7 +35,7 @@ const reducers =(state=initialize ,action )=>{
 
 let Store=legacy_createStore(reducer);
 
-let store =legacy_createStore(reducers)
+let store =legacy_createStore(loginReducer)
 export{Store}
 export default store;
 
