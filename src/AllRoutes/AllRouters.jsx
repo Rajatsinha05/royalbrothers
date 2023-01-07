@@ -38,6 +38,7 @@ function AllRouters() {
       <Route path='/product' element={<Product />} />
 
     </Routes>
+
   )
 }
 
