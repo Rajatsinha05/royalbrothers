@@ -1,16 +1,34 @@
 import { useDisclosure } from "@chakra-ui/react";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Loader from "./Loader";
 import "./Navbar.css";
 import PlacementExample from "./NavbarSlider";
 import { ChakraProvider } from "@chakra-ui/react";
 function NavBar() {
+  const [disStyle, setDisStyle] = useState({ display: "none" });
+  const [disStyle1, setDisStyle1] = useState({ display: "none" });
+  const [loginDis, setLoginDis] = useState({ display: "none" });
+  const [loggedIn, setLoggedIn] = useState(true);
+  const [loaderCom, setLoaderCom] = useState(false);
+  
+  function logoutFun(){
+    setLoaderCom(true);
+    setTimeout(() => {
+      setLoggedIn(false);
+      setLoaderCom(false);
+    }, 1000);
+  }
+
   return (
     <>
+
+
     <ChakraProvider>
 
-
+    {loaderCom ? <Loader /> : ""}
    
+
       <div id="mainParentNavbar">
         <div className="navbarYellow">
           <p>
@@ -19,7 +37,8 @@ function NavBar() {
         </div>
         <div className="navbarContact">
           <p>
-            +917795687594 / +919019595595 | <a href="">Chat now</a>
+            <i class="fa-solid fa-phone"></i> +917795687594 / +919019595595 |{" "}
+            <a href="">Chat now</a>
           </p>
         </div>
         <div className="navbar">
@@ -41,22 +60,74 @@ function NavBar() {
               <Link to={"/"}>
                 <p>Tarrif</p>
               </Link>
-              <select name="" className="navbarMenuButtonDiv">
-                <option value="">Whats new?</option>
-
-                {/* <option value=""><Link>Store</Link></option>
-                   <option value=""><Link>Inter-city travel</Link></option> */}
-              </select>
+              <div style={{ width: "150px" }}>
+                <div
+                  className="navbarMenuButtonDiv"
+                  onMouseEnter={(e) => {
+                    setDisStyle({ display: "block" });
+                  }}
+                  onMouseLeave={(e) => {
+                    setDisStyle({ display: "none" });
+                  }}
+                >
+                  <p>What's new?</p> <i class="fa-solid fa-angle-down"></i>
+                </div>
+                <div
+                  className="divSelectDropdown"
+                  style={disStyle}
+                  onMouseEnter={(e) => {
+                    setDisStyle({ display: "block" });
+                  }}
+                  onMouseLeave={(e) => {
+                    setDisStyle({ display: "none" });
+                  }}
+                >
+                  <p>
+                    <Link to={"/"}>Store</Link>
+                  </p>
+                  <hr />
+                  <p>
+                    <Link to={"/"}>Inter-city travel</Link>
+                  </p>
+                </div>
+              </div>
               <Link to={"/"}>
                 <p>Offers</p>
               </Link>
-              <select name="" className="navbarMenuButtonDiv">
-                <option value="">Partner with us</option>
 
-                {/* <option value=""><Link to={'/'}>Earn with us</Link></option>
-                   <option value=""><Link to={'/'}>Own a franchise</Link></option> */}
-              </select>
+              <div style={{ width: "170px" }}>
+                <div
+                  className="navbarMenuButtonDiv"
+                  onMouseEnter={(e) => {
+                    setDisStyle1({ display: "block" });
+                  }}
+                  onMouseLeave={(e) => {
+                    setDisStyle1({ display: "none" });
+                  }}
+                >
+                  <p>Partner with us</p> <i class="fa-solid fa-angle-down"></i>
+                </div>
+                <div
+                  className="divSelectDropdown"
+                  style={disStyle1}
+                  onMouseEnter={(e) => {
+                    setDisStyle1({ display: "block" });
+                  }}
+                  onMouseLeave={(e) => {
+                    setDisStyle1({ display: "none" });
+                  }}
+                >
+                  <p>
+                    <Link to={"/"}>Earn with us</Link>
+                  </p>
+                  <hr />
+                  <p>
+                    <Link to={"/"}>Own a franchise</Link>
+                  </p>
+                </div>
+              </div>
             </div>
+
             <div className="navbarButtons">
               <button id="locationButton">
                 <i className="fa-solid fa-location-dot" id="locationIcon"></i>
@@ -64,8 +135,86 @@ function NavBar() {
                 <i className="fa-solid fa-angle-down"></i>
               </button>
               <p>|</p>
-              <button id="navbarLoginButton">Login</button>
-              <button id="navbarSignUpButton">Sign up</button>
+              {loggedIn ? (
+                <div style={{ width: "170px" }}>
+                  <div
+                    className="navbarUserDisplay"
+                    onMouseEnter={(e) => {
+                      setLoginDis({ display: "block" });
+                    }}
+                    onMouseLeave={(e) => {
+                      setLoginDis({ display: "none" });
+                    }}
+                  >
+                    <img
+                      style={{ width: "68px" }}
+                      src="https://d36g7qg6pk2cm7.cloudfront.net/assets/icons/user-profile-menu-70666577f1d7fbe6bba1f46ceacdb2e4abdbb2575014670cf9afbfbf35376c25.png"
+                      alt=""
+                    />
+                    <div
+                      style={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        width: "100%",
+                        alignItems: "center",
+                      }}
+                    >
+                      <p>Aditya</p>
+                      <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                  </div>
+                  <div
+                    className="divSelectDropdown"
+                    id="navbarUserDropDown"
+                    style={loginDis}
+                    onMouseEnter={(e) => {
+                      setLoginDis({ display: "block" });
+                    }}
+                    onMouseLeave={(e) => {
+                      setLoginDis({ display: "none" });
+                    }}
+                  >
+                    <div className="navbarUserDropDown">
+                      <img
+                        src="https://d36g7qg6pk2cm7.cloudfront.net/assets/icons/user-rides-524da8ffff10d2e01c9e84efcfb373e8f0ac875de5ffe22451edac747b5a7153.png"
+                        alt=""
+                      />
+                      <p>
+                        <Link to={"/"}>My Ride</Link>
+                      </p>
+                    </div>
+
+                    <hr />
+                    <div className="navbarUserDropDown">
+                      <img
+                        src="https://d36g7qg6pk2cm7.cloudfront.net/assets/icons/user-profile-183f7c4413f90f48fb9c0778c76c72dcb26b8b3b9485e18b1cb200a364ef82f4.png"
+                        alt=""
+                      />
+                      <p>
+                        <Link to={"/"}>My Profile</Link>
+                      </p>
+                    </div>
+                    <hr />
+                    <div className="navbarUserDropDown">
+                      <img
+                        src="https://d36g7qg6pk2cm7.cloudfront.net/assets/icons/user-logout-6020357dca0e3d23e89ff421e5b5a8bb084a61095430c68c9c357bfbc92b1b21.png"
+                        alt=""
+                      />
+                      <p
+                        onClick={() => {logoutFun()
+                        }}
+                      >
+                        Logout
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <div>
+                  <button id="navbarLoginButton">Login</button>
+                  <button id="navbarSignUpButton">Sign up</button>
+                </div>
+              )}
             </div>
           </div>
         </div>

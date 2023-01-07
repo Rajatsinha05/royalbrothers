@@ -16,22 +16,23 @@ function LoginForm() {
   const dispatch = useDispatch();
   const users = useSelector((state) => state.reducers.users);
 
-  const logIn = () => {
-    const payload = users.find(
-      (user) => user.mobile === mobile && user.password === password
-    );
-    if (payload) {
-      dispatch({
-        type: "LOGIN",
-        payload,
-      });
-      alert("Login SuccessFully");
-      window.location.href = "./index";
-    } else if (mobile === "" || password === "") {
-      setError(true);
-      alert("Enter all the fields");
-    } else {
-      alert("Wrong Credentials");
+    const logIn =() =>{
+        const payload = users.find(user => user.mobile === mobile && user.password === password)
+        if(payload){
+            dispatch({
+                type:'LOGIN',
+                payload
+            })
+            alert('Login SuccessFully');
+            window.location.href = "/";
+        }else if (mobile === '' || password === '') {
+            setError(true);
+            alert("Enter all the fields");
+            } else{
+            alert('Wrong Credentials');
+
+        }
+
     }
   };
 
