@@ -8,7 +8,7 @@ function Rbxsubscription() {
 
   const handleTabBtn1=()=>{
     
-    document.querySelector("#tab1-button-pk").classList.add("active-tab-button-pk");
+  document.querySelector("#tab1-button-pk").classList.add("active-tab-button-pk");
     document.querySelector("#tab2-button-pk").classList.remove("active-tab-button-pk");
     document.querySelector("#tab3-button-pk").classList.remove("active-tab-button-pk");
   }
