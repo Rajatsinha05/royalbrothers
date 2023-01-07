@@ -28,7 +28,7 @@ function Otp(){
                 payload
             })
             alert('Login SuccessFully');
-            window.location.href = "./index";
+            window.location.href = "/";
         }
         else if (mobile === '' || otp === '') {
             setError(true);
