@@ -87,7 +87,27 @@
   font-size: 14px;
   color: rgb(89, 89, 89);
   padding: 15px 0px;
+  width: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
+.divSelectDropdown{
+  border: 1px solid rgb(209, 209, 209);
+  border-top: none;
+  position: absolute;
+  background: white;
+  width: inherit;
+  transition: background-color .3s;
+}
+.divSelectDropdown p{
+  padding: 10px 0;
+
+}
+.divSelectDropdown p:hover{
+    background-color: #fed24d;
+}
+
 .navbarMenuButtonDiv:hover{
     background-color: #fed24d;
     border: none;
@@ -157,4 +177,24 @@
   margin: 15px 0;
 }
 
+.navbarUserDisplay{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbarUserDisplay:hover{
+  background-color: #fed24d;
+}
 
+.navbarUserDropDown{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+}
+#navbarUserDropDown div:hover,#navbarUserDropDown p:hover{
+  background-color: rgb(240, 240, 240);
+}
+.fa-solid:hover{
+  cursor: pointer;
+}
