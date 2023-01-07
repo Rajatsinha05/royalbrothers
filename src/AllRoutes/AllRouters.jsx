@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { Route, Routes } from 'react-router-dom'
+
 import Home from '../AllPages/Home'
 import Login from '../AllPages/Login'
 import Cart from '../AllPages/Cart'
@@ -19,7 +20,6 @@ function AllRouters() {
 
   return (
 
-
     <Routes>
 
       
@@ -37,6 +37,7 @@ function AllRouters() {
       <Route path='/product' element={<Product />} />
 
     </Routes>
+
   )
 }
 

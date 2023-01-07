@@ -20,7 +20,7 @@
     margin-top: 0;
     background-color: white;
     width: 60%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     /* position: absolute;
     z-index: 999; */
 }
@@ -80,7 +80,7 @@
 
 .hiw-pk{
     padding: 3rem;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .hiw-heading-pk{
@@ -108,14 +108,14 @@
     /* justify-content: space-between; */
     padding: 2rem;
     flex-wrap: wrap;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 .hiw-items-pk{
     position: relative;
     width: 11rem;
     margin: 1rem 0;
     text-align: center;
-    border: 1px solid teal;
+    /* border: 1px solid teal; */
     padding: auto 20px;
 }
 .hiw-image-pk{
@@ -145,22 +145,25 @@
     display: flex;
     align-items: flex-start;
 }
-.rfu-items-pk{
+.rfu-flex-content-pk{
     margin: 0 1rem;
-    /* display: flex;
-    flex-direction: column; */
 }
-.rfu-items-pk{
-    width: 20%;
-}
-.rfu-items-pk:first-child{
+.rfu-flex-content-pk:first-child{
     width: 28%;
+}
+.rfu-flex-content-pk:last-child{
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
 }
 .rfu-heading-pk{
     font-size: 3rem;
     font-weight: 700 !important;
     line-height: 110%;
     margin: 1.9466666667rem 0 1.168rem 0;
+}
+.rfu-items-pk{
+    width: 30%;
 }
 .rfu-items-pk>img{
     width: 100%;
@@ -203,7 +206,7 @@
     margin-top: 2rem;
 }
 .fleet-card-pk{
-    width: 28%;
+    width: 30%;
     text-align: center;
     margin: 1rem;
     margin: auto;
@@ -214,7 +217,7 @@
     /* max-width: 30rem; */
 }
 .fleet-card-pk>img{
-    width: 15rem;
+    width: 100%;
 }
 .card-bike-price-pk{
     font-size: 1.3rem;
@@ -311,6 +314,10 @@
     transition: all 0.1s;
     /* border: 1px solid teal; */
 }
+.tab-button-pk:nth-child(2){
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
 .tab-button-pk:hover{
     background-color: #fed24d;
 }
@@ -361,4 +368,123 @@
     display: none;
     border-bottom: 1px solid #ddd;
     box-sizing: border-box;
+}
+
+.active-tab-button-pk{
+    background-color: #fed24d;
+}
+.active-faq-answer-pk{
+    display: block;
+}
+.active-material-icons{
+    transform: rotate(180deg);
+}
+
+
+
+
+/* media querry for different screens  */
+
+@media only screen and (max-width: 1200px) {
+    .hero-pk{
+        height: 80vh;
+    }
+    .hiw-pk{
+        padding: 2rem;
+    }
+    .hiw-flex-pk{
+        padding: 1rem;
+    }
+    .hiw-items-pk{
+        margin: 0.5rem 0;
+    }
+    .hiw-image-pk {
+        height: 2.5rem;
+    }
+    .rfu-flex-pk {
+        flex-direction: column;
+    }
+    .rfu-flex-content-pk:first-child {
+        width: 100%;
+    }
+    .rfu-flex-content-pk:last-child {
+        width: 100%;
+        text-align: center;
+    }
+    .fleet-pk {
+        padding: 2rem;
+    }
+    .fleet-card-container-pk{
+        width: 90%;
+    }
+    .faq-pk {
+        padding: 2rem;
+    }
+    .faq-container-pk{
+        width: 80vw;
+    }
+    
+}
+
+@media (max-width: 900px){
+    .hiw-pk{
+        padding: 1rem;
+    }
+    .hiw-image-arrow-pk {
+        display: none;
+    }
+    .fleet-pk {
+        padding: 1rem 1rem 2rem 1rem;
+    }
+    .faq-container-pk{
+        width: 90vw;
+    }
+    .tab-button-pk{
+        padding: 1rem;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .hero-pk{
+        height: 50vh;
+    }
+}
+
+@media (max-width: 600px){
+    .rfu-pk {
+        padding: 1rem;
+    }
+    .rfu-flex-content-pk:last-child {
+        flex-direction: column;
+    }
+    .rfu-items-pk {
+        width: 80%;
+        margin: auto;
+    }
+    .tab-button-pk{
+        padding: 0.5rem;
+    }
+    .fleet-card-container-pk{
+        flex-direction: column;
+    }
+    .fleet-card-pk{
+        width: 80%;
+    }
+    .fleet-card-pk:nth-child(2){
+        margin: 20px auto;
+    }
+
+}
+
+@media only screen and (max-width: 450px) {
+    .faq-questios-pk{
+        padding-right: 2rem;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .faq-questios-pk{
+        padding-right: 3rem;
+    }
+    
 }
