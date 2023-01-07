@@ -13,6 +13,7 @@ import OTP from '../AllPages/Otp'
 import BookingRelated from '../Components/RbxSubscription/BookingRelated'
 import ServiceRelated from '../Components/RbxSubscription/ServiceRelated'
 import VehicleRelated from '../Components/RbxSubscription/VehicleRelated'
+import Storeproduct from '../AllPages/Storeproduct'
 
 function AllRouters() {
 
@@ -22,7 +23,7 @@ function AllRouters() {
 
     <Routes>
 
-      
+
       <Route path='/' element={<Home />} />
       <Route path='/signup' element={<SignUp />} />
       <Route path='/login' element={<Login />} />
@@ -34,7 +35,9 @@ function AllRouters() {
         <Route path='vehiclerelated' element={<VehicleRelated />} />
       </Route>
       <Route path='/payment' element={<Payments />} />
-      <Route path='/product' element={<Product />} />
+      <Route path='/services' element={<Product />} />
+      <Route path='/store/product' element={<Storeproduct />} />
+
 
     </Routes>
   )

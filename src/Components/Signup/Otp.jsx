@@ -1,5 +1,5 @@
-import React,{useState,useEffect} from 'react';
-import { Link } from 'react-router-dom';
+import React,{useState} from 'react';
+
 import { Button } from "@chakra-ui/react";
 import styles from "./css/login.module.css";
 import {useDispatch,useSelector} from 'react-redux';
