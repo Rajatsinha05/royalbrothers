@@ -1,31 +1,68 @@
-.dateSelectorDiv{
-    background: url("https://d36g7qg6pk2cm7.cloudfront.net/assets/new_year_web-a2bad80df84aa805b5865ee860f0ba64c6e28deadc8e66a417238e732741c0a4.jpg");
-    width: 100%;
-    height: 100vh;
-    background-position: center center;
-    background-size: 100% 100%;
-  }
+.dateSelectorDiv {
+  background: url("https://d36g7qg6pk2cm7.cloudfront.net/assets/new_year_web-a2bad80df84aa805b5865ee860f0ba64c6e28deadc8e66a417238e732741c0a4.jpg");
+  width: 100%;
+  height: 100vh;
+  background-position: center center;
+  background-size: 100% 100%;
+}
 
-  .homeBikeCardDiv{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    text-align: center;
-    width: 80%;
-    gap: 20px;
-    margin: auto;
-  }
-  .homeBikeCardDiv>div{
-    border-radius: 5px;
-    background-color: #f7fafc;
-    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -1px rgb(0 0 0 / 6%);
-    text-align: center;;
-  }
-  
-  .homeBikeCardDiv>div>h3{
-    padding: 10px;
-  }
-  .homeBikeCardDiv img{
-    width: 70%;
-    margin: auto;
-  }
-  
+.homeBikeCardDiv {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+  width: 80%;
+  gap: 20px;
+  margin: auto;
+}
+.homeBikeCardDiv > div {
+  border-radius: 5px;
+  background-color: #f7fafc;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -1px rgb(0 0 0 / 6%);
+  text-align: center;
+}
+
+.homeBikeCardDiv > div > h3 {
+  padding: 10px;
+}
+.homeBikeCardDiv img {
+  width: 70%;
+  margin: auto;
+}
+
+/* Popup card close button */
+.fa-solid:hover {
+  cursor: pointer;
+}
+
+/* Duration button config */
+.durationButton {
+  border: none;
+  font-size: 14px;
+  padding: 15px 0px;
+  width: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 5px;
+  border: solid 1px #e8e8e8;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -1px rgb(0 0 0 / 6%);
+  cursor:pointer;
+  /* margin-left: 15px; */
+}
+
+.durationDropdown {
+  cursor: pointer;
+  border-top: none;
+  position: absolute;
+  background: white;
+  width: inherit;
+  transition: background-color 0.3s;
+  text-align: center;
+}
+.durationDropdown p {
+  padding: 10px 0;
+}
+.durationDropdown p:hover {
+  background-color: rgb(226, 226, 226);
+}
