@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Loader from "./Loader";
 import "./Navbar.css";
 import PlacementExample from "./NavbarSlider";
-
+import { ChakraProvider } from "@chakra-ui/react";
 function NavBar() {
   const [disStyle, setDisStyle] = useState({ display: "none" });
   const [disStyle1, setDisStyle1] = useState({ display: "none" });
@@ -22,7 +22,13 @@ function NavBar() {
 
   return (
     <>
-      {loaderCom ? <Loader /> : ""}
+
+
+    <ChakraProvider>
+
+    {loaderCom ? <Loader /> : ""}
+   
+
       <div id="mainParentNavbar">
         <div className="navbarYellow">
           <p>
@@ -213,6 +219,7 @@ function NavBar() {
           </div>
         </div>
       </div>
+      </ChakraProvider>
     </>
   );
 }
