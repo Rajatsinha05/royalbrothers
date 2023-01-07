@@ -7,6 +7,7 @@ import Cart from '../AllPages/Cart'
 import Rbxsubscription from '../AllPages/Rbxsubscription'
 import Payments from '../AllPages/Payments'
 import Product from '../AllPages/Product'
+import CitySelect from '../AllPages/CitySelect'
 function AllRouters() {
   return (
   <Routes>
@@ -17,7 +18,7 @@ function AllRouters() {
 <Route path='/rbx' element={<Rbxsubscription/>}/>
 <Route path='/payment' element={<Payments/>}/>
 <Route path='/product' element={<Product/>}/>
-
+<Route path='/city' element={<CitySelect/>}/>
   </Routes>
   )
 }
