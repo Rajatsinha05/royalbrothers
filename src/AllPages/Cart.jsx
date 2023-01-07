@@ -1,4 +1,4 @@
-import { Box, Center, Flex,Text,Image, Heading, Spacer, Input, Button, Select } from '@chakra-ui/react'
+import { Box, Center, Flex,Text,Image, Heading, Spacer, Input, Button, Select, ChakraProvider } from '@chakra-ui/react'
 import React from 'react'
 
 function Cart() {
@@ -15,6 +15,8 @@ function Cart() {
 
   return (
     <>
+
+    <ChakraProvider>
     <Box w='100%' bgColor='#fed250' align='center'>
       <Text fontWeight='500' maxW='80%' align='center' p='2px'>
       Now rent two wheelers for 4 or 7 days at a lower special price. Click to modify search to 4 days or 7 days ( 7 Hours and 30 Minutes )
@@ -191,6 +193,7 @@ function Cart() {
 
       </Box>
     </ Center>
+    </ChakraProvider>
     </>
   )
 }

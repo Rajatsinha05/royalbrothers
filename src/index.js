@@ -24,16 +24,16 @@ root.render(
  
   <React.StrictMode>
 
-    <ChakraProvider>
+
       <BrowserRouter>
-    <Provider store={Store}>
+
    <Provider store={store}>
    
         <App />
-   </Provider>
+   
    </Provider>
       </BrowserRouter>
-    </ChakraProvider>
+ 
 
   </React.StrictMode>
 

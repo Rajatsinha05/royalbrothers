@@ -1,5 +1,5 @@
 
-import {legacy_createStore} from 'redux'
+import {legacy_createStore,combineReducers} from 'redux'
 import { reducer } from './Reducer'
 
 const initialize ={
@@ -31,12 +31,12 @@ const reducers =(state=initialize ,action )=>{
     }
 }
 
+let combine=combineReducers({reducer,reducers})
 
 
-let Store=legacy_createStore(reducer);
 
-let store =legacy_createStore(reducers)
-export{Store}
+let store =legacy_createStore(combine)
+
 export default store;
 
 
