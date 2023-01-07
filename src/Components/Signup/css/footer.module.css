@@ -102,7 +102,7 @@
     text-align: center;
     background-color: #444444;
     padding-top: 30px;
-    height: 355px;
+    height: 415px;
 }
 .lastF>p{
     font-size: 25px;
@@ -140,6 +140,8 @@
 }
 .footercopy >p{
     padding-top: 8px;
+    display: flex;
+    margin-left: 540px;
 }
 .footercopy >p > img{
     width: 18px;
