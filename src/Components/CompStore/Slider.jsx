@@ -11,17 +11,22 @@ import "./Store.css";
 
 // import required modules
 
-import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
+import { Autoplay, Pagination, Navigation } from "swiper";
 export default function Slider() {
   return (
     <div id="swiper_div">
- <Swiper
-        cssMode={true}
+  <Swiper
+        spaceBetween={30}
+        centeredSlides={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
+        }}
         navigation={true}
-        pagination={true}
-        mousewheel={true}
-        keyboard={true}
-        modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+        modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
 

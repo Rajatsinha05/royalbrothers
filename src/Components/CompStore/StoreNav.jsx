@@ -45,25 +45,25 @@ function StoreNav() {
 
 <Flex gap="25" pl="10" pb="15px" justifyItems="center" alignItems="center" >
 
-<Text color="grey" _hover={{borderBottom:"1px sloid black"}}>
+<Text color="grey" _hover={{textDecoration:" underline" ,cursor:"pointer"}}>
     PRODICTS
 </Text>
 
-<Text color="grey">
+<Text color="grey" _hover={{textDecoration:" underline" ,cursor:"pointer"}}>
    BRANDS
 </Text>
 
 
-<Text color="grey">
+<Text color="grey" _hover={{textDecoration:" underline" ,cursor:"pointer"}}>
     BIKE RENTAL
 </Text>
-<Text color="grey">
+<Text color="grey" _hover={{textDecoration:" underline" ,cursor:"pointer"}}>
  RBX SUBSCRIPTION
 </Text>
-<Text color="grey">
+<Text color="grey" _hover={{textDecoration:" underline" ,cursor:"pointer"}}>
     ABOUT US
 </Text>
-<Text color="grey">
+<Text color="grey" _hover={{textDecoration:" underline" ,cursor:"pointer"}}> 
    BLOG
 </Text>
 </Flex>
