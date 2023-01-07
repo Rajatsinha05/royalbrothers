@@ -1,4 +1,4 @@
-import { Box, ChakraProvider, Flex, Img, Spacer } from '@chakra-ui/react'
+import { Box, ChakraProvider, Flex, Img, Spacer, Text } from '@chakra-ui/react'
 import React from 'react'
 import SearchSharpIcon from '@mui/icons-material/SearchSharp';
 import PersonIcon from '@mui/icons-material/Person';
@@ -7,7 +7,8 @@ import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined
 function StoreNav() {
   return (
     <ChakraProvider>
-    <Box padding="20px">
+        <Box>
+    <Box padding="25px">
 
 <Flex justifyItems="center" alignItems="center">
 <Box>
@@ -41,7 +42,34 @@ function StoreNav() {
 
     </Box>
     
-    
+
+<Flex gap="25" pl="10" pb="15px" justifyItems="center" alignItems="center" >
+
+<Text color="grey" _hover={{borderBottom:"1px sloid black"}}>
+    PRODICTS
+</Text>
+
+<Text color="grey">
+   BRANDS
+</Text>
+
+
+<Text color="grey">
+    BIKE RENTAL
+</Text>
+<Text color="grey">
+ RBX SUBSCRIPTION
+</Text>
+<Text color="grey">
+    ABOUT US
+</Text>
+<Text color="grey">
+   BLOG
+</Text>
+</Flex>
+
+
+    </Box>
     
     </ChakraProvider>
   )
