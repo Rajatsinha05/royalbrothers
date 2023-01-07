@@ -24,7 +24,7 @@ let get=async()=>{
 
 let res=await fetch(`https://royalbrothers.cyclic.app/products`)
 let  result=await res.json();
-console.log(result)
+
 SetData(dispacth,result)
 
 
@@ -33,7 +33,7 @@ SetData(dispacth,result)
 
 
 
-// console.log('data: ', data);
+// 
 
   return (
   <>

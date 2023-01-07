@@ -24,7 +24,7 @@ root.render(
  
   <React.StrictMode>
 
-    <ChakraProvider>
+  
       <BrowserRouter>
    
    <Provider store={Store}>
@@ -32,7 +32,7 @@ root.render(
         <App />
    </Provider>
       </BrowserRouter>
-    </ChakraProvider>
+  
 
   </React.StrictMode>
 
