@@ -3,10 +3,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import PlacementExample from "./NavbarSlider";
-
+import { ChakraProvider } from "@chakra-ui/react";
 function NavBar() {
   return (
     <>
+    <ChakraProvider>
+
+
+   
       <div id="mainParentNavbar">
         <div className="navbarYellow">
           <p>
@@ -66,6 +70,7 @@ function NavBar() {
           </div>
         </div>
       </div>
+      </ChakraProvider>
     </>
   );
 }
