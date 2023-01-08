@@ -2,18 +2,7 @@ import React from "react";
 
 function FeaturedIn() {
   return (
-    // <div>
-    //   <h1>Featured In</h1>
-    //   <div>
-    //     <img src="" alt="" />
-    //     <img src="" alt="" />
-    //     <img src="" alt="" />
-    //     <img src="" alt="" />
-    //     <img src="" alt="" />
-    //     <img src="" alt="" />
-    //     <img src="" alt="" />
-    //   </div>
-    // </div>
+  
     <>
       <section className="media">
         <div className="media-heading text-center">Featured In</div>
