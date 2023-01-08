@@ -29,7 +29,7 @@ function AllRouters() {
       <Route path='/login' element={<Login />} />
       <Route path='/otp' element={<OTP />} />
       <Route path='/cart' element={<Cart />} />
-      <Route path='/rbx' element={<Rbxsubscription />}>
+      <Route path='/rbxsub' element={<Rbxsubscription />}>
         <Route path='bookingrelated' element={<BookingRelated />} />
         <Route path='servicerelated' element={<ServiceRelated />} />
         <Route path='vehiclerelated' element={<VehicleRelated />} />
