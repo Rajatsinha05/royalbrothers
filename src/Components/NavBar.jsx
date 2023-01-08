@@ -5,7 +5,7 @@ import Loader from "./Loader";
 import "./Navbar.css";
 import PlacementExample from "./NavbarSlider";
 
-function NavBar() {
+function NavBar({cityName}) {
   const [disStyle, setDisStyle] = useState({ display: "none" });
   const [disStyle1, setDisStyle1] = useState({ display: "none" });
   const [loginDis, setLoginDis] = useState({ display: "none" });
@@ -125,7 +125,7 @@ function NavBar() {
             <div className="navbarButtons">
               <button id="locationButton">
                 <i className="fa-solid fa-location-dot" id="locationIcon"></i>
-                <p>Bangalore</p>
+                <p>{cityName}</p>
                 <i className="fa-solid fa-angle-down"></i>
               </button>
               <p>|</p>
