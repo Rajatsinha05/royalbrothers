@@ -5,7 +5,7 @@ import Loader from "./Loader";
 import "./Navbar.css";
 import PlacementExample from "./NavbarSlider";
 import { ChakraProvider } from "@chakra-ui/react";
-
+import { useNavigate } from "react-router-dom";
 
 function NavBar({cityName}) {
 
@@ -21,6 +21,17 @@ function NavBar({cityName}) {
       setLoggedIn(false);
       setLoaderCom(false);
     }, 1000);
+  }
+  
+  const navigate = useNavigate();
+
+
+  function handleLoginLogout(val){
+    if(val == 'login'){
+      navigate('/login');
+    } else{
+      navigate('/signup')
+    }
   }
 
   return (
@@ -214,8 +225,8 @@ function NavBar({cityName}) {
                 </div>
               ) : (
                 <div>
-                  <button id="navbarLoginButton">Login</button>
-                  <button id="navbarSignUpButton">Sign up</button>
+                  <button id="navbarLoginButton" onClick={()=> handleLoginLogout("login")}>Login</button>
+                  <button id="navbarSignUpButton" onClick={()=> handleLoginLogout("signup")}>Sign up</button>
                 </div>
               )}
             </div>
