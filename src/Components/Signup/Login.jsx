@@ -34,7 +34,7 @@ function LoginForm() {
         }
 
     }
-  };
+  
 
   return (
     <div className={styles.fullContainer}>
