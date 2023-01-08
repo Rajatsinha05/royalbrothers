@@ -18,7 +18,7 @@ function Cart() {
       </Text>
     </Box>
     <Center>
-      <Flex m='3' mt='5' wrap={{base:'nowrap'}} p='0 70px' alignItems='baseline'>
+      <Flex m='3' mt='5' wrap={{base:'nowrap'}} p='0 70px'>
         <Box mr='3' boxShadow={style.shadowbox} borderRadius={style.bRadius} p={style.paddingBox}>
           <Heading textTransform='uppercase' fontWeight='600' p={style.paddingText} >Summary</Heading>
           <Flex alignItems='center'>
