@@ -4,17 +4,12 @@ import { Link } from "react-router-dom";
 import Loader from "./Loader";
 import "./Navbar.css";
 import PlacementExample from "./NavbarSlider";
-<<<<<<< HEAD
-
-function NavBar({cityName}) {
-=======
 import { ChakraProvider } from "@chakra-ui/react";
 function NavBar() {
->>>>>>> d2659da346da9cbd73953d0184131a3b353f5d7b
   const [disStyle, setDisStyle] = useState({ display: "none" });
   const [disStyle1, setDisStyle1] = useState({ display: "none" });
   const [loginDis, setLoginDis] = useState({ display: "none" });
-  const [loggedIn, setLoggedIn] = useState(true);
+  const [loggedIn, setLoggedIn] = useState(false);
   const [loaderCom, setLoaderCom] = useState(false);
   
   function logoutFun(){
@@ -136,7 +131,7 @@ function NavBar() {
             <div className="navbarButtons">
               <button id="locationButton">
                 <i className="fa-solid fa-location-dot" id="locationIcon"></i>
-                <p>{cityName}</p>
+                <p>Bangalore</p>
                 <i className="fa-solid fa-angle-down"></i>
               </button>
               <p>|</p>
@@ -216,8 +211,8 @@ function NavBar() {
                 </div>
               ) : (
                 <div>
-                  <button id="navbarLoginButton">Login</button>
-                  <button id="navbarSignUpButton">Sign up</button>
+                  <button id="navbarLoginButton"><Link to={'/login'}>Login</Link></button>
+                  <button id="navbarSignUpButton"><Link to={'/signup'}>Sign up</Link></button>
                 </div>
               )}
             </div>

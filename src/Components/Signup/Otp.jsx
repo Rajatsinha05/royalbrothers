@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react';
-import { Link } from 'react-router-dom';
+import { Link,redirect } from 'react-router-dom';
 import { Button } from "@chakra-ui/react";
 import styles from "./css/login.module.css";
 import {useDispatch,useSelector} from 'react-redux';
@@ -28,7 +28,8 @@ function Otp(){
                 payload
             })
             alert('Login SuccessFully');
-            window.location.href = "/";
+            
+            console.log("Hello")
         }
         else if (mobile === '' || otp === '') {
             setError(true);
