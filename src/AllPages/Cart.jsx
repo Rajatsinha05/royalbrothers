@@ -187,8 +187,6 @@ function Cart() {
           </Center>
         </Box>
       </Flex>
-
-      </Box>
     </ Center>
     </>
   )
