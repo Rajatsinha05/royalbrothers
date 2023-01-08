@@ -5,7 +5,10 @@ import Loader from "./Loader";
 import "./Navbar.css";
 import PlacementExample from "./NavbarSlider";
 import { ChakraProvider } from "@chakra-ui/react";
-function NavBar() {
+import { useNavigate } from "react-router-dom";
+
+function NavBar({cityName}) {
+
   const [disStyle, setDisStyle] = useState({ display: "none" });
   const [disStyle1, setDisStyle1] = useState({ display: "none" });
   const [loginDis, setLoginDis] = useState({ display: "none" });
@@ -18,6 +21,17 @@ function NavBar() {
       setLoggedIn(false);
       setLoaderCom(false);
     }, 1000);
+  }
+  
+  const navigate = useNavigate();
+
+
+  function handleLoginLogout(val){
+    if(val == 'login'){
+      navigate('/login');
+    } else{
+      navigate('/signup')
+    }
   }
 
   return (
@@ -131,7 +145,7 @@ function NavBar() {
             <div className="navbarButtons">
               <button id="locationButton">
                 <i className="fa-solid fa-location-dot" id="locationIcon"></i>
-                <p>Bangalore</p>
+                <p>{cityName}</p>
                 <i className="fa-solid fa-angle-down"></i>
               </button>
               <p>|</p>
@@ -211,8 +225,8 @@ function NavBar() {
                 </div>
               ) : (
                 <div>
-                  <button id="navbarLoginButton">Login</button>
-                  <button id="navbarSignUpButton">Sign up</button>
+                  <button id="navbarLoginButton" onClick={()=> handleLoginLogout("login")}>Login</button>
+                  <button id="navbarSignUpButton" onClick={()=> handleLoginLogout("signup")}>Sign up</button>
                 </div>
               )}
             </div>

@@ -3,7 +3,8 @@ import React,{useState} from 'react';
 import { Button } from "@chakra-ui/react";
 import styles from "./css/login.module.css";
 import {useDispatch,useSelector} from 'react-redux';
-
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 function Otp(){
     const[mobile,setMobile] =useState('');
     const[otp,setOtp] =useState('1234');
@@ -27,14 +28,42 @@ function Otp(){
                 type:'OTP',
                 payload
             })
-            alert('Login SuccessFully');
+            toast.success('successfully logged!', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                });
             window.location.href = "/";
         }
         else if (mobile === '' || otp === '') {
             setError(true);
-            alert("Enter all the fields");
+            toast.warn('Enter all the fields!', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                });
+  
             } else{
-            alert('Wrong Credentials');
+                toast.error('Wrong Credentials!', {
+                    position: "top-center",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                    });
 
         }
     }
@@ -46,6 +75,7 @@ function Otp(){
         <ul className={styles.login_signup_otp}>
                 <li>Verify account</li>
             </ul>
+            <ToastContainer />
         <div className={styles.divMobile_otp}>
             <p>Phone</p>
             </div>

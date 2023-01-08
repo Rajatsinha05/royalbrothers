@@ -4,7 +4,9 @@ import { Button } from "@chakra-ui/react";
 import styles from "./css/login.module.css";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
+  
 function LoginForm() {
   const [mobile, setMobile] = useState("");
   const [password, setPassword] = useState("");
@@ -23,13 +25,45 @@ function LoginForm() {
                 type:'LOGIN',
                 payload
             })
-            alert('Login SuccessFully');
+            toast.success('successfully logged!', {
+              position: "top-center",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "light",
+              });
             window.location.href = "/";
         }else if (mobile === '' || password === '') {
             setError(true);
-            alert("Enter all the fields");
+            // alert("Enter all the fields");
+            toast.warn('Enter all the fields!', {
+              position: "top-center",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "light",
+              });
+
+
             } else{
-            alert('Wrong Credentials');
+            // alert('Wrong Credentials');
+
+            toast.error('Wrong Credentials!', {
+              position: "top-center",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "light",
+              });
 
         }
 
@@ -39,7 +73,7 @@ function LoginForm() {
   return (
     <div className={styles.fullContainer}>
       <h1 className={styles.riders}>Rent . Ride . Explore</h1>
-
+      <ToastContainer />
       <div className={styles.ParentLog}>
         <ul className={styles.login_signup_tabs}>
           <li className={styles.tab_sig}>

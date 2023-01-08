@@ -15,6 +15,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 
 
 function Home() {
+  
   const [show,setShow] = useState(true);
   function closePopup(data){
     setShow(data);
