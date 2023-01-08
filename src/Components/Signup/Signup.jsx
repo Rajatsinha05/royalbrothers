@@ -4,7 +4,8 @@ import { Button } from "@chakra-ui/react";
 import styles from "./css/login.module.css";
 import { useDispatch, useSelector } from 'react-redux';
 
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 function Signup() {
 
     // States for registration
@@ -39,18 +40,52 @@ function Signup() {
 
         if (name === '' || email === '' || mobile === '' || password === '') {
             setError(true);
-            alert("Enter all the fields");
+            // alert("Enter all the fields");
+
+            toast.warn('Enter all the fields!', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                });
+  
         }else if(!result){
             setError(true);
-            alert('Enter valid email!');
+            // alert('Enter valid email!');
+            toast.warn('Enter valid email!', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                });
+            
         }
         else if(password.length < 8 || password.length > 15){
             setError(true);
-            alert("Password length should be between 8 to 15");
+            // alert("Password length should be between 8 to 15");
+            toast.warn('Password length should be between 8 to 15', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                });
         } 
         else if(mobile.length < 10 || mobile.length >10){
             setError(true);
             alert("Enter valid mobile number ");
+            
         }
         else {
             setSubmitted(true);
@@ -75,7 +110,7 @@ function Signup() {
 		  {errorMessage()}
 		   {successMessage()}
 	    </div> */}
-
+ <ToastContainer />
             <div className={styles.ParentLog}>
                 <ul className={styles.login_signup_tabs}>
                     <li className={styles.tab_log}><Link to={'/login'}>Login</Link></li>
