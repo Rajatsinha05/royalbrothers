@@ -7,7 +7,7 @@ import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined
 function StoreNav() {
   return (
     <ChakraProvider>
-      <Box>
+      <Box bg="#FFFFFF" borderBottom=".1px solid grey">
         <Box padding="25px">
           <Flex justifyItems="center" alignItems="center">
             <Box>
@@ -38,7 +38,7 @@ function StoreNav() {
             color="grey"
             _hover={{ textDecoration: " underline", cursor: "pointer" }}
           >
-            PRODICTS
+            PRODUCTS
           </Text>
 
           <Text

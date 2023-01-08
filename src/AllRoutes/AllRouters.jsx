@@ -14,6 +14,7 @@ import BookingRelated from '../Components/RbxSubscription/BookingRelated'
 import ServiceRelated from '../Components/RbxSubscription/ServiceRelated'
 import VehicleRelated from '../Components/RbxSubscription/VehicleRelated'
 import Storeproduct from '../AllPages/Storeproduct'
+import SingleProduct from '../AllPages/SingleProduct'
 
 function AllRouters() {
 
@@ -36,8 +37,8 @@ function AllRouters() {
       </Route>
       <Route path='/payment' element={<Payments />} />
       <Route path='/services' element={<Product />} />
-      <Route path='/store/product' element={<Storeproduct />} />
-
+      <Route path='/store/products' element={<Storeproduct />} />
+      <Route path='/product/:id' element={<SingleProduct />} />
 
     </Routes>
   )

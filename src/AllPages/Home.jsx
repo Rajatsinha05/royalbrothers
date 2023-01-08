@@ -13,6 +13,7 @@ import NavBar from "../Components/NavBar";
 import { CacheProvider } from "@emotion/react";
 import { ChakraProvider } from "@chakra-ui/react";
 
+
 function Home() {
   const [show,setShow] = useState(true);
   function closePopup(data){
@@ -26,6 +27,7 @@ function Home() {
       <OurFleet/>
       <Quality/>
 
+      <FeaturedIn/>
       {
         show? <PopupCard closePopup={closePopup}/> : ""
       }
