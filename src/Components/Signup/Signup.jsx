@@ -48,6 +48,10 @@ function Signup() {
             setError(true);
             alert("Password length should be between 8 to 15");
         } 
+        else if(mobile.length < 10 || mobile.length >10){
+            setError(true);
+            alert("Enter valid mobile number ");
+        }
         else {
             setSubmitted(true);
             setError(false);
