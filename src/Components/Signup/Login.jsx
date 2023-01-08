@@ -25,9 +25,9 @@ function LoginForm() {
                 type:'LOGIN',
                 payload
             })
-            toast.success('🦄 Wow so easy!', {
+            toast.success('successfully logged!', {
               position: "top-center",
-              autoClose: 1100,
+              autoClose: 5000,
               hideProgressBar: false,
               closeOnClick: true,
               pauseOnHover: true,
@@ -35,21 +35,35 @@ function LoginForm() {
               progress: undefined,
               theme: "light",
               });
-            // window.location.href = "/";
+            window.location.href = "/";
         }else if (mobile === '' || password === '') {
             setError(true);
-            alert("Enter all the fields");
+            // alert("Enter all the fields");
+            toast.warn('Enter all the fields!', {
+              position: "top-center",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "light",
+              });
+
+
             } else{
-              toast.error(' wrong', {
-                position: "top-center",
-                autoClose: 1100,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "light",
-                });
+            // alert('Wrong Credentials');
+
+            toast.error('Wrong Credentials!', {
+              position: "top-center",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "light",
+              });
 
         }
 
