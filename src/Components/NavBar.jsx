@@ -4,13 +4,14 @@ import { Link } from "react-router-dom";
 import Loader from "./Loader";
 import "./Navbar.css";
 import PlacementExample from "./NavbarSlider";
-<<<<<<< HEAD
+import { ChakraProvider } from "@chakra-ui/react";
+
 
 function NavBar({cityName}) {
-=======
-import { ChakraProvider } from "@chakra-ui/react";
-function NavBar() {
->>>>>>> d2659da346da9cbd73953d0184131a3b353f5d7b
+
+
+
+
   const [disStyle, setDisStyle] = useState({ display: "none" });
   const [disStyle1, setDisStyle1] = useState({ display: "none" });
   const [loginDis, setLoginDis] = useState({ display: "none" });
