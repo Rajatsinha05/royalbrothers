@@ -1,7 +1,11 @@
 import { Box, Center, Flex,Text,Image, Heading, Spacer, Input, Button, Select } from '@chakra-ui/react'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 function Cart() {
+  let [data,setData] = useState({})
+  const [coupon,setCoupon ] = useState('')
+  const [cPrice,setCPrice] = useState(0)
   let style ={
     bRadius: 'md',
     paddingBox: '15px 20px',
@@ -10,8 +14,14 @@ function Cart() {
     mt:'3',
     mb:'4'
   }
-
-
+  useEffect(()=>{
+    setCart()
+  },[])
+  function setCart() {
+    fetch('https://royalbrothers.cyclic.app/Cart')
+    .then((res)=>res.json())
+    .then((res)=>setData(res[0]))
+  }
 
   return (
     <>
@@ -26,15 +36,15 @@ function Cart() {
           <Heading textTransform='uppercase' fontWeight='600' p={style.paddingText} >Summary</Heading>
           <Flex alignItems='center'>
             <Box m='2'>
-              <Image src={'https://d3vp2rl7047vsp.cloudfront.net/bike_models/images/000/000/338/medium/HERO_PLEASURE_PLUS.png?1660655867'}  _hover={{transform: "scale(1.1)"}}/>
-              <Text fontSize='28px' fontWeight='500' align='center'>HeroPleasure Plus</Text> 
+              <Image src={data.img}  _hover={{transform: "scale(1.1)"}}/>
+              <Text fontSize='28px' fontWeight='500' align='center'>{data.name}</Text> 
             </Box>
             <Spacer/>
             <Box p={style.paddingBox}>
               <Flex name='timings' mb={style.mb}>
                 <Box>
-                  <Text>10:00 am</Text>
-                  <Text>05 Jan 2023</Text>
+                  <Text>{data.pickupTime}</Text>
+                  <Text>{data.pickupdate}</Text>
                 </Box>
                 <Spacer/>
                 <Box>
@@ -42,8 +52,8 @@ function Cart() {
                 </Box>
                 <Spacer/>
                 <Box>
-                  <Text>5:00 pm</Text>
-                  <Text>05 Jan 2023</Text>
+                  <Text>{data.dropoffTime}</Text>
+                  <Text>{data.dropoffdate}</Text>
                 </Box>
               </Flex>
               <hr/>
@@ -59,7 +69,7 @@ function Cart() {
                   <Spacer/>
                   <Text>
                     <span style={{fontWeight:'500'}}>₹</span>
-                    140.0
+                    {(data.price*1).toFixed(2)}
                   </Text>
                 </Flex>
               </Box>
@@ -71,15 +81,21 @@ function Cart() {
                   <Spacer/>
                   <Text color='#555' fontWeight='700'>
                   <span style={{fontWeight:'500',color:'black'}}>₹</span>
-                  140.0
+                  {(data.price*1).toFixed(2)}
                   </Text>
                 </Flex>
               </Box>
               <Box mt={style.mt}>
                 <Flex>
-                  <Input placeholder='Coupon code' mr='2'></Input>
+                  <Input placeholder='Coupon code' mr='2' onChange={(e)=>setCoupon(e.target.value)}></Input>
                   <Spacer/>
-                  <Button bgColor='#fed250' minW='100px'>Apply</Button>
+                  <Button bgColor='#fed250' minW='100px' onClick={()=>{
+                    if(coupon.toLowerCase()==='masai30'){
+                      setCPrice((data.price*.7*1.28))
+                    }else{
+                      setCPrice(0)
+                    }
+                  }}>Apply</Button>
                 </Flex>
               </Box>
               <Box mt={style.mt}>
@@ -130,7 +146,7 @@ function Cart() {
               <Spacer/>
               <Text>
                 <span style={{fontWeight:'500'}}>₹ </span>
-                140.0
+                {data.price}
               </Text>
             </Flex>
           </Box>
@@ -142,7 +158,7 @@ function Cart() {
               <Spacer/>
               <Text>
                 <span style={{fontWeight:'500'}}>₹ </span>
-                19.60
+                {(data.price*.14).toFixed(2)}
               </Text>
             </Flex>
           </Box>
@@ -154,7 +170,7 @@ function Cart() {
               <Spacer/>
               <Text>
                 <span style={{fontWeight:'500'}}>₹ </span>
-                19.60
+                {(data.price*.14).toFixed(2)}
               </Text>
             </Flex>
           </Box>
@@ -177,14 +193,16 @@ function Cart() {
               </Text>
               <Spacer/>
               <Text color='#555' fontWeight='700'>
-              <span style={{fontWeight:'500',color:'black'}}>₹</span>
-              140.0
+              <span style={{fontWeight:'500',color:'black'}}>₹ </span>
+              {((cPrice*1.28)||(data.price*1.28)).toFixed(2)}
               </Text>
             </Flex>
           </Box>
+          <Link to='/payment'>
           <Center mt='5'>
             <Button bgColor='#fed250' w='70%' mb='5'>Make Payment</Button>
           </Center>
+            </Link>
         </Box>
       </Flex>
     </ Center>
