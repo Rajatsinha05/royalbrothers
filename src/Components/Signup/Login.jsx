@@ -25,7 +25,7 @@ function LoginForm() {
                 payload
             })
             alert('Login SuccessFully');
-            window.location.href = "./index";
+            window.location.href = "/";
         }else if (mobile === '' || password === '') {
             setError(true);
             alert("Enter all the fields");
