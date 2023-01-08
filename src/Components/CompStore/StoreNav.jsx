@@ -38,7 +38,7 @@ function StoreNav() {
             color="grey"
             _hover={{ textDecoration: " underline", cursor: "pointer" }}
           >
-            PRODICTS
+            PRODUCTS
           </Text>
 
           <Text
