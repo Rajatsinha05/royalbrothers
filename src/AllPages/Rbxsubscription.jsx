@@ -1,25 +1,42 @@
 import React from 'react'
 import './Rbxsubscription.css'
 import { Outlet, Link, NavLink } from 'react-router-dom';
-// import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 function Rbxsubscription() {
 
-  const handleTabBtn1=()=>{
+  const handleColor=()=>{
+    document.querySelector(".date-picker-pk").style.color="black";
+  }
+  const handleColorTime=()=>{
+    document.querySelector(".pickup-time-select-pk").style.color="black";
+  }
+
+  const handleSubsSearch=()=>{
+    let date=document.querySelector(".date-picker-pk").value;
+    let time=document.querySelector(".pickup-time-select-pk").value;
+
+    if(date==="" || time===""){
+      alert("Please select date and time");
+    }
+    else{
+      console.log(date,"&",time);
+    }
     
+  }
+
+  const handleTabBtn1=()=>{
     document.querySelector("#tab1-button-pk").classList.add("active-tab-button-pk");
     document.querySelector("#tab2-button-pk").classList.remove("active-tab-button-pk");
     document.querySelector("#tab3-button-pk").classList.remove("active-tab-button-pk");
   }
   const handleTabBtn2=()=>{
-    
     document.querySelector("#tab2-button-pk").classList.add("active-tab-button-pk");
     document.querySelector("#tab1-button-pk").classList.remove("active-tab-button-pk");
     document.querySelector("#tab3-button-pk").classList.remove("active-tab-button-pk");
   }
   const handleTabBtn3=()=>{
-    
     document.querySelector("#tab3-button-pk").classList.add("active-tab-button-pk");
     document.querySelector("#tab1-button-pk").classList.remove("active-tab-button-pk");
     document.querySelector("#tab2-button-pk").classList.remove("active-tab-button-pk");
@@ -29,45 +46,51 @@ function Rbxsubscription() {
   return (
     <div className='subscription-page-pk'>
       <section className='hero-pk'></section>
-      {/* <section className='hero-mobile-pk'>
+
+      {/* date and time picker section start */}
+
+      <section className='hero-mobile-pk'>
         <div className='hero-mobile-card-pk'>
           <h3 className='hero-mobile-card-heading-pk'>DELIVERY DATE</h3>
           <div className='hero-mobile-card-datetime-parent-pk'>
             <div className='hero-mobile-card-datetime-child-pk'>
               <div className='input-container-pk'>
-                <input type='date'></input>
+                <input onChange={handleColor} className='date-picker-pk' type='date'></input>
               </div>
               <div className='input-container-pk'>
-                <select className='pickup-time-select-pk'>
-                  <option value="">Select time</option>
-                  <option value=""></option>
-                  <option value=""></option>
-                  <option value=""></option>
-                  <option value=""></option>
-                  <option value=""></option>
-                  <option value=""></option>
-                  <option value=""></option>
-                  <option value=""></option>
-                  <option value=""></option>
-                  <option value=""></option>
-                  <option value=""></option>
-                  <option value=""></option>
-                  <option value=""></option>
-                  <option value=""></option>
-                  <option value=""></option>
-                  <option value=""></option>
-                  <option value=""></option>
-                  <option value=""></option>
-                  <option value=""></option>
+                <select onChange={handleColorTime} className='pickup-time-select-pk'>
+                  <option value="">Time</option>
+                  <option value="9:00">9:00 AM</option>
+                  <option value="9:30">9:30 AM</option>
+                  <option value="10:00">10:00 AM</option>
+                  <option value="10:30">10:30 AM</option>
+                  <option value="11:00">11:00 AM</option>
+                  <option value="11:00">11:30 AM</option>
+                  <option value="11:00">12:00 PM</option>
+                  <option value="12:30">12:30 PM</option>
+                  <option value="1:00">1:00 PM</option>
+                  <option value="1:30">1:30 PM</option>
+                  <option value="2:00">2:00 PM</option>
+                  <option value="2:30">2:30 PM</option>
+                  <option value="3:00">3:00 PM</option>
+                  <option value="3:30">3:30 PM</option>
+                  <option value="4:00">4:00 PM</option>
+                  <option value="4:30">4:30 PM</option>
+                  <option value="5:00">5:00 PM</option>
+                  <option value="5:30">5:30 PM</option>
+                  <option value="6:00">6:00 PM</option>
+                  <option value="6:30">6:30 PM</option>
+                  <option value="7:00">7:00 PM</option>
+                  <option value="7:30">7:30 PM</option>
                 </select>
               </div>
             </div>
             <div className='hero-mobile-card-datetime-child-pk'>
-              <button className='hero-mobile-card-btn-pk'>SEARCH</button>
+              <button onClick={handleSubsSearch} className='hero-mobile-card-btn-pk'>SEARCH</button>
             </div>
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* section how it works start */}
       <section className='hiw-pk'>
@@ -177,14 +200,10 @@ function Rbxsubscription() {
             <button className='card-book-btn-pk'>Book Now</button>
           </div>
         </div>
-        {/* <div className='glide-arrows-pk'>
-          <button className='glide-arrow-pk glide-arrow-left-pk'>
-            <span className='material-icons-pk'>keyboard_arrow-left</span>
-          </button>
-          <button className='glide-arrow-pk glide-arrow-right-pk'>
-            <span className='material-icons-pk'>keyboard_arrow-right</span>
-          </button>
-        </div> */}
+        <div className='glide-arrows-pk'>
+          <span className='glide-arrows-left-pk'><ArrowBackIosIcon /></span>
+          <span className='glide-arrows-right-pk'><ArrowForwardIosIcon /></span>
+        </div>
         <p className='fleet-end-desc-pk'>*All prices are exclusive of taxes and fuel. Images used for representation purposes only, actual color may vary.</p>
         <button className='fleet-view-all-btn-pk'>View All Fleet</button>
       </section>
