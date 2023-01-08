@@ -2,18 +2,42 @@ import {
   Box,
   ChakraProvider,
   Flex,
+  Grid,
   MenuOptionGroup,
   Select,
   Spacer,
   Stack,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useState ,useEffect} from "react";
+import { Link } from "react-router-dom";
+import StoreCard from "./StoreCard";
+
+import { useDispatch, useSelector } from "react-redux";
+import { SetData } from "../../ReduxStrore/Action";
+
 
 
 
 function Storehome() {
+  let data=useSelector((store)=>store.reducer.bikes)
+
+useEffect(() => {
+ get();
+
+}, [])
 
 
+let dispacth=useDispatch();
+let get =async()=>{
+
+let res=await fetch(`https://royalbrothers.cyclic.app/storeproducts`);
+let result=await res.json();
+SetData(dispacth,result)
+
+
+}
+
+let ck=[3,4,6,6];
   
   return (
     <ChakraProvider>
@@ -43,7 +67,35 @@ function Storehome() {
           </Box>
           <Spacer />
         </Flex>
-      </Box>
+      </Box>   
+
+<Grid templateColumns='repeat(4, 1fr)' gap="8px"  p="5" rowGap="15px"> 
+
+
+
+
+
+{data.length>0 && data.map((ele,idx)=>
+ {
+
+  return(
+<Link to={`/products/${ele.id}`}>
+
+  <StoreCard {...ele}/>
+</Link>
+
+
+  )
+ }
+
+
+)}
+
+
+
+</Grid>
+
+
     </ChakraProvider>
   );
 }
