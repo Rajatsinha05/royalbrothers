@@ -1,7 +1,6 @@
 import React from 'react'
 
-import { Route, Routes } from 'react-router-dom'
-
+import { Route, Routes, Navigate} from 'react-router-dom'
 import Home from '../AllPages/Home'
 import Login from '../AllPages/Login'
 import Cart from '../AllPages/Cart'
@@ -21,6 +20,7 @@ function AllRouters() {
 
   return (
 
+
     <Routes>
 
 
@@ -29,7 +29,8 @@ function AllRouters() {
       <Route path='/login' element={<Login />} />
       <Route path='/otp' element={<OTP />} />
       <Route path='/cart' element={<Cart />} />
-      <Route path='/rbxsub' element={<Rbxsubscription />}>
+      <Route path='/rbx' element={<Rbxsubscription />}>
+        <Route path='' element={<Navigate to='bookingrelated'/>}/>
         <Route path='bookingrelated' element={<BookingRelated />} />
         <Route path='servicerelated' element={<ServiceRelated />} />
         <Route path='vehiclerelated' element={<VehicleRelated />} />

@@ -6,30 +6,38 @@
 }
 .hero-pk{
     background-image: url(https://d36g7qg6pk2cm7.cloudfront.net/assets/long_term/RBX_landing_web-8b84ff099c1cd0851362d28adccdcc8ca829a0fc36a2e3c5c01e1ce4764f0a7a.jpg);
-    height: 80vh;
+    height: 100vh;
     background-color: rgba(252,252,252,0.988);
     color: #fff !important;
     background-size: cover;
     position: relative;
     background-position: 80%;
 }
+
+
+/* date and time picker styles */
+
+.hero-mobile-pk{
+    margin-top: 0em;
+    position: relative;
+    margin-left: 8rem;
+}
 .hero-mobile-card-pk{
-    padding: 2rem;
+    padding: 1.3rem 1.5rem;
     border-radius: 6px;
     box-shadow: none;
     margin-top: 0;
     background-color: white;
-    width: 60%;
-    /* border: 1px solid red; */
-    /* position: absolute;
-    z-index: 999; */
+    width: 35rem;
+    position: absolute;
+    top: -23rem;
 }
 .hero-mobile-card-heading-pk{
     font-family: "Muli", sans-serif;
-    font-size: 1.5rem;
-    font-weight: 700 !important;
+    font-size: 1.3rem;
+    font-weight: 600 !important;
     margin: 0;
-    color: rgb(51, 51, 51);
+    color: #000;
     /* font: 100% Helvetica, sans-serif; */
 }
 .hero-mobile-card-datetime-parent-pk{
@@ -47,23 +55,54 @@
     border: 2px solid #dedede;
     border-radius: 0.25rem;
     box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%), 0 1px 2px 0 rgb(0 0 0 / 6%);
-    width: 90%;
+    width: 100%;
 }
 .input-container-pk{
     width: 50%;
-    border: 1px solid yellow;
     height: 100%;
+}
+.input-container-pk:first-child{
+    border-right: 2px solid #dedede;
 }
 .hero-mobile-card-datetime-child-pk{
     display: flex;
     align-items: center;
     position: relative;
 }
-.input-container-pk>input{
+.date-picker-pk{
+    background-image: url(https://d36g7qg6pk2cm7.cloudfront.net/assets/long_term/date-609be488aaef36d8f84a823b97517d5551821ab02804e2f745b5c80550dbc46e.png);
+    border-right: 2px solid #dedede;
+    background-repeat: no-repeat;
+    background-size: 1.15rem;
+    background-position: 0.9rem 0.9rem;
+    padding-left: 3rem;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
     height: 100%;
+    width: 100%;
+    color: #bbb7b7;
 }
-.input-container-pk>select{
+::-webkit-calendar-picker-indicator{
+    cursor: pointer;
+    margin-right: 0.5rem;
+}
+.pickup-time-select-pk{
+    appearance: none;
+    outline: none;
+    border: none;
+    background-image: url(https://d36g7qg6pk2cm7.cloudfront.net/assets/long_term/time-b6ac387420760c4f2c4ea8bf0b7dc644a7d2d3b1f77ba6987b095c6980f25ce0.png);
+    background-repeat: no-repeat;
+    background-size: 1.15rem;
+    background-position: 0.9rem 0.9rem;
+    padding-left: 3rem;
+    box-sizing: border-box;
     height: 100%;
+    width: 100%;
+    color: #bbb7b7;
+}
+.pickup-time-select-pk>option{
+    color: black;
 }
 .hero-mobile-card-btn-pk{
     width: 100%;
@@ -75,6 +114,7 @@
     transition: all 0.2s;
     cursor: pointer;
 }
+
 
 /* How it works style */
 
@@ -236,7 +276,7 @@
     background-color: #fed24d;
     font-weight: 700;
     font-size: 1rem;
-    color: #000;
+    color: rgb(51, 51, 51);
     margin-top: 1rem;
     text-decoration: none;
     letter-spacing: .5px;
@@ -251,6 +291,22 @@
 .fleet-end-desc-pk{
     text-align: center;
     margin-top: 2rem;
+}
+.glide-arrows-pk{
+    position: relative;
+    color: rgb(51, 51, 51);
+}
+.glide-arrows-left-pk{
+    position: absolute;
+    top: -12rem;
+    left: 5rem;
+    cursor: pointer;
+}
+.glide-arrows-right-pk{
+    position: absolute;
+    right: 5rem;
+    top: -12rem;
+    cursor: pointer;
 }
 .fleet-view-all-btn-pk{
     background-color: rgba(245,245,245,0.965);
@@ -389,6 +445,12 @@
     .hero-pk{
         height: 80vh;
     }
+    .hero-mobile-pk{
+        margin-left: 1rem;
+    }
+    .hero-mobile-card-pk{
+        top: -18rem;
+    }
     .hiw-pk{
         padding: 2rem;
     }
@@ -417,6 +479,12 @@
     .fleet-card-container-pk{
         width: 90%;
     }
+    .glide-arrows-left-pk{
+        left: 1rem;
+    }
+    .glide-arrows-right-pk{
+        right: 1rem;
+    }
     .faq-pk {
         padding: 2rem;
     }
@@ -427,6 +495,16 @@
 }
 
 @media (max-width: 900px){
+    .hero-mobile-pk{
+        margin-left: 0;
+        margin-right: 2rem;
+    }
+    .hero-mobile-card-pk{
+        top: 0;
+        position: relative;
+        width: 95%;
+        
+    }
     .hiw-pk{
         padding: 1rem;
     }
@@ -473,16 +551,42 @@
     .fleet-card-pk:nth-child(2){
         margin: 20px auto;
     }
+    .glide-arrows-left-pk{
+        display: none;
+    }
+    .glide-arrows-right-pk{
+        display: none;
+    }
 
+}
+
+@media only screen and (max-width: 499px) {
+    .hero-mobile-card-datetime-parent-pk{
+        flex-direction: column;
+    }
+    .hero-mobile-card-datetime-child-pk:last-child{
+        margin-top: 1rem;
+    }
+    .input-container-pk{
+        padding: 1rem 0rem;
+    }
+    .date-picker-pk{
+        background-position: 0.9rem 0rem;
+    }
+    .pickup-time-select-pk{
+        background-position: 0.9rem 0rem;
+    }
+    
 }
 
 @media only screen and (max-width: 450px) {
     .faq-questios-pk{
         padding-right: 2rem;
     }
+    
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 350px) {
     .faq-questios-pk{
         padding-right: 3rem;
     }
