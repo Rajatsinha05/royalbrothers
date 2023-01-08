@@ -1,7 +1,7 @@
 import React,{useEffect} from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { SetData } from '../ReduxStrore/Action';
-import { useState } from 'react';
+
 import BikeCard from './BikeCardPage';
 
 
