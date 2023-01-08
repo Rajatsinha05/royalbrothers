@@ -1,18 +1,16 @@
-import React from 'react';
+import React from 'react'
+import Signup from '../Components/Signup/Signup';
 import Footer from '../Components/Footer';
 import NavBar from '../Components/NavBar';
-import LoginForm from '../Components/Signup/Login';
 
-
-function Login() {
+function SignUp() {
   return (
     <div>
         <NavBar />
-        <LoginForm />
+        <Signup />
         <Footer />
-
     </div>
   )
 }
 
-export default Login
+export default SignUp
