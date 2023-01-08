@@ -9,9 +9,6 @@ import { ChakraProvider } from "@chakra-ui/react";
 
 function NavBar({cityName}) {
 
-
-
-
   const [disStyle, setDisStyle] = useState({ display: "none" });
   const [disStyle1, setDisStyle1] = useState({ display: "none" });
   const [loginDis, setLoginDis] = useState({ display: "none" });
