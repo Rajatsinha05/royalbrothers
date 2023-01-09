@@ -1,11 +1,13 @@
 import React from "react";
 import "./Home.css";
+import DatePicker from "./DatePicker";
 
 function DateSelector() {
   return (
     <>
       <div className="dateSelectorDiv">
       </div>
+      <DatePicker />
       <div
         style={{
           width: "100%",
@@ -19,7 +21,7 @@ function DateSelector() {
         }}
       >
         <button style={{background:"#fed24d",width:"200px",height:"30px",borderRadius:"20px",display:"flex",justifyContent:"space-around",alignItems:"center"}}>
-            Subscribe now <i className="fa-solid fa-arrow-right"></i>
+            Subscribe now <i class="fa-solid fa-arrow-right"></i>
         </button>
       </div>
     </>
