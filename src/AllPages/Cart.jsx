@@ -38,10 +38,13 @@ function Cart() {
   
   
   let dispacth=useDispatch();
+
+
   let get =async()=>{
   
-  let res=await fetch(`https://royalbrothers.cyclic.app/storeproducts`);
+  let res=await fetch(`https://royalbrothers.cyclic.app/Cart`);
   let result=await res.json();
+  console.log('result: ', result);
   SetData(dispacth,result)
   
   
@@ -90,16 +93,17 @@ function Cart() {
                 <Flex alignItems="center">
                   <Box m="2">
                     <Image
-                      // src={data[0].url_1}
+                      src={    data.length>0&& data[data.length-1].img}
                       _hover={{ transform: "scale(1.1)" }}
                     />
+                    {/* {console.log(data)} */}
                     <Text
                       fontSize="28px"
                       fontWeight="500"
                       align="center"
-                      mt="17px"
+                      mt="25px"
                     >
-                      {/* {data[0].name} */}
+                      {  data.length>0&& data[data.length-1].name}
                     </Text>
                   </Box>
                   <Spacer />
@@ -133,7 +137,7 @@ function Cart() {
                         <Spacer />
                         <Text>
                           <span style={{ fontWeight: "500" }}>₹</span>
-                          {/* {data[0].price} */}
+                          {   data.length>0&&data[data.length-1].price}
                         </Text>
                       </Flex>
                     </Box>
@@ -147,7 +151,7 @@ function Cart() {
                           <span style={{ fontWeight: "500", color: "black" }}>
                             ₹
                           </span>
-                          {/* {data[0].price} */}
+                          {  data.length>0&& data[data.length-1].price}
                         </Text>
                       </Flex>
                     </Box>
@@ -212,7 +216,7 @@ function Cart() {
                     <Spacer />
                     <Text mt="3">
                       <span style={{ fontWeight: "500" }}>₹ </span>
-                      {/* {data[0].price} */}
+                      {   data.length>0&& data[data.length-1].price}
                     </Text>
                   </Flex>
                 </Box>
@@ -222,7 +226,7 @@ function Cart() {
                     <Spacer />
                     <Text mt="3">
                       <span style={{ fontWeight: "500" }}>₹ </span>
-                      {/* {(data[0].price * 14) / 100} */}
+                      {   data.length>0&& (data[data.length-1].price * 14) / 100}
                     </Text>
                   </Flex>
                 </Box>
@@ -232,7 +236,7 @@ function Cart() {
                     <Spacer />
                     <Text mt="3">
                       <span style={{ fontWeight: "500" }}>₹ </span>
-                      {/* {(data[0].price * 14) / 100} */}
+                      {  data.length>0&& (data[data.length-1].price * 14) / 100}
                     </Text>
                   </Flex>
                 </Box>
@@ -256,7 +260,7 @@ function Cart() {
                       <span style={{ fontWeight: "500", color: "black" }}>
                         ₹
                       </span>
-                      {/* {data[0].price} */}
+                      {   data.length>0&& data[data.length-1].price+2*(data.length>0&& (data[data.length-1].price * 14) / 100)}
                     </Text>
                   </Flex>
                 </Box>
@@ -272,7 +276,7 @@ function Cart() {
 
                 <Link to="/payment">
                   <Center mt="5">
-                    <Button bgColor="#fed250" w="70%" mb="5" mt="2">
+                    <Button bgColor="#fed250" w="70%" mb="5" mt="2" >
                       Make Payment
                     </Button>
                   </Center>

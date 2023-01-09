@@ -3,6 +3,8 @@ width: 200px;
 display: block;
 margin: auto;
 transition: 0.6s;
+/* border:  1px solid red; */
+/* margin-top: -19px!important; */
 
 }
 #card img:hover{
@@ -20,6 +22,7 @@ transition: 0.6s;
 #card h2{
 
     text-align: center;
+   
 
 }
 
@@ -33,21 +36,27 @@ transition: 0.6s;
     transition: 0.5s;
 
     border-radius: 10px;
+    /* border:  1px solid red; */
 }
 
 
 #parent_box{
 display: grid;
 grid-template-columns: repeat(3,1fr);
-gap:10px
+gap:10px;
+/* border:  1px solid red; */
    
 }
 #ser_name{
     text-align: center;
-    font-size: 15px;
+    font-size: 15px !important;
     font-weight: bold;
     color: rgb(27, 27, 27);
-    padding-top: 18px;
+    padding-top: -150px !important;
+    /* border:  1px solid red; */
+    margin-top: 35px!important;
+    padding: 10px,0;
+
 }
 
 

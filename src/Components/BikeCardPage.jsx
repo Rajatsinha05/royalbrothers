@@ -3,11 +3,22 @@ import './BikeCardPage.css'
 import AutoComplete from './AutoComplete'
 import { Link } from 'react-router-dom'
 
-
+import axios from 'axios'
 function BikeCard({img,name,price}) {
 
+   let setVal=async()=>{
+axios.post(`https://royalbrothers.cyclic.app/Cart`,{
 
-console.log(price)
+"img":img,
+"name":name,
+"price":price
+}).then((res)=>{console.log(res)})
+
+   }
+
+
+
+
 
   return (
     <div id="card">
@@ -63,11 +74,11 @@ console.log(price)
    </span>
 
 
-
+<Link to="/cart">
   
-<button className="button-37">Book</button>
+<button className="button-37" onClick={setVal}>Book</button>
 
-
+</Link>
 
      </div>
     
