@@ -4,6 +4,7 @@ import {Route, Routes} from 'react-router-dom'
 import Home from '../AllPages/Home'
 import Login from '../AllPages/Login'
 import Cart from '../AllPages/Cart'
+import StoreCart from '../AllPages/StoreCart'
 import Rbxsubscription from '../AllPages/Rbxsubscription'
 import Payments from '../AllPages/Payments'
 import Product from '../AllPages/Product'
@@ -17,6 +18,7 @@ function AllRouters() {
 
 <Route path='/login' element={<Login/>}/>
 <Route path='/cart' element={<Cart/>}/>
+<Route path='/store/cart' element={<StoreCart/>}/>
 <Route path='/rbx' element={<Rbxsubscription/>}>
   <Route path='bookingrelated' element={<BookingRelated />} />
   <Route path='servicerelated' element={<ServiceRelated />} />
