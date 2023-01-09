@@ -11,7 +11,13 @@ function Rbxsubscription() {
     document.querySelector(".date-picker-pk").style.color="black";
   }
   const handleColorTime=()=>{
-    document.querySelector(".pickup-time-select-pk").style.color="black";
+    let time=document.querySelector(".pickup-time-select-pk").value;
+    if(time==''){
+      document.querySelector(".pickup-time-select-pk").style.color="#bbb7b7";
+    }
+    else{
+      document.querySelector(".pickup-time-select-pk").style.color="black";
+    }
   }
 
   const handleSubsSearch=()=>{

@@ -28,7 +28,7 @@
     box-shadow: none;
     margin-top: 0;
     background-color: white;
-    width: 35rem;
+    width: 37rem;
     position: absolute;
     top: -23rem;
 }
@@ -74,7 +74,7 @@
     border-right: 2px solid #dedede;
     background-repeat: no-repeat;
     background-size: 1.15rem;
-    background-position: 0.9rem 0.9rem;
+    background-position: 0.9rem 0.75rem;
     padding-left: 3rem;
     box-sizing: border-box;
     outline: none;
@@ -94,7 +94,7 @@
     background-image: url(https://d36g7qg6pk2cm7.cloudfront.net/assets/long_term/time-b6ac387420760c4f2c4ea8bf0b7dc644a7d2d3b1f77ba6987b095c6980f25ce0.png);
     background-repeat: no-repeat;
     background-size: 1.15rem;
-    background-position: 0.9rem 0.9rem;
+    background-position: 0.9rem 0.75rem;
     padding-left: 3rem;
     box-sizing: border-box;
     height: 100%;
@@ -107,7 +107,7 @@
 .hero-mobile-card-btn-pk{
     width: 100%;
     background-color: #fed24d;
-    padding: 1rem 3rem;
+    padding: 0.7rem 3rem;
     border: none;
     border-radius: 0.25rem;
     font-weight: 700;

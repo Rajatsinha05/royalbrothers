@@ -4,15 +4,28 @@ import './DatePicker.css'
 export default function DatePicker() {
 
   const handleColor=()=>{
-    document.querySelector(".date-picker-pk").style.color="black";
+    document.querySelector(".date-picker-ab").style.color="black";
   }
+  const handleColorDrop=()=>{
+    document.querySelector(".drop-date-picker-ab").style.color="black";
+  }
+
   const handleColorTime=()=>{
-    let time=document.querySelector(".pickup-time-select-pk").value;
+    let time=document.querySelector(".pickup-time-select-color-ab").value;
     if(time==''){
-      document.querySelector(".pickup-time-select-pk").style.color="#bbb7b7";
+      document.querySelector(".pickup-time-select-color-ab").style.color="#bbb7b7";
     }
     else{
-      document.querySelector(".pickup-time-select-pk").style.color="black";
+      document.querySelector(".pickup-time-select-color-ab").style.color="black";
+    }
+  }
+  const handleColorTimeDrop=()=>{
+    let time=document.querySelector(".drop-time-select-ab").value;
+    if(time==''){
+      document.querySelector(".drop-time-select-ab").style.color="#bbb7b7";
+    }
+    else{
+      document.querySelector(".drop-time-select-ab").style.color="black";
     }
   }
 
@@ -26,7 +39,7 @@ export default function DatePicker() {
             <input onChange={handleColor} className='date-picker-ab' type='date'></input>
           </div>
           <div className='pickup-time-select-div-ab'>
-            <select onChange={handleColorTime} className='pickup-time-select-ab'>
+            <select onChange={handleColorTime} className='pickup-time-select-ab pickup-time-select-color-ab'>
               <option value="">Time</option>
               <option value="9:00">9:00 AM</option>
               <option value="9:30">9:30 AM</option>
@@ -56,10 +69,10 @@ export default function DatePicker() {
         <div className='date-picker-inp-head-ab'>Dropoff</div>
         <div className='pickup-date-container-ab'>
           <div className='date-picker-inp-div-ab'>
-            <input onChange={handleColor} className='date-picker-ab' type='date'></input>
+            <input onChange={handleColorDrop} className='date-picker-ab drop-date-picker-ab' type='date'></input>
           </div>
           <div className='pickup-time-select-div-ab'>
-            <select onChange={handleColorTime} className='pickup-time-select-ab'>
+            <select onChange={handleColorTimeDrop} className='pickup-time-select-ab drop-time-select-ab'>
               <option value="">Time</option>
               <option value="9:00">9:00 AM</option>
               <option value="9:30">9:30 AM</option>

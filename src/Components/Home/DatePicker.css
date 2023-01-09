@@ -6,7 +6,7 @@
     position: absolute;
     top: -35rem;
     left: 5rem;
-    /* width: 28rem; */
+    width: 27rem;
     /* height: 29.5rem; */
     border-radius: 0.6667rem;
     transition: all 0.2s;
@@ -85,6 +85,9 @@
     height: 100%;
     width: 100%;
     color: #bbb7b7;
+}
+.pickup-time-select-ab>option{
+    color: #000;
 }
 .saerch-btn-div-ab{
     width: 100%;
