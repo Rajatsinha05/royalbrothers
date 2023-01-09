@@ -3,10 +3,10 @@ import {
   ChakraProvider,
   Flex,
   Grid,
-  MenuOptionGroup,
+ 
   Select,
   Spacer,
-  Stack,
+  
 } from "@chakra-ui/react";
 import React, { useState ,useEffect} from "react";
 import { Link } from "react-router-dom";
@@ -37,7 +37,7 @@ SetData(dispacth,result)
 
 }
 
-let ck=[3,4,6,6];
+
   
   return (
     <ChakraProvider>
@@ -79,7 +79,7 @@ let ck=[3,4,6,6];
  {
 
   return(
-<Link to={`/products/${ele.id}`}>
+<Link to={`/product/${ele.id}`}>
 
   <StoreCard {...ele}/>
 </Link>

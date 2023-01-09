@@ -130,7 +130,7 @@ function Signup() {
                 <div className={styles.recapt}>
                     <input type="checkbox" className={styles.inpTag3}></input>
                     <p className={styles.robot}>I'm not a robot</p>
-                    <img className={styles.recapimg} src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/RecaptchaLogo.svg/130px-RecaptchaLogo.svg.png"></img>
+                    <img className={styles.recapimg} src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/RecaptchaLogo.svg/130px-RecaptchaLogo.svg.png" alt="img"></img>
                 </div>
                 <Button className={styles.spBt} onClick={handleSubmit} >SignUp</Button>
 

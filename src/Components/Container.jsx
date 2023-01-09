@@ -20,11 +20,31 @@ import {
 
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { Box } from "@mui/system";
+import { createSearchParams ,useSearchParams } from "react-router-dom";
 
 function Container() {
-  let handleCat = () => {};
 
-  let handleSortlth = () => {};
+  const [searchParams, setSearchParams] = useSearchParams();
+  let handleCat = (event) => {
+
+
+
+      setSearchParams(
+        createSearchParams({ filter: event.target.value })
+      );
+
+
+
+  };
+
+  let handleSortlth = (val) => {
+
+    setSearchParams(
+      createSearchParams({ filter: val })
+    );
+
+
+  };
 
   let type2;
 

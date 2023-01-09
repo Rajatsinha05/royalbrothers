@@ -1,8 +1,9 @@
-import React,{useEffect} from 'react'
+import React,{useEffect,useState} from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { SetData } from '../ReduxStrore/Action';
 
 import BikeCard from './BikeCardPage';
+import { useSearchParams } from 'react-router-dom';
 
 
 
@@ -15,6 +16,11 @@ get();
 
 },[])
 
+const [searchParams, setSearchParams] = useSearchParams();
+
+const fltr = searchParams.get("filter");
+
+
 
 
 let dispacth=useDispatch()
@@ -24,16 +30,29 @@ let get=async()=>{
 
 let res=await fetch(`https://royalbrothers.cyclic.app/products`)
 let  result=await res.json();
-console.log(result)
+
 SetData(dispacth,result)
 
 
 }
 
 
+// const [val, setVal] = useState(data)
+// if(fltr==''){
+// setVal(data);
+
+// }
+// else if(fltr=='lth'){
+//   val.sort((a,b)=>a.price-b.price)
+// }
+// else if(fltr=='htl'){
+//   val.sort((a,b)=>b.price-a.price)
+
+// }
 
 
-// console.log('data: ', data);
+
+// 
 
   return (
   <>
