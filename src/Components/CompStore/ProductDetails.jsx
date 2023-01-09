@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./ProductDetail.css";
+// import "./ProductDetail.css";
 import StoreNav from "./StoreNav";
 import {
   Box,

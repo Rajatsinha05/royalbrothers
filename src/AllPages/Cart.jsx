@@ -260,7 +260,7 @@ function Cart() {
                       <span style={{ fontWeight: "500", color: "black" }}>
                         ₹
                       </span>
-                      {   data.length>0&& data[data.length-1].price+2*(data.length>0&& (data[data.length-1].price * 14) / 100)}
+                      {   Number(data.length>0&& data[data.length-1].price)+2*Number(data.length>0&& (data[data.length-1].price * 14) / 100)}
                     </Text>
                   </Flex>
                 </Box>
