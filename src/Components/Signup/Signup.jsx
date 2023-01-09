@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Button } from "@chakra-ui/react";
 import styles from "./css/login.module.css";
 import { useDispatch, useSelector } from 'react-redux';
@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 function Signup() {
-
+let nav=useNavigate();
     // States for registration
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -52,6 +52,7 @@ function Signup() {
                 progress: undefined,
                 theme: "light",
                 });
+                return false;
   
         }else if(!result){
             setError(true);
@@ -66,7 +67,7 @@ function Signup() {
                 progress: undefined,
                 theme: "light",
                 });
-            
+                return false;
         }
         else if(password.length < 8 || password.length > 15){
             setError(true);
@@ -81,17 +82,52 @@ function Signup() {
                 progress: undefined,
                 theme: "light",
                 });
+                return false;
         } 
         else if(mobile.length < 10 || mobile.length >10){
             setError(true);
-            alert("Enter valid mobile number ");
+
+            // alert("Enter valid mobile number ");
+            toast.warn('Enter valid mobile number', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                });
+
             
         }
         else {
             setSubmitted(true);
             setError(false);
-            alert("Account Created Successfully");
-            window.location.href = "./otp";
+          
+
+
+            toast.success('Account Created Successfully', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                });
+
+
+                setTimeout(() => {
+                    // window.location.href = "./otp";
+
+
+nav('/otp')
+                
+                },1100 )
+                
+           
         }
 
 
@@ -104,7 +140,7 @@ function Signup() {
 
     return (
         <div className={styles.fullContainer}>
-            <h1 className={styles.riders}>Rent . Ride . Explore</h1>
+            <h3 className={styles.riders}>Rent . Ride . Explore</h3>
             {/* Calling to the methods */}
             {/* <div className="messages">
 		  {errorMessage()}
@@ -130,7 +166,7 @@ function Signup() {
                 <div className={styles.recapt}>
                     <input type="checkbox" className={styles.inpTag3}></input>
                     <p className={styles.robot}>I'm not a robot</p>
-                    <img className={styles.recapimg} src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/RecaptchaLogo.svg/130px-RecaptchaLogo.svg.png"></img>
+                    <img className={styles.recapimg} src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/RecaptchaLogo.svg/130px-RecaptchaLogo.svg.png" alt="img"></img>
                 </div>
                 <Button className={styles.spBt} onClick={handleSubmit} >SignUp</Button>
 

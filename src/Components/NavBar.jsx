@@ -52,7 +52,7 @@ function NavBar({cityName}) {
         </div>
         <div className="navbarContact">
           <p>
-            <i class="fa-solid fa-phone"></i> +917795687594 / +919019595595 |{" "}
+            <i className="fa-solid fa-phone"></i> +917795687594 / +919019595595 |{" "}
             <a href="">Chat now</a>
           </p>
         </div>
@@ -68,10 +68,16 @@ function NavBar({cityName}) {
           </div>
           <div id="rightSide">
             <div className="navbar_menus">
+
+
+              <Link to="/rbx">
+
+             
               <img
                 src="https://d36g7qg6pk2cm7.cloudfront.net/assets/long_term/RBX_logo-7618eb109a17dcfa44e88596c831606746fc124a000553458d6b7fc1bf9a6345.png "
                 alt=""
               />
+               </Link>
               <Link to={"/"}>
                 <p>Tarrif</p>
               </Link>
@@ -85,7 +91,7 @@ function NavBar({cityName}) {
                     setDisStyle({ display: "none" });
                   }}
                 >
-                  <p>What's new?</p> <i class="fa-solid fa-angle-down"></i>
+                  <p>What's new?</p> <i className="fa-solid fa-angle-down"></i>
                 </div>
                 <div
                   className="divSelectDropdown"
@@ -98,7 +104,7 @@ function NavBar({cityName}) {
                   }}
                 >
                   <p>
-                    <Link to={"/"}>Store</Link>
+                    <Link to={"/store/products"}>Store</Link>
                   </p>
                   <hr />
                   <p>
@@ -120,7 +126,7 @@ function NavBar({cityName}) {
                     setDisStyle1({ display: "none" });
                   }}
                 >
-                  <p>Partner with us</p> <i class="fa-solid fa-angle-down"></i>
+                  <p>Partner with us</p> <i className="fa-solid fa-angle-down"></i>
                 </div>
                 <div
                   className="divSelectDropdown"
@@ -175,7 +181,7 @@ function NavBar({cityName}) {
                       }}
                     >
                       <p>Aditya</p>
-                      <i class="fa-solid fa-angle-down"></i>
+                      <i className="fa-solid fa-angle-down"></i>
                     </div>
                   </div>
                   <div
@@ -206,7 +212,7 @@ function NavBar({cityName}) {
                         alt=""
                       />
                       <p>
-                        <Link to={"/"}>My Profile</Link>
+                        <Link to={"/profile"}>My Profile</Link>
                       </p>
                     </div>
                     <hr />

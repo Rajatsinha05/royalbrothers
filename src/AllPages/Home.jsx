@@ -14,6 +14,7 @@ import { CacheProvider } from "@emotion/react";
 import { ChakraProvider } from "@chakra-ui/react";
 import CitySelect from "../Components/Home/CitySelect";
 import { DateComponent } from "../Components/Home/DateComponent";
+import Footer from "../Components/Footer";
 
 
 function Home() {
@@ -30,11 +31,12 @@ function Home() {
       <OurFleet/>
       <Quality/>
 
+      
       {
         show? <PopupCard closePopup={closePopup}/> : ""
       }
       
-
+<Footer/>
       </ChakraProvider>
 
     </>

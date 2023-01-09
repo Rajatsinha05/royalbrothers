@@ -2,7 +2,7 @@ import React from "react";
 
 function FeaturedIn() {
   return (
-  
+
     <>
       <section className="media">
         <div className="media-heading text-center">Featured In</div>

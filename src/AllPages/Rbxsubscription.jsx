@@ -3,6 +3,7 @@ import './Rbxsubscription.css'
 import { Outlet, Link, NavLink } from 'react-router-dom';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import NavBar from '../Components/NavBar';
 
 function Rbxsubscription() {
 
@@ -43,7 +44,9 @@ function Rbxsubscription() {
   }
 
 
-  return (
+  return (<>
+  <NavBar/>
+
     <div className='subscription-page-pk'>
       <section className='hero-pk'></section>
 
@@ -211,7 +214,7 @@ function Rbxsubscription() {
 
       {/* section frequently asked question start */}
       <section className='faq-pk'>
-        <h3 className='faq-heading-pk'>FREQUENTLY ASKED QUESTIONS</h3>
+        <h3 className='faq-heading-pk' >FREQUENTLY ASKED QUESTIONS</h3>
         <div className='faq-container-pk'>
           <div className='faq-tab-pk'>
             <div className='tab-button-pk active-tab-button-pk' id='tab1-button-pk' onClick={handleTabBtn1}><NavLink to='bookingrelated' className='tab-button-link-pk'>Booking Related</NavLink></div>
@@ -226,6 +229,7 @@ function Rbxsubscription() {
         </div>
       </section>
     </div>
+    </>
   )
 }
 

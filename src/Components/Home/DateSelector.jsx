@@ -23,7 +23,7 @@ function DateSelector() {
         }}
       >
         <button style={{background:"#fed24d",width:"200px",height:"30px",borderRadius:"20px",display:"flex",justifyContent:"space-around",alignItems:"center"}}>
-            Subscribe now <i class="fa-solid fa-arrow-right"></i>
+            Subscribe now <i className="fa-solid fa-arrow-right"></i>
         </button>
       </div>
     </>

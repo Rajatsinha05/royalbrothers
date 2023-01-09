@@ -35,7 +35,7 @@ function OurFleet() {
               setDisStyle({ display: "block" });
             }}
           >
-            <p>{durationValue}</p> <i class="fa-solid fa-angle-down"></i>
+            <p>{durationValue}</p> <i className="fa-solid fa-angle-down"></i>
           </div>
           <div
             className="durationDropdown"

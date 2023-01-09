@@ -145,6 +145,7 @@
 }
 .footercopy >p > img{
     width: 18px;
+    height: 18px;
     margin-left: 5px;
     margin-right: 5px;
 }
@@ -215,5 +216,6 @@
         margin-top: 33px;
         height: 100%;
     }
+   
 
 }
