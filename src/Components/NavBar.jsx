@@ -15,6 +15,8 @@ function NavBar({cityName}) {
   const [loginDis, setLoginDis] = useState({ display: "none" });
   const [loggedIn, setLoggedIn] = useState(false);
   const [loaderCom, setLoaderCom] = useState(false);
+  var userName = JSON.parse(localStorage.getItem("users"));
+  console.log(userName);
   
   function logoutFun(){
     setLoaderCom(true);
@@ -156,7 +158,7 @@ function NavBar({cityName}) {
                 <i className="fa-solid fa-angle-down"></i>
               </button>
               <p>|</p>
-              {loggedIn ? (
+              {userName ? (
                 <div style={{ width: "170px" }}>
                   <div
                     className="navbarUserDisplay"
@@ -180,7 +182,7 @@ function NavBar({cityName}) {
                         alignItems: "center",
                       }}
                     >
-                      <p>Aditya</p>
+                      <p>{userName[0].name}</p>
                       <i className="fa-solid fa-angle-down"></i>
                     </div>
                   </div>
