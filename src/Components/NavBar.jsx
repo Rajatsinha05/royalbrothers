@@ -158,7 +158,7 @@ function NavBar({cityName,onOpen}) {
             <div className="navbarButtons">
               <button id="locationButton" onClick={onOpen}>
                 <i className="fa-solid fa-location-dot" id="locationIcon"></i>
-                <p>{cityName}</p>
+                <p>Bangalore</p>
                 <i className="fa-solid fa-angle-down"></i>
               </button>
               <p>|</p>
