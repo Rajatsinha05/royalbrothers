@@ -67,10 +67,16 @@ function NavBar({cityName}) {
           </div>
           <div id="rightSide">
             <div className="navbar_menus">
+
+
+              <Link to="/rbx">
+
+             
               <img
                 src="https://d36g7qg6pk2cm7.cloudfront.net/assets/long_term/RBX_logo-7618eb109a17dcfa44e88596c831606746fc124a000553458d6b7fc1bf9a6345.png "
                 alt=""
               />
+               </Link>
               <Link to={"/"}>
                 <p>Tarrif</p>
               </Link>

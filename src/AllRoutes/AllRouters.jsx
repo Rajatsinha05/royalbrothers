@@ -23,7 +23,7 @@ function AllRouters() {
 
   return (
     <>
-    <NavBar />
+ 
     
     <Routes>
 
