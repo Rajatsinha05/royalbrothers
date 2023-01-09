@@ -9,19 +9,21 @@ import Payments from '../AllPages/Payments'
 import Product from '../AllPages/Product'
 import SignUp from '../AllPages/Signup'
 import OTP from '../AllPages/Otp'
+import NavBar from '../Components/NavBar'
 
 import BookingRelated from '../Components/RbxSubscription/BookingRelated'
 import ServiceRelated from '../Components/RbxSubscription/ServiceRelated'
 import VehicleRelated from '../Components/RbxSubscription/VehicleRelated'
 
+
 function AllRouters() {
 
 
   return (
-
-
+    <>
+    <NavBar />
+    
     <Routes>
-
       
       <Route path='/' element={<Home />} />
       <Route path='/signup' element={<SignUp />} />
@@ -37,6 +39,7 @@ function AllRouters() {
       <Route path='/product' element={<Product />} />
 
     </Routes>
+    </>
   )
 }
 
