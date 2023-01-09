@@ -39,7 +39,7 @@ function LoginForm() {
 
   return (
       <div className={styles.fullContainer}>
-      <h1 className={styles.riders}>Rent . Ride . Explore</h1>
+      <h3 className={styles.riders}>Rent . Ride . Explore</h3>
 
       <div className={styles.ParentLog}>
           <ul className={styles.login_signup_tabs}>

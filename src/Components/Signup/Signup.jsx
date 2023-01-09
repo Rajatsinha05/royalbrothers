@@ -69,7 +69,7 @@ function Signup() {
 
     return (
         <div className={styles.fullContainer}>
-            <h1 className={styles.riders}>Rent . Ride . Explore</h1>
+            <h3 className={styles.riders}>Rent . Ride . Explore</h3>
             {/* Calling to the methods */}
             {/* <div className="messages">
 		  {errorMessage()}
