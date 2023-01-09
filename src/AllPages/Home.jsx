@@ -22,7 +22,7 @@ function Home() {
   return (
     <>
 <ChakraProvider>
-      <NavBar />
+      {/* <NavBar /> */}
       <DateSelector />
       <OurFleet/>
       <Quality/>
