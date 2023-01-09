@@ -1,5 +1,6 @@
 import React from 'react'
 import './DatePicker.css'
+import { Link } from 'react-router-dom';
 
 export default function DatePicker() {
 
@@ -100,7 +101,14 @@ export default function DatePicker() {
           </div>
         </div>
         <div className='saerch-btn-div-ab'>
-          <button className='saerch-btn-ab'>Search</button>
+
+<Link to="/services">
+
+
+
+          <button className='saerch-btn-ab'   >Search</button>
+
+          </Link>
         </div>
       </div>
     </div>
