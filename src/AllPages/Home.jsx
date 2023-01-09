@@ -28,7 +28,7 @@ function Home() {
       <OurFleet/>
       <Quality/>
 
-      <FeaturedIn/>
+      
       {
         show? <PopupCard closePopup={closePopup}/> : ""
       }

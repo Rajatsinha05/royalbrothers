@@ -16,6 +16,7 @@ import ServiceRelated from '../Components/RbxSubscription/ServiceRelated'
 import VehicleRelated from '../Components/RbxSubscription/VehicleRelated'
 import Storeproduct from '../AllPages/Storeproduct'
 import SingleProduct from '../AllPages/SingleProduct'
+import Profile from '../Components/Profile/Profile'
 
 
 function AllRouters() {
@@ -42,7 +43,7 @@ function AllRouters() {
       <Route path='/services' element={<Product />} />
       <Route path='/store/products' element={<Storeproduct />} />
       <Route path='/product/:id' element={<SingleProduct />} />
-
+      <Route path='/profile' element={<Profile />} />
     </Routes>
 
     </>

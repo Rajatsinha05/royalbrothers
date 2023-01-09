@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Button } from "@chakra-ui/react";
 import styles from "./css/login.module.css";
 import { useDispatch, useSelector } from 'react-redux';
@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 function Signup() {
-
+let nav=useNavigate();
     // States for registration
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -86,15 +86,48 @@ function Signup() {
         } 
         else if(mobile.length < 10 || mobile.length >10){
             setError(true);
-            alert("Enter valid mobile number ");
-            return false;
+
+            // alert("Enter valid mobile number ");
+            toast.warn('Enter valid mobile number', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                });
+
             
         }
         else {
             setSubmitted(true);
             setError(false);
-            alert("Account Created Successfully");
-            window.location.href = "./otp";
+          
+
+
+            toast.success('Account Created Successfully', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                });
+
+
+                setTimeout(() => {
+                    // window.location.href = "./otp";
+
+
+nav('/otp')
+                
+                },1100 )
+                
+           
         }
 
 
