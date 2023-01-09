@@ -15,10 +15,11 @@ import { ChakraProvider } from "@chakra-ui/react";
 import CitySelect from "../Components/Home/CitySelect";
 import { DateComponent } from "../Components/Home/DateComponent";
 import Footer from "../Components/Footer";
+import { useParams } from "react-router-dom";
 
 
 function Home() {
-  
+  const {city} = useParams()
   const [show,setShow] = useState(true);
   function closePopup(data){
     setShow(data);
@@ -26,7 +27,11 @@ function Home() {
   return (
     <>
 <ChakraProvider>
-      <NavBar />
+  {
+    !city? 
+    <CitySelect/> : ""
+  }
+      <NavBar cityName={city}/>
       <DateSelector />
       <OurFleet/>
       <Quality/>

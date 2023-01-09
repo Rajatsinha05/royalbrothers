@@ -8,7 +8,8 @@ import { ChakraProvider } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import CitySelect from "./Home/CitySelect";
 
-function NavBar({cityName}) {
+function NavBar({cityName,onOpen}) {
+
 
   const [disStyle, setDisStyle] = useState({ display: "none" });
   const [disStyle1, setDisStyle1] = useState({ display: "none" });
@@ -23,6 +24,7 @@ function NavBar({cityName}) {
     setTimeout(() => {
       setLoggedIn(false);
       setLoaderCom(false);
+      localStorage.setItem('users', JSON.stringify(null));
     }, 1000);
   }
   
@@ -36,7 +38,9 @@ function NavBar({cityName}) {
       navigate('/signup')
     }
   }
-
+  function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
   return (
     <>
 
@@ -152,9 +156,9 @@ function NavBar({cityName}) {
             </div>
 
             <div className="navbarButtons">
-              <button id="locationButton">
+              <button id="locationButton" onClick={onOpen}>
                 <i className="fa-solid fa-location-dot" id="locationIcon"></i>
-                <p>Bangalore</p>
+                <p>{cityName}</p>
                 <i className="fa-solid fa-angle-down"></i>
               </button>
               <p>|</p>

@@ -15,7 +15,7 @@ function CitySelect() {
     const { isOpen, onOpen, onClose } = useDisclosure()
     useEffect(()=>{
         onOpen()
-    })
+    },[])
     useEffect(()=>{
         setCity(data)
     },[])
@@ -46,16 +46,8 @@ function CitySelect() {
         img:'https://d3vp2rl7047vsp.cloudfront.net/cities/round_images/000/000/023/original/Ahmedabad_b8d1eb5783c996a077aff887d35e4168.jpg?1558599488'
     },
     {
-        city:'Andaman Nicobar',
-        img:'https://d3vp2rl7047vsp.cloudfront.net/cities/round_images/000/000/017/original/Andaman-_-Nicobar_b5a3ba5c464968f274dfb7a98bcc4dbc.jpg?1558599551'
-    },
-    {
         city:"Bangalore",
         img:"https://d3vp2rl7047vsp.cloudfront.net/cities/round_images/000/000/001/original/Bangalore_1cf1aa53741a94edc3532f7b2b583c52.jpg?1558599565"
-    },
-    {
-        city:"Bangalore Airport",
-        img:"https://d3vp2rl7047vsp.cloudfront.net/cities/round_images/000/000/051/original/PHOTO-2021-02-01-15-55-27.jpg?1613127422"
     },
     {
         city:"Bangkok",
@@ -98,14 +90,6 @@ function CitySelect() {
         img:"https://d3vp2rl7047vsp.cloudfront.net/cities/round_images/000/000/020/original/Coimbatore_0916e4a9a1cbd3a31eaa15b3a54cc7d2.jpg?1558599789"
     },
     {
-        city:"Coorg - Kushalnagar",
-        img:"https://d3vp2rl7047vsp.cloudfront.net/cities/round_images/000/000/025/original/Coorg-Kushalnagar_33007141ac0c1776af600c183815b103.jpg?1558599818"
-    },
-    {
-        city:"Coorg - Madikeri",
-        img:"https://d3vp2rl7047vsp.cloudfront.net/cities/round_images/000/000/003/original/Coorg-Madikeri_23164519f8e58c8a2676595b5209011d.jpg?1558599831"
-    },
-    {
         city:"Davanagere",
         img:"https://d3vp2rl7047vsp.cloudfront.net/cities/round_images/000/000/104/original/Davangere.jpg?1576578716"
     },
@@ -116,10 +100,6 @@ function CitySelect() {
     {
         city:"Dharamshala",
         img:"https://d3vp2rl7047vsp.cloudfront.net/cities/round_images/000/000/043/original/Dharmshala_7a856e0aa3f643752440791c28853737.jpg?1558599942"
-    },
-    {
-        city:"Ganapati pule",
-        img:"https://d3vp2rl7047vsp.cloudfront.net/cities/round_images/000/000/029/original/Ganpati-pule_3b01c2992789ac8a2dd36cd903163e89.jpg?1558599969"
     },
     {
         city:"Gandhinagar",
@@ -140,10 +120,6 @@ function CitySelect() {
     {
         city:"Guwahati",
         img:"https://d3vp2rl7047vsp.cloudfront.net/cities/round_images/000/000/095/original/Guwahati_3adb5736296c93fec082f24b87dce70d.jpg?1558600028"
-    },
-    {
-        city:"Hubli - Dharwad",
-        img:"https://d3vp2rl7047vsp.cloudfront.net/cities/round_images/000/000/015/original/Hubli_639135a4da835f48ac30404922b193ec.jpg?1558600089"
     },
     {
         city:"Hyderabad",
@@ -210,6 +186,7 @@ function CitySelect() {
 
     return (
         <Modal
+        size="xl"
         onClose={onClose}
         isOpen={isOpen}
         scrollBehavior='inside'
@@ -246,7 +223,7 @@ function CitySelect() {
                     <Center>
                         <Grid templateColumns='repeat(4, 1fr)' gap={4} w='90%'>
                             {cityArray.map((e)=>{
-                                return <Link to={`/`}><City city={e.city} img={e.img}></City></Link>
+                                return <Link to={`/${e.city.toLowerCase()}`}><City city={e.city} img={e.img}></City></Link>
                             })}
                         </Grid>
                     </Center>
