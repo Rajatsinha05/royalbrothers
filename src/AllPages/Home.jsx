@@ -12,6 +12,7 @@ import Quality from "../Components/Home/Quality";
 import NavBar from "../Components/NavBar";
 import { CacheProvider } from "@emotion/react";
 import { ChakraProvider } from "@chakra-ui/react";
+import Footer from "../Components/Footer";
 
 
 function Home() {
@@ -33,7 +34,7 @@ function Home() {
         show? <PopupCard closePopup={closePopup}/> : ""
       }
       
-
+<Footer/>
       </ChakraProvider>
 
     </>

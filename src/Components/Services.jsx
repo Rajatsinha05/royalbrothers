@@ -14,11 +14,12 @@ useEffect(()=>{
 
 get();
 
-},[])
+},[data])
 
-const [searchParams, setSearchParams] = useSearchParams();
+const [searchParams] = useSearchParams();
 
 const fltr = searchParams.get("filter");
+console.log('fltr: ', fltr);
 
 
 
@@ -37,22 +38,33 @@ SetData(dispacth,result)
 }
 
 
-// const [val, setVal] = useState(data)
-// if(fltr==''){
-// setVal(data);
+let [val, setVal] = useState(data)
 
+// if(val.length>0){
+//   console.log('val: ', val);
+  
 // }
-// else if(fltr=='lth'){
-//   val.sort((a,b)=>a.price-b.price)
-// }
-// else if(fltr=='htl'){
-//   val.sort((a,b)=>b.price-a.price)
-
+// else{
+//   console.log('valless')
 // }
 
 
+if(fltr=='lth'){
+  data.sort((a,b)=>a.price-b.price)
+}
+else if(fltr=='htl'){
+  data.sort((a,b)=>b.price-a.price)
 
-// 
+}
+else if(fltr=='asc'){
+  data.sort((a,b)=>a.name-b.name)
+}
+if(fltr==499){
+  data.filter((a)=>a.price <=499)
+}
+
+
+
 
   return (
   <>

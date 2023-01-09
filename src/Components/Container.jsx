@@ -21,17 +21,17 @@ import {
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { Box } from "@mui/system";
 import { createSearchParams ,useSearchParams } from "react-router-dom";
+import NavBar from "./NavBar";
+import Footer from "./Footer";
 
 function Container() {
 
-  const [searchParams, setSearchParams] = useSearchParams();
-  let handleCat = (event) => {
+  const [searchParams, setSearchParams] = useSearchParams("");
+  let handleCat = () => {
 
 
 
-      setSearchParams(
-        createSearchParams({ filter: event.target.value })
-      );
+    
 
 
 
@@ -48,9 +48,18 @@ function Container() {
 
   let type2;
 
-  let sortbyPrice = () => {};
+  let sortbyPrice = (val,val2) => {
 
-  return (
+    setSearchParams(
+      createSearchParams({filter: val,filter:val2 })
+    );
+
+  };
+
+  return (<>
+  
+  <NavBar/>
+ 
     <div id="container_outer">
       <div>
         {/* <Datepicker/> */}
@@ -260,10 +269,13 @@ function Container() {
           </Box>
       </div>
 
-      <div id="parent_box">
+      <div id="parent_box" style={{overflow:"scroll"}}>
         <Services />
       </div>
     </div>
+
+    <Footer/>
+    </>
   );
 }
 
