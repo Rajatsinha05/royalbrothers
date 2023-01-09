@@ -1,11 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import BikeCard from "./BikeCard";
+import { bikeData } from "./FourData";
 
 function OurFleet() {
+  const [durationValue, setDurationValue] = useState("Hourly");
+  const [disStyle, setDisStyle] = useState({ display: "none" });
+  const [charge,setCharge] = useState("hourly");
+
   return (
-    <div style={{ marginBottom: "20px" }}>
-      <h1 style={{ fontSize: "30px", textAlign: "center"}}>Our Fleet</h1>
-      <div style={{width:"50px",background:"#fed24d",margin:"auto",height:"5px"}}></div>
+    <div style={{ margin: "20px 0" }}>
+      <h1 style={{ fontSize: "30px", textAlign: "center" }}>OUR FLEET</h1>
+      <div
+        style={{
+          width: "50px",
+          background: "#fed24d",
+          margin: "auto",
+          height: "5px",
+          marginBottom: "40px",
+        }}
+      ></div>
       <div
         style={{
           display: "flex",
@@ -14,29 +27,73 @@ function OurFleet() {
           margin: "20px",
         }}
       >
-        <p>Duration</p>
-        <div
-          style={{
-            padding: "5px",
-            borderRadius: "3px",
-            margin: "0px 10px",
-            width: "10rem",
-            boxShadow:
-              "0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -1px rgb(0 0 0 / 6%)",
-          }}
-        >
-          <p style={{display:"flex",justifyContent:"space-between",alignItems:"center"}}>
-            Hourly <i class="fa-solid fa-angle-down"></i>
-          </p>
+        <p style={{ marginRight: "15px" }}>Duration</p>
+        <div style={{ width: "150px" }}>
+          <div
+            className="durationButton"
+            onClick={() => {
+              setDisStyle({ display: "block" });
+            }}
+          >
+            <p>{durationValue}</p> <i class="fa-solid fa-angle-down"></i>
+          </div>
+          <div
+            className="durationDropdown"
+            style={disStyle}
+            onClick={() => {
+              setDisStyle({ display: "none" });
+            }}
+          >
+            <p
+              onClick={() => {
+                setDurationValue("Hourly");setCharge("hourly");
+              }}
+            >
+              Hourly
+            </p>
+            <p
+              onClick={() => {
+                setDurationValue("7 days");setCharge("daily");
+              }}
+            >
+              7 days
+            </p>
+            <p
+              onClick={() => {
+                setDurationValue("15 days");setCharge("daily");
+              }}
+            >
+              15 days
+            </p>
+            <p
+              onClick={() => {
+                setDurationValue("1 month");setCharge("monthly");
+              }}
+            >
+              1 month
+            </p>
+            <p
+              onClick={() => {
+                setDurationValue("3 month");setCharge("monthly");
+              }}
+            >
+              3 month
+            </p>
+          </div>
         </div>
       </div>
       <div className="homeBikeCardDiv">
-        <BikeCard />
-        <BikeCard />
-        <BikeCard />
-        <BikeCard />
+        {/* After adding data then mapping buttonCardComponent */}
+        <>
+          {bikeData?.map((elem) => (
+            <BikeCard name={elem.name} image={elem.image} priceCharge={charge} charges={elem.charge} addButton={elem.button}
+            />
+          ))}
+        </>
       </div>
-      <p style={{ textAlign: "center",marginTop:"15px",marginBottom:"50px"}}>
+      <p
+        style={{ textAlign: "center", marginTop: "15px", marginBottom: "50px" }}
+      >
         *All prices are exclusive of taxes and fuel. Images used for
         representation purposes only, actual color may vary.
       </p>

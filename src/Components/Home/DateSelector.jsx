@@ -4,7 +4,8 @@ import "./Home.css";
 function DateSelector() {
   return (
     <>
-      <div className="dateSelectorDiv"></div>
+      <div className="dateSelectorDiv">
+      </div>
       <div
         style={{
           width: "100%",

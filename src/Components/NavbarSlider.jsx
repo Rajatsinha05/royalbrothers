@@ -37,7 +37,7 @@ function PlacementExample() {
           >
             <i
               style={{ fontSize: "20px", padding: "20px" }}
-              class="fa-solid fa-xmark"
+              className="fa-solid fa-xmark"
               onClick={onClose}
             ></i>
           </div>
