@@ -1,6 +1,11 @@
-import { Box, Center,Flex,Text,Tabs,TabList,Tab,TabPanels,TabPanel,Image,Radio,RadioGroup,Stack, FormControl, FormLabel, Input, Button, Spacer } from '@chakra-ui/react'
-import React from 'react'
+
+import { Box, Center,Flex,Text,Tabs,TabList,Tab,TabPanels,TabPanel,Image,Radio,RadioGroup,Stack, FormControl, FormLabel, Input, Button, Spacer, ChakraProvider } from '@chakra-ui/react'
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
+import { SetData } from '../ReduxStrore/Action'
+import NavBar from '../Components/NavBar'
+import Footer from '../Components/Footer'
 
 function Box1({children}) {
   return <Box w='400px' minH='425px'>{children}</Box>
@@ -15,8 +20,12 @@ function PayCard({text}) {
     mb:'4',
     inputW:'70px'
   }
+
+
+
+  
   return(
-    <>
+    <ChakraProvider>
     <Text mb='5'>{text}</Text>
     <RadioGroup mb='5'>
       <Stack direction='row'>
@@ -53,10 +62,35 @@ function PayCard({text}) {
         <Button bgColor='#fed250'>MAKE PAYMENT</Button>
       </Link>
     </Box>
-    </>
+    </ChakraProvider>
   )
 }
 function Payments() {
+  useEffect(() => {
+    get();
+   
+   }, [])
+   
+   
+   let dispacth=useDispatch();
+ 
+ 
+   let get =async()=>{
+   
+   let res=await fetch(`https://royalbrothers.cyclic.app/Cart`);
+   let result=await res.json();
+   console.log('result: ', result);
+   SetData(dispacth,result)
+   
+   
+   }
+   
+   let data=useSelector((store)=>store.reducer.bikes)
+
+
+
+
+
   let style ={
     bRadius: 'md',
     paddingBox: '15px 20px',
@@ -67,6 +101,9 @@ function Payments() {
     border:'1px solid #f0f0f0'
   }
   return (
+    <ChakraProvider>
+<NavBar/>
+
     <Center>
       <Flex m='3' align='start'>
         <Box mr='3' boxShadow={style.shadowbox} borderRadius={style.bRadius}>
@@ -124,14 +161,18 @@ function Payments() {
           <Center>
             <Text color='#555' fontWeight='700'>
             <span style={{fontWeight:'500',color:'black'}}>₹</span>
-            140.0
+            {   Number(data.length>0&& data[data.length-1].price)+2*Number(data.length>0&& (data[data.length-1].price * 14) / 100)}
             </Text>
           </Center>
           </Box>
         </Box>
       </Flex>
     </Center>
+
+    <Footer/>
+    </ChakraProvider>
   )
 }
+
 
 export default Payments

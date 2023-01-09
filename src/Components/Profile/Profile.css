@@ -1,0 +1,184 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+/* outer div */
+.profile_outer{
+
+    padding: 40px 6%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.profile_outer > div{
+
+}
+
+.profile_left{
+    width: 23%;  
+}
+
+
+/* left side section....... */
+
+.user_name_section{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px 5px 0px 0px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.user_name_section >div:last-of-type{
+    margin-left: 6%;
+}
+.user_name_section img{
+    max-width: 80px;
+    max-height: 80px;
+}
+
+.profile_navigation_section{
+    margin-top: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    border-radius: 0px 0px 5px 5px;
+    padding: 5px;
+    margin-top: 20px;
+}
+
+.single_nav_icon{
+    display: flex;
+    /* padding: 5px; */
+    width: 100%;
+    height: 100%;
+    align-items: center;
+
+}
+
+.single_nav_icon div{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.single_nav_icon div span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.single_nav_icon p {
+    margin-left: 10px;
+}
+
+
+/* .....................................right side section.......................................... */
+
+.profile_right{
+    width: 72%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    padding: 10px;
+    max-height: calc(100vh - 195px);
+    overflow-y: scroll;
+}
+
+/* my order Section */
+
+.outer_orders{
+    /* border: 1px solid red; */
+}
+
+.my_orders_cad{
+    margin-top: 20px;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 3px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.my_orders_cad:first-of-type{
+    margin-top: 0px;
+}
+.my_orders_cad img{
+    width: 80px;
+    height: 80px;
+    transition: 0.5s;
+}
+.my_orders_cad img:hover{
+    scale: 1.1;
+}
+.my_orders_cad >div:first-of-type{
+    display: flex;
+    width: 70%;
+}
+
+.nameandprice{
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 10px 0px;
+}
+
+.product_heading{
+    font-weight: bold;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.product_price{
+    color: rgb(69, 68, 68);
+}
+.my_orders_button{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 3px;
+}
+
+.my_orders_button > button:first-of-type{
+    background-color: #fed24d;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+.my_orders_button > button:last-of-type{
+    background-color: 	#D3D3D3;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-weight: 500;
+    margin-top: 8px;
+    transition: 0.5s;
+}
+
+.my_orders_button > button:first-of-type:hover , .my_orders_button > button:last-of-type:hover{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    cursor: pointer;
+}
+
+.selected_nav_list{
+    /* background-color: #fed24dad !important; */
+    /* border-radius: 5px !important; */
+}
+
+.selected_nav_list span{
+    
+}
+
+.testing{
+    
+    padding: 5px;
+    border-radius: 50%;
+   
+}
+
+.nav_icon_activate{
+background-color: #fed24d;
+ color: white;
+}

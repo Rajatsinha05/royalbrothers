@@ -6,30 +6,38 @@
 }
 .hero-pk{
     background-image: url(https://d36g7qg6pk2cm7.cloudfront.net/assets/long_term/RBX_landing_web-8b84ff099c1cd0851362d28adccdcc8ca829a0fc36a2e3c5c01e1ce4764f0a7a.jpg);
-    height: 80vh;
+    height: 100vh;
     background-color: rgba(252,252,252,0.988);
     color: #fff !important;
     background-size: cover;
     position: relative;
     background-position: 80%;
 }
+
+
+/* date and time picker styles */
+
+.hero-mobile-pk{
+    margin-top: 0em;
+    position: relative;
+    margin-left: 8rem;
+}
 .hero-mobile-card-pk{
-    padding: 2rem;
+    padding: 1.3rem 1.5rem;
     border-radius: 6px;
     box-shadow: none;
     margin-top: 0;
     background-color: white;
-    width: 60%;
-    border: 1px solid red;
-    /* position: absolute;
-    z-index: 999; */
+    width: 37rem;
+    position: absolute;
+    top: -23rem;
 }
 .hero-mobile-card-heading-pk{
     font-family: "Muli", sans-serif;
-    font-size: 1.5rem;
-    font-weight: 700 !important;
+    font-size: 1.3rem;
+    font-weight: 600 !important;
     margin: 0;
-    color: rgb(51, 51, 51);
+    color: #000;
     /* font: 100% Helvetica, sans-serif; */
 }
 .hero-mobile-card-datetime-parent-pk{
@@ -47,28 +55,59 @@
     border: 2px solid #dedede;
     border-radius: 0.25rem;
     box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%), 0 1px 2px 0 rgb(0 0 0 / 6%);
-    width: 90%;
+    width: 100%;
 }
 .input-container-pk{
     width: 50%;
-    border: 1px solid yellow;
     height: 100%;
+}
+.input-container-pk:first-child{
+    border-right: 2px solid #dedede;
 }
 .hero-mobile-card-datetime-child-pk{
     display: flex;
     align-items: center;
     position: relative;
 }
-.input-container-pk>input{
+.date-picker-pk{
+    background-image: url(https://d36g7qg6pk2cm7.cloudfront.net/assets/long_term/date-609be488aaef36d8f84a823b97517d5551821ab02804e2f745b5c80550dbc46e.png);
+    border-right: 2px solid #dedede;
+    background-repeat: no-repeat;
+    background-size: 1.15rem;
+    background-position: 0.9rem 0.75rem;
+    padding-left: 3rem;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
     height: 100%;
+    width: 100%;
+    color: #bbb7b7;
 }
-.input-container-pk>select{
+::-webkit-calendar-picker-indicator{
+    cursor: pointer;
+    margin-right: 0.5rem;
+}
+.pickup-time-select-pk{
+    appearance: none;
+    outline: none;
+    border: none;
+    background-image: url(https://d36g7qg6pk2cm7.cloudfront.net/assets/long_term/time-b6ac387420760c4f2c4ea8bf0b7dc644a7d2d3b1f77ba6987b095c6980f25ce0.png);
+    background-repeat: no-repeat;
+    background-size: 1.15rem;
+    background-position: 0.9rem 0.75rem;
+    padding-left: 3rem;
+    box-sizing: border-box;
     height: 100%;
+    width: 100%;
+    color: #bbb7b7;
+}
+.pickup-time-select-pk>option{
+    color: black;
 }
 .hero-mobile-card-btn-pk{
     width: 100%;
     background-color: #fed24d;
-    padding: 1rem 3rem;
+    padding: 0.7rem 3rem;
     border: none;
     border-radius: 0.25rem;
     font-weight: 700;
@@ -76,11 +115,12 @@
     cursor: pointer;
 }
 
+
 /* How it works style */
 
 .hiw-pk{
     padding: 3rem;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .hiw-heading-pk{
@@ -108,14 +148,14 @@
     /* justify-content: space-between; */
     padding: 2rem;
     flex-wrap: wrap;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 .hiw-items-pk{
     position: relative;
     width: 11rem;
     margin: 1rem 0;
     text-align: center;
-    border: 1px solid teal;
+    /* border: 1px solid teal; */
     padding: auto 20px;
 }
 .hiw-image-pk{
@@ -145,22 +185,25 @@
     display: flex;
     align-items: flex-start;
 }
-.rfu-items-pk{
+.rfu-flex-content-pk{
     margin: 0 1rem;
-    /* display: flex;
-    flex-direction: column; */
 }
-.rfu-items-pk{
-    width: 20%;
-}
-.rfu-items-pk:first-child{
+.rfu-flex-content-pk:first-child{
     width: 28%;
+}
+.rfu-flex-content-pk:last-child{
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
 }
 .rfu-heading-pk{
     font-size: 3rem;
     font-weight: 700 !important;
     line-height: 110%;
     margin: 1.9466666667rem 0 1.168rem 0;
+}
+.rfu-items-pk{
+    width: 30%;
 }
 .rfu-items-pk>img{
     width: 100%;
@@ -203,7 +246,7 @@
     margin-top: 2rem;
 }
 .fleet-card-pk{
-    width: 28%;
+    width: 30%;
     text-align: center;
     margin: 1rem;
     margin: auto;
@@ -214,7 +257,7 @@
     /* max-width: 30rem; */
 }
 .fleet-card-pk>img{
-    width: 15rem;
+    width: 100%;
 }
 .card-bike-price-pk{
     font-size: 1.3rem;
@@ -233,7 +276,7 @@
     background-color: #fed24d;
     font-weight: 700;
     font-size: 1rem;
-    color: #000;
+    color: rgb(51, 51, 51);
     margin-top: 1rem;
     text-decoration: none;
     letter-spacing: .5px;
@@ -248,6 +291,22 @@
 .fleet-end-desc-pk{
     text-align: center;
     margin-top: 2rem;
+}
+.glide-arrows-pk{
+    position: relative;
+    color: rgb(51, 51, 51);
+}
+.glide-arrows-left-pk{
+    position: absolute;
+    top: -12rem;
+    left: 5rem;
+    cursor: pointer;
+}
+.glide-arrows-right-pk{
+    position: absolute;
+    right: 5rem;
+    top: -12rem;
+    cursor: pointer;
 }
 .fleet-view-all-btn-pk{
     background-color: rgba(245,245,245,0.965);
@@ -311,6 +370,10 @@
     transition: all 0.1s;
     /* border: 1px solid teal; */
 }
+.tab-button-pk:nth-child(2){
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
 .tab-button-pk:hover{
     background-color: #fed24d;
 }
@@ -361,4 +424,171 @@
     display: none;
     border-bottom: 1px solid #ddd;
     box-sizing: border-box;
+}
+
+.active-tab-button-pk{
+    background-color: #fed24d;
+}
+.active-faq-answer-pk{
+    display: block;
+}
+.active-material-icons{
+    transform: rotate(180deg);
+}
+
+
+
+
+/* media querry for different screens  */
+
+@media only screen and (max-width: 1200px) {
+    .hero-pk{
+        height: 80vh;
+    }
+    .hero-mobile-pk{
+        margin-left: 1rem;
+    }
+    .hero-mobile-card-pk{
+        top: -18rem;
+    }
+    .hiw-pk{
+        padding: 2rem;
+    }
+    .hiw-flex-pk{
+        padding: 1rem;
+    }
+    .hiw-items-pk{
+        margin: 0.5rem 0;
+    }
+    .hiw-image-pk {
+        height: 2.5rem;
+    }
+    .rfu-flex-pk {
+        flex-direction: column;
+    }
+    .rfu-flex-content-pk:first-child {
+        width: 100%;
+    }
+    .rfu-flex-content-pk:last-child {
+        width: 100%;
+        text-align: center;
+    }
+    .fleet-pk {
+        padding: 2rem;
+    }
+    .fleet-card-container-pk{
+        width: 90%;
+    }
+    .glide-arrows-left-pk{
+        left: 1rem;
+    }
+    .glide-arrows-right-pk{
+        right: 1rem;
+    }
+    .faq-pk {
+        padding: 2rem;
+    }
+    .faq-container-pk{
+        width: 80vw;
+    }
+    
+}
+
+@media (max-width: 900px){
+    .hero-mobile-pk{
+        margin-left: 0;
+        margin-right: 2rem;
+    }
+    .hero-mobile-card-pk{
+        top: 0;
+        position: relative;
+        width: 95%;
+        
+    }
+    .hiw-pk{
+        padding: 1rem;
+    }
+    .hiw-image-arrow-pk {
+        display: none;
+    }
+    .fleet-pk {
+        padding: 1rem 1rem 2rem 1rem;
+    }
+    .faq-container-pk{
+        width: 90vw;
+    }
+    .tab-button-pk{
+        padding: 1rem;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .hero-pk{
+        height: 50vh;
+    }
+}
+
+@media (max-width: 600px){
+    .rfu-pk {
+        padding: 1rem;
+    }
+    .rfu-flex-content-pk:last-child {
+        flex-direction: column;
+    }
+    .rfu-items-pk {
+        width: 80%;
+        margin: auto;
+    }
+    .tab-button-pk{
+        padding: 0.5rem;
+    }
+    .fleet-card-container-pk{
+        flex-direction: column;
+    }
+    .fleet-card-pk{
+        width: 80%;
+    }
+    .fleet-card-pk:nth-child(2){
+        margin: 20px auto;
+    }
+    .glide-arrows-left-pk{
+        display: none;
+    }
+    .glide-arrows-right-pk{
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 499px) {
+    .hero-mobile-card-datetime-parent-pk{
+        flex-direction: column;
+    }
+    .hero-mobile-card-datetime-child-pk:last-child{
+        margin-top: 1rem;
+    }
+    .input-container-pk{
+        padding: 1rem 0rem;
+    }
+    .date-picker-pk{
+        background-position: 0.9rem 0rem;
+    }
+    .pickup-time-select-pk{
+        background-position: 0.9rem 0rem;
+    }
+    
+}
+
+@media only screen and (max-width: 450px) {
+    .faq-questios-pk{
+        padding-right: 2rem;
+    }
+    
+}
+
+@media only screen and (max-width: 350px) {
+    .faq-questios-pk{
+        padding-right: 3rem;
+    }
+    
 }

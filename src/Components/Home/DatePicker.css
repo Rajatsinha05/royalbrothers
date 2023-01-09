@@ -1,0 +1,130 @@
+
+.date-picker-section-ab{
+    position: relative;
+}
+.date-picker-container-ab{
+    position: absolute;
+    top: -35rem;
+    left: 5rem;
+    width: 27rem;
+    /* height: 29.5rem; */
+    border-radius: 0.6667rem;
+    transition: all 0.2s;
+    display: block;
+    background-color: #fff;
+    box-shadow: rgb(26 26 29 / 30%) 0px 15px 46px -10px;
+    padding: 1rem 1.4rem 0 1.4rem;
+    /* border: 1px solid red; */
+}
+.date-picker-heading-ab{
+    color: #222;
+    font-weight: 600;
+    font-size: 1.8667rem !important;
+    margin: 0 0 1rem 0 !important;
+}
+.date-picker-inp-head-ab{
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    color: #222;
+}
+.pickup-date-container-ab{
+    display: flex;
+    box-sizing: border-box;
+    /* margin-top: 1rem; */
+    margin-bottom: 2rem;
+    position: relative;
+    /* border: 1px solid red; */
+    width: 100%;
+}
+.date-picker-inp-div-ab{
+    width: 50%;
+    /* height: 100%; */
+    padding: 7px;
+    border: 1px solid #dedede;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    /* border: 1px solid teal; */
+}
+.date-picker-ab{
+    background-image: url(https://d36g7qg6pk2cm7.cloudfront.net/assets/long_term/date-609be488aaef36d8f84a823b97517d5551821ab02804e2f745b5c80550dbc46e.png);
+    border-right: 2px solid #dedede;
+    background-repeat: no-repeat;
+    background-size: 1.15rem;
+    background-position: 1.1rem 0.3rem;
+    padding-left: 3rem;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    height: 100%;
+    width: 100%;
+    color: #bbb7b7;
+}
+::-webkit-calendar-picker-indicator{
+    cursor: pointer;
+    margin-right: 0.5rem;
+}
+.pickup-time-select-div-ab{
+    width: 50%;
+    /* height: 100%; */
+    padding: 7px;
+    border: 1px solid #dedede;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+.pickup-time-select-ab{
+    appearance: none;
+    outline: none;
+    border: none;
+    background-image: url(https://d36g7qg6pk2cm7.cloudfront.net/assets/long_term/time-b6ac387420760c4f2c4ea8bf0b7dc644a7d2d3b1f77ba6987b095c6980f25ce0.png);
+    background-repeat: no-repeat;
+    background-size: 1.15rem;
+    background-position: 1.1rem 0.3rem;
+    padding-left: 3rem;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    color: #bbb7b7;
+}
+.pickup-time-select-ab>option{
+    color: #000;
+}
+.saerch-btn-div-ab{
+    width: 100%;
+    text-align: center;
+}
+.saerch-btn-div-ab{
+    margin-bottom: 4rem;
+}
+.saerch-btn-ab{
+    box-shadow: none;
+    border: none;
+    width: 100%;
+    background-color: #fed250;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #000;
+    transition: all 0.2s;
+    height: 2.5rem;
+    text-transform: initial;
+    line-height: 0;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+
+
+@media (max-width: 700px) {
+    .date-picker-section-ab{
+        width: 100%;
+    }
+    .date-picker-container-ab{
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        margin: auto;
+        box-shadow: none;
+    }
+}

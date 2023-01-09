@@ -1,8 +1,18 @@
-import React from 'react'
+import React from 'react';
+import Footer from '../Components/Footer';
+//import NavBar from '../Components/NavBar';
+import LoginForm from '../Components/Signup/Login';
+import NavBar from '../Components/NavBar';
+
 
 function Login() {
   return (
-    <div>Login</div>
+    <div>
+        <NavBar/>
+        <LoginForm />
+        <Footer />
+
+    </div>
   )
 }
 

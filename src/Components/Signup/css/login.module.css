@@ -1,0 +1,262 @@
+*{
+    font-family: 'Mulish', sans-serif;
+  }
+   .fullContainer{
+    height: 100vh;
+    
+   }
+   .fullContainer1{
+    height: 62vh;
+    margin-top: 80px
+   }
+   
+  .ParentLog{
+    width:372px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%), 0 1px 2px 0 rgb(0 0 0 / 6%);
+    padding-bottom: 25px;
+    border: none;
+}
+.riders{
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    font-size: 1.6rem !important;
+    color: #000;
+    margin-top: 15px;
+}
+.login_signup_tabs{
+    height: 2.4rem;
+    border-top-left-radius: 0.6667rem;
+    border-top-right-radius: 0.6667rem;
+    border-bottom: 1px solid #e9e9e9;
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+.login_signup_otp > li {
+    margin-top: -7px;
+    color: #000 !important;
+    font-weight: 500;
+    font-size: 20px;
+}
+.login_signup_otp{
+    height: 2.2rem !important;
+    border-top-left-radius: 0.6667rem;
+    border-top-right-radius: 0.6667rem;
+    border-bottom: 1px solid #e9e9e9;
+    list-style-type: none;
+    text-align: center;
+    padding-bottom: 27px;
+    height: 12px;
+    font-size: 1.5rem;
+    margin-top: 13px;
+
+}
+.login_signup_tabs .tab_l6ab {
+    display: inline-block;
+    text-align: center;
+    line-height: 48px;
+    height: 48px;
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+/* li a{
+    color: #9e9e9e !important;
+    font-size: 1.1rem;
+    padding: 0.4rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+} */
+.tab_log a{
+    color: #9e9e9e !important;
+    font-size: 1.1rem;
+    padding: 0.4rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.tab_sig a{
+    color: #000 !important;
+    font-size: 1.1rem;
+    padding: 0.4rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.tab_sig{
+    border-bottom: 4px solid #fecc00;
+    margin-top: 6px;
+}
+.ParentLog>input{
+    width:80%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: none;
+    background-color: #f5f5f5;
+    height: 2.8rem;
+    border-radius: 3px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+  .divMobile{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    margin-top: 25px;
+}
+.divMobile_otp{
+    margin-left: 40px;
+    margin-bottom: -13px;
+    margin-top: 10px;
+
+}
+.button_exp {
+    box-shadow: none;
+    border-radius: 3px !important;
+    font-size: 1.2em !important;
+    height: 2.5em !important;
+    background-color: #fed250 !important;
+    width: 340px;
+    font-weight: 500 !important;
+    border: none;
+    margin: auto;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.divMobile :hover{
+   border:  none;
+}
+.divMobile>p{
+    margin-left:40px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: -8px;
+}
+.divMobile1{
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    width:80%;
+    margin-bottom: -10px;
+}
+.inpTag1{
+    width:15%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 0px;
+    border: none;
+    background-color: #f5f5f5;
+    height: 2.8rem;
+    border-radius: 3px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.inpTag2{
+    width:80%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: none;
+    background-color: #f5f5f5;
+    height: 2.8rem;
+    border-radius: 3px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.inpTag3{
+    margin: 4px;
+    width: 28px;
+    overflow: visible;
+    outline: 0;
+    vertical-align: text-bottom;
+}
+.robot{
+    font-family: Roboto,helvetica,arial,sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 44px;
+    width: 124px;
+}
+.recapimg {
+    height: 53px;
+    width: 35px;
+    margin-top: 8px;
+}
+.recapt{
+    width:80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    height: 72px;
+    border: 1px solid #d3d3d3;
+    background: #f9f9f9;
+    color: #000;
+}
+.recapt>input{
+    margin-left: 10px;
+    margin-top: 5px;
+}
+.recapt>p{
+    margin-left: 10px;
+    margin-top: 14px;
+}
+.recapt>img{
+    width:50px;
+    margin-left: 50px;
+}
+.spBt{
+    margin: auto;
+    margin-top: 2rem;
+    border-radius: 4px !important;
+    background-color: #fecc00 !important;
+    box-shadow: none !important;
+    width: 86%;
+    border: none !important;
+    font-size: 1rem !important;
+    height: 3rem !important;
+    box-shadow: none !important;
+    text-transform: unset;
+    font-weight: 500 !important;
+    cursor: pointer;
+}
+.otpsubmit {
+    margin: auto;
+    border-radius: 4px;
+    background-color: #f2f2f2;
+    box-shadow: none;
+    width: 86%;
+    border: none;
+    font-size: 1rem;
+    height: 3rem;
+    box-shadow: none;
+    text-transform: unset;
+    font-weight: 500;
+    cursor: pointer;
+
+}
+.otpsubmit a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+}
+.Ors{
+    margin:auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.tab_log {
+    margin-top: 6px;
+}
