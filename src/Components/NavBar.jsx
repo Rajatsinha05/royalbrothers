@@ -211,7 +211,7 @@ function NavBar({cityName}) {
                         alt=""
                       />
                       <p>
-                        <Link to={"/"}>My Profile</Link>
+                        <Link to={"/profile"}>My Profile</Link>
                       </p>
                     </div>
                     <hr />

@@ -14,7 +14,7 @@ useEffect(()=>{
 
 get();
 
-},[data])
+},[])
 
 const [searchParams] = useSearchParams();
 
@@ -59,7 +59,11 @@ else if(fltr=='htl'){
 else if(fltr=='asc'){
   data.sort((a,b)=>a.name-b.name)
 }
-if(fltr==499){
+else if(fltr==499){
+  data.filter((a)=>a.price <=499)
+}
+
+else if(fltr==999){
   data.filter((a)=>a.price <=499)
 }
 

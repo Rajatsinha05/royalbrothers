@@ -4,7 +4,12 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+import { useDispatch, useSelector } from 'react-redux';
+import { SetData } from '../../ReduxStrore/Action';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
+import axios from 'axios'
 function TabPanel(props) {
 
   const { children, value, index, ...other } = props;
@@ -47,7 +52,27 @@ export default function BasicTabs() {
 
   // store data to both array...
 
+  let data=useSelector((store)=>store.reducer.bikes)
 
+React.useEffect(() => {
+  
+  get()
+}, [])
+  
+  
+  let dispacth=useDispatch();
+
+
+  let get =async()=>{
+  
+  let res=await fetch(`https://royalbrothers.cyclic.app/Cart`);
+  let result=await res.json();
+  console.log('result: ', result);
+  SetData(dispacth,result)
+  
+  setBooking(data)
+  }
+  
 
 
   // 
@@ -56,6 +81,24 @@ export default function BasicTabs() {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
+  let handleshow=(id)=>{
+
+    toast.success('Ordered cancelled!', {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      });
+
+
+      axios.delete(`https://royalbrothers.cyclic.app/Cart/${id}`)
+      .then(() => get());
+  }
 
   return (
     <Box sx={{ width: '100%' }}>
@@ -78,12 +121,12 @@ export default function BasicTabs() {
                     { orderHistory.length >0 && orderHistory.map((elem)=>{
                       return <div className="my_orders_cad" key={elem.id}>
                                 <div>
-                                <div><img src={elem.url_1} alt="Not found" /></div>
+                                <div><img src={elem.img} alt="Not found" /></div>
 
                                 <div className='nameandprice'>
                                     <h3 className='product_heading'>{elem.name}</h3>
                                     <p style={{fontSize:'12px'}}>Order Id : #1234</p>
-                                    <p className='product_price'>Price : &#x20B9; {elem.pride}</p>
+                                    <p className='product_price'>Price : &#x20B9; {elem.price}</p>
                                 </div>
 
                                 </div>
@@ -96,28 +139,29 @@ export default function BasicTabs() {
                         </div>
                     }) }
 
-                        
+
                     </div>
       </TabPanel>
       <TabPanel value={value} index={1}>
       <div className="outer_orders">
 
-      { booking.length >0 && booking.map((elem)=>{
+      { booking.length >0 && booking.map((elem,id)=>{
                       return <div className="my_orders_cad" key={elem.id}>
                                 <div>
-                                <div><img src={elem.url_1} alt="Not found" /></div>
+                                <div><img src={elem.img} alt="Not found" /></div>
 
                                 <div className='nameandprice'>
                                     <h3 className='product_heading'>{elem.name}</h3>
                                     <p style={{fontSize:'12px'}}>Order Id : #1234</p>
-                                    <p className='product_price'>Price : &#x20B9; {elem.pride}</p>
+                                    <p className='product_price'>Price : &#x20B9; {elem.price}</p>
                                 </div>
 
                                 </div>
 
                                 <div className='my_orders_button'>
                                     <button>Track Order</button>
-                                    <button>Cancel Order</button>
+                                    <ToastContainer />
+                                    <button onClick={()=>handleshow(elem.id)}>Cancel Order</button>
                                 </div>
 
                         </div>

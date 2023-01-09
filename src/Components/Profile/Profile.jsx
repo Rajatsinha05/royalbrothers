@@ -16,7 +16,7 @@ function Profile() {
                                 <div><img src="https://d36g7qg6pk2cm7.cloudfront.net/assets/icons/user-profile-menu-70666577f1d7fbe6bba1f46ceacdb2e4abdbb2575014670cf9afbfbf35376c25.png" alt="Not found" /></div>
                                 <div>
                                     <p>Hello,</p>
-                                    <p><b>Anshu Raj</b></p>
+                                    <p><b>User</b></p>
                                 </div>
                             </div>
 
