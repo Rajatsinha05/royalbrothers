@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 import { Route, Routes, Navigate} from 'react-router-dom'
 import Home from '../AllPages/Home'
@@ -20,8 +20,6 @@ import Profile from '../Components/Profile/Profile'
 
 
 function AllRouters() {
-
-
   return (
     <>
  
@@ -29,6 +27,7 @@ function AllRouters() {
     <Routes>
 
       <Route path='/' element={<Home />} />
+      <Route path='/:city' element={<Home />} />
       <Route path='/signup' element={<SignUp />} />
       <Route path='/login' element={<Login />} />
       <Route path='/otp' element={<OTP />} />
@@ -51,4 +50,4 @@ function AllRouters() {
   )
 }
 
-export default AllRouters
+export default AllRouters;

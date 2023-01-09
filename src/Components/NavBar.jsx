@@ -6,23 +6,28 @@ import "./Navbar.css";
 import PlacementExample from "./NavbarSlider";
 import { ChakraProvider } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
+import CitySelect from "./Home/CitySelect";
 
-function NavBar({cityName}) {
+function NavBar({cityName,onOpen}) {
+
 
   const [disStyle, setDisStyle] = useState({ display: "none" });
   const [disStyle1, setDisStyle1] = useState({ display: "none" });
   const [loginDis, setLoginDis] = useState({ display: "none" });
-  const [loggedIn, setLoggedIn] = useState(true);
+  const [loggedIn, setLoggedIn] = useState(false);
   const [loaderCom, setLoaderCom] = useState(false);
+  var userName = JSON.parse(localStorage.getItem("users"));
+  console.log(userName);
   
   function logoutFun(){
     setLoaderCom(true);
     setTimeout(() => {
       setLoggedIn(false);
       setLoaderCom(false);
+      localStorage.setItem('users', JSON.stringify(null));
     }, 1000);
   }
-  
+  const citySelected = JSON.stringify(localStorage.getItem("citySelected"));
   const navigate = useNavigate();
 
 
@@ -33,15 +38,17 @@ function NavBar({cityName}) {
       navigate('/signup')
     }
   }
-
+  function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
   return (
     <>
 
 
     <ChakraProvider>
-
+    {/* <CitySelect/> */}
     {loaderCom ? <Loader /> : ""}
-   
+    
 
       <div id="mainParentNavbar">
         <div className="navbarYellow">
@@ -149,13 +156,13 @@ function NavBar({cityName}) {
             </div>
 
             <div className="navbarButtons">
-              <button id="locationButton">
+              <button id="locationButton" onClick={onOpen}>
                 <i className="fa-solid fa-location-dot" id="locationIcon"></i>
                 <p>{cityName}</p>
                 <i className="fa-solid fa-angle-down"></i>
               </button>
               <p>|</p>
-              {loggedIn ? (
+              {userName ? (
                 <div style={{ width: "170px" }}>
                   <div
                     className="navbarUserDisplay"
@@ -179,7 +186,7 @@ function NavBar({cityName}) {
                         alignItems: "center",
                       }}
                     >
-                      <p>Aditya</p>
+                      <p>{userName[0].name}</p>
                       <i className="fa-solid fa-angle-down"></i>
                     </div>
                   </div>

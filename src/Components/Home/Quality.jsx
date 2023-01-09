@@ -74,7 +74,7 @@ const Quality = () => {
                   backgroundSize: "auto",
                 }}
               >
-                <div
+                <div id="textDivQualityParent"
                   style={{
                     backgroundSize: "100% 100%",
                     display: "flex",
@@ -83,15 +83,15 @@ const Quality = () => {
                     height: "100%",
                   }}
                 >
-                  <div
+                  <div id="textDivQuality"
                     style={{
                       width: "30%",
                       padding: "10px",
                       marginLeft: "30px",
                     }}
                   >
-                    <h3 style={{ fontSize: "30px" }}>{slideImage.head}</h3>
-                    <h3 style={{ fontSize: "30px" }}>{slideImage.head1}</h3>
+                    <h3 >{slideImage.head}</h3>
+                    <h3 >{slideImage.head1}</h3>
                     <p style={{ color: "grey" }}>{slideImage.para}</p>
                   </div>
                 </div>
