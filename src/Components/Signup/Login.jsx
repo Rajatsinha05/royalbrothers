@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@chakra-ui/react";
 import styles from "./css/login.module.css";
 import { useState } from "react";
@@ -8,6 +8,9 @@ import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
   
 function LoginForm() {
+
+
+  let nav=useNavigate();
   const [mobile, setMobile] = useState("");
   const [password, setPassword] = useState("");
 
@@ -25,7 +28,7 @@ function LoginForm() {
                 type:'LOGIN',
                 payload
             })
-            toast.success('successfully logged!', {
+            toast.success('successfully logged in!', {
               position: "top-center",
               autoClose: 5000,
               hideProgressBar: false,
@@ -35,7 +38,13 @@ function LoginForm() {
               progress: undefined,
               theme: "light",
               });
-            window.location.href = "/";
+              setTimeout(() => {
+                // window.location.href = "./otp";
+
+
+nav('/')
+            
+            },1100 )
         }else if (mobile === '' || password === '') {
             setError(true);
             // alert("Enter all the fields");
