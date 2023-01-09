@@ -37,6 +37,8 @@ function Home() {
       <OurFleet/>
       <Quality/>
 
+
+
       
       {
         show? <PopupCard closePopup={closePopup}/> : ""
