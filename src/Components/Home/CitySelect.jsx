@@ -11,7 +11,7 @@ function City({city,img}){
         </Center>
     )   
 }
-function CitySelect(props) {
+function CitySelect() {
     const { isOpen, onOpen, onClose } = useDisclosure()
     useEffect(()=>{
         onOpen()
@@ -213,6 +213,7 @@ function CitySelect(props) {
         onClose={onClose}
         isOpen={isOpen}
         scrollBehavior='inside'
+        style={{width:"90%"}}
         >
             <ModalOverlay 
             bg='blackAlpha.300'
@@ -245,7 +246,7 @@ function CitySelect(props) {
                     <Center>
                         <Grid templateColumns='repeat(4, 1fr)' gap={4} w='90%'>
                             {cityArray.map((e)=>{
-                                return <Link to='city'><City city={e.city} img={e.img}></City></Link>
+                                return <Link to={`/`}><City city={e.city} img={e.img}></City></Link>
                             })}
                         </Grid>
                     </Center>

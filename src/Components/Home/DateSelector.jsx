@@ -1,11 +1,13 @@
 import React from "react";
-// import DateCalendar from "./DateCalendar";
+import DateCalendar from "./DateCalendar";
+import { DateComponent } from "./DateComponent";
 import "./Home.css";
 
 function DateSelector() {
   return (
     <>
     {/* <DateCalendar/> */}
+    <DateComponent/>
       <div className="dateSelectorDiv">
       </div>
       <div

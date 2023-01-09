@@ -130,3 +130,50 @@ code {
   border-radius: 14% !important;
   color: #fff;
 }
+.durationDropdown{
+  z-index: 500;
+  display: block;
+  max-height: 200px;
+  overflow: scroll;
+  color:"black"
+}
+
+#textDivQuality h3{
+  font-size: 30px;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 700px)  {
+  #textDivQualityParent{
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  #textDivQualityParent{
+    display: block;
+    text-align: center;
+  }
+  #textDivQuality {
+    width:100%;
+    padding: 0px;
+    text-align: center;
+
+  }
+  #textDivQuality h3{
+    font-size: 20px;
+  }
+    .homeBikeCardDiv{
+      grid-template-columns: repeat(2,1fr);
+    }
+    #textDivQuality p{
+      display: none;
+    }
+    .dateSelectorDiv{
+
+      background-size: cover;
+    }
+}

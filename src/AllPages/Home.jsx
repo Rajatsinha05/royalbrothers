@@ -12,6 +12,8 @@ import Quality from "../Components/Home/Quality";
 import NavBar from "../Components/NavBar";
 import { CacheProvider } from "@emotion/react";
 import { ChakraProvider } from "@chakra-ui/react";
+import CitySelect from "../Components/Home/CitySelect";
+import { DateComponent } from "../Components/Home/DateComponent";
 
 
 function Home() {

@@ -5,14 +5,11 @@ import Loader from "./Loader";
 import "./Navbar.css";
 import PlacementExample from "./NavbarSlider";
 import { ChakraProvider } from "@chakra-ui/react";
-<<<<<<< HEAD
-function NavBar() {
-=======
 import { useNavigate } from "react-router-dom";
+import CitySelect from "./Home/CitySelect";
 
 function NavBar({cityName}) {
 
->>>>>>> 5af7e6560b162475469329342e9d5b9f256d87e5
   const [disStyle, setDisStyle] = useState({ display: "none" });
   const [disStyle1, setDisStyle1] = useState({ display: "none" });
   const [loginDis, setLoginDis] = useState({ display: "none" });
@@ -43,9 +40,9 @@ function NavBar({cityName}) {
 
 
     <ChakraProvider>
-
+    {/* <CitySelect/> */}
     {loaderCom ? <Loader /> : ""}
-   
+    
 
       <div id="mainParentNavbar">
         <div className="navbarYellow">
@@ -229,13 +226,8 @@ function NavBar({cityName}) {
                 </div>
               ) : (
                 <div>
-<<<<<<< HEAD
-                  <button id="navbarLoginButton"><Link to={'/login'}>Login</Link></button>
-                  <button id="navbarSignUpButton"><Link to={'/signup'}>Sign up</Link></button>
-=======
                   <button id="navbarLoginButton" onClick={()=> handleLoginLogout("login")}>Login</button>
                   <button id="navbarSignUpButton" onClick={()=> handleLoginLogout("signup")}>Sign up</button>
->>>>>>> 5af7e6560b162475469329342e9d5b9f256d87e5
                 </div>
               )}
             </div>
