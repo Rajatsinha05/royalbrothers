@@ -36,7 +36,17 @@ SetData(dispacth,result)
 
 
 }
+let handle=(val)=>{
 
+
+  if(val=="htl"){
+    data.sort((a,b)=>b.pride-a.pride)
+  }
+  else if(val=="lth"){
+
+    data.sort((a,b)=>a.pride-b.pride)
+  }
+}
 
   
   return (
@@ -61,8 +71,8 @@ SetData(dispacth,result)
           <Box fontSize="20px" fontWeight="hairline "  border="1px solid grey" p="3px" _hover={{ cursor: "pointer" }}>
             <Select variant="outline" outline="none">
               <option value="">---Sort by price---</option>
-              <option value="">Price Low to High</option>
-              <option value="">Price High to Low</option>
+              <option value="" onClick={()=>handle("lth")}>Price Low to High</option>
+              <option value="" onClick={()=>handle("htl")}> Price High to Low</option>
             </Select>
           </Box>
           <Spacer />

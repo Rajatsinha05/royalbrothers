@@ -96,8 +96,7 @@ React.useEffect(() => {
       });
 
 
-      axios.delete(`https://royalbrothers.cyclic.app/Cart/${id}`)
-      .then(() => get());
+     data.slice(id-1,id)
   }
 
   return (
