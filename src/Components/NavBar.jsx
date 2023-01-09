@@ -51,7 +51,7 @@ function NavBar({cityName}) {
         </div>
         <div className="navbarContact">
           <p>
-            <i class="fa-solid fa-phone"></i> +917795687594 / +919019595595 |{" "}
+            <i className="fa-solid fa-phone"></i> +917795687594 / +919019595595 |{" "}
             <a href="">Chat now</a>
           </p>
         </div>
@@ -90,7 +90,7 @@ function NavBar({cityName}) {
                     setDisStyle({ display: "none" });
                   }}
                 >
-                  <p>What's new?</p> <i class="fa-solid fa-angle-down"></i>
+                  <p>What's new?</p> <i className="fa-solid fa-angle-down"></i>
                 </div>
                 <div
                   className="divSelectDropdown"
@@ -125,7 +125,7 @@ function NavBar({cityName}) {
                     setDisStyle1({ display: "none" });
                   }}
                 >
-                  <p>Partner with us</p> <i class="fa-solid fa-angle-down"></i>
+                  <p>Partner with us</p> <i className="fa-solid fa-angle-down"></i>
                 </div>
                 <div
                   className="divSelectDropdown"
@@ -180,7 +180,7 @@ function NavBar({cityName}) {
                       }}
                     >
                       <p>Aditya</p>
-                      <i class="fa-solid fa-angle-down"></i>
+                      <i className="fa-solid fa-angle-down"></i>
                     </div>
                   </div>
                   <div

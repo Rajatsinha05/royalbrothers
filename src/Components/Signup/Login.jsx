@@ -20,9 +20,11 @@ function LoginForm() {
 
   const dispatch = useDispatch();
   const users = useSelector((state) => state.reducers.users);
+  //const users = useSelector((state) => state.users);
 
     const logIn =() =>{
         const payload = users.find(user => user.mobile === mobile && user.password === password)
+    
         if(payload){
             dispatch({
                 type:'LOGIN',
@@ -81,7 +83,7 @@ nav('/')
 
   return (
     <div className={styles.fullContainer}>
-      <h1 className={styles.riders}>Rent . Ride . Explore</h1>
+      <h3 className={styles.riders}>Rent . Ride . Explore</h3>
       <ToastContainer />
       <div className={styles.ParentLog}>
         <ul className={styles.login_signup_tabs}>
