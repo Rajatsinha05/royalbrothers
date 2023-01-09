@@ -1,11 +1,11 @@
 import React from 'react'
 import './BikeCardPage.css'
 import AutoComplete from './AutoComplete'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 import axios from 'axios'
 function BikeCard({img,name,price}) {
-
+ let Navigate = useNavigate()
    let setVal=async()=>{
 axios.post(`https://royalbrothers.cyclic.app/Cart`,{
 
@@ -13,7 +13,7 @@ axios.post(`https://royalbrothers.cyclic.app/Cart`,{
 "name":name,
 "price":price
 }).then((res)=>{console.log(res)})
-
+    Navigate('/cart')
    }
 
 
@@ -73,12 +73,8 @@ axios.post(`https://royalbrothers.cyclic.app/Cart`,{
   
    </span>
 
-
-<Link to="/cart">
-  
 <button className="button-37" onClick={setVal}>Book</button>
 
-</Link>
 
      </div>
     
