@@ -1,0 +1,10 @@
+.img{
+    width:300px;
+    height:100px;
+    margin:1px;
+    border:1px solid grey;
+}
+#slide{
+    display: flex;
+    justify-content: center;
+}

@@ -10,6 +10,7 @@ import OurFleet from "../Components/Home/OurFleet";
 import PopupCard from "../Components/Home/PopupCard";
 import Quality from "../Components/Home/Quality";
 import NavBar from "../Components/NavBar";
+import Royal from "../Components/Home/Royal"
 import { CacheProvider } from "@emotion/react";
 import { ChakraProvider } from "@chakra-ui/react";
 import CitySelect from "../Components/Home/CitySelect";

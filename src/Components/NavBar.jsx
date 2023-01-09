@@ -27,7 +27,7 @@ function NavBar({cityName,onOpen}) {
       localStorage.setItem('users', JSON.stringify(null));
     }, 1000);
   }
-  
+  const citySelected = JSON.stringify(localStorage.getItem("citySelected"));
   const navigate = useNavigate();
 
 
