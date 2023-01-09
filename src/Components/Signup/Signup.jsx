@@ -52,6 +52,7 @@ function Signup() {
                 progress: undefined,
                 theme: "light",
                 });
+                return false;
   
         }else if(!result){
             setError(true);
@@ -66,7 +67,7 @@ function Signup() {
                 progress: undefined,
                 theme: "light",
                 });
-            
+                return false;
         }
         else if(password.length < 8 || password.length > 15){
             setError(true);
@@ -81,10 +82,12 @@ function Signup() {
                 progress: undefined,
                 theme: "light",
                 });
+                return false;
         } 
         else if(mobile.length < 10 || mobile.length >10){
             setError(true);
             alert("Enter valid mobile number ");
+            return false;
             
         }
         else {
@@ -104,7 +107,7 @@ function Signup() {
 
     return (
         <div className={styles.fullContainer}>
-            <h1 className={styles.riders}>Rent . Ride . Explore</h1>
+            <h3 className={styles.riders}>Rent . Ride . Explore</h3>
             {/* Calling to the methods */}
             {/* <div className="messages">
 		  {errorMessage()}
