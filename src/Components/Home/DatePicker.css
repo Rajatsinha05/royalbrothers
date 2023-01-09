@@ -12,7 +12,7 @@
     transition: all 0.2s;
     display: block;
     background-color: #fff;
-    box-shadow: rgb(26 26 29 / 30%) 0px 15px 46px -10px !important;
+    box-shadow: rgb(26 26 29 / 30%) 0px 15px 46px -10px;
     padding: 1rem 1.4rem 0 1.4rem;
     /* border: 1px solid red; */
 }
@@ -111,4 +111,20 @@
     line-height: 0;
     margin-top: 1rem;
     cursor: pointer;
+}
+
+
+
+@media (max-width: 700px) {
+    .date-picker-section-ab{
+        width: 100%;
+    }
+    .date-picker-container-ab{
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        margin: auto;
+        box-shadow: none;
+    }
 }
