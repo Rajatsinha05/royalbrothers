@@ -37,18 +37,18 @@ SetData(dispacth,result)
 }
 
 
-const [val, setVal] = useState(data)
-if(fltr==''){
-setVal(data);
+// const [val, setVal] = useState(data)
+// if(fltr==''){
+// setVal(data);
 
-}
-else if(fltr=='lth'){
-  val.sort((a,b)=>a.price-b.price)
-}
-else if(fltr=='htl'){
-  val.sort((a,b)=>b.price-a.price)
+// }
+// else if(fltr=='lth'){
+//   val.sort((a,b)=>a.price-b.price)
+// }
+// else if(fltr=='htl'){
+//   val.sort((a,b)=>b.price-a.price)
 
-}
+// }
 
 
 
@@ -57,7 +57,7 @@ else if(fltr=='htl'){
   return (
   <>
   
-  {val.length>0 && val.map((ele,idx)=><BikeCard {...ele} key={idx}/>)}
+  {data.length>0 && data.map((ele,idx)=><BikeCard {...ele} key={idx}/>)}
   
   
   </>
