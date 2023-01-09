@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./ProductDetail.css";
 import StoreNav from "./StoreNav";
 import {
   Box,
+  Button,
   ChakraProvider,
   Flex,
+  Img,
   ListItem,
   Spacer,
   Tab,
@@ -16,24 +18,78 @@ import {
   UnorderedList,
 } from "@chakra-ui/react";
 
-import Trending from '../CompStore/Trending'
-
-
+import Trending from "../CompStore/Trending";
+import { useParams } from "react-router-dom";
 
 function ProductDetails() {
+  let [data, setData] = useState({});
+  useEffect(() => {
+    get();
+  }, []);
+
+  let { id } = useParams();
+
+  let get = async () => {
+    let res = await fetch(
+      `https://royalbrothers.cyclic.app/storeproducts/${id}`
+    );
+
+    let result = await res.json();
+    console.log("resul: ", result);
+
+    setData(result);
+  };
+
   return (
     <ChakraProvider>
       <StoreNav />
 
       <Box width="100%" h="45px" bg="yellow.100" mt="10px"></Box>
-      <Box>
-        <Flex>
-          <Box width="45%" bg="red" h="400px"></Box>
+      <Box mt="50px">
+        <Flex justify="center" justifyContent="center" justifyItems="center">
+          <Box width="45%" h="500px" justifyItems="center" mb="30px" pb="30">
+            <Img src={data.url_1} alt={data.name} width="fit-content " overflow="hidden"/>
+          </Box>
 
-          <Box width="45%" bg="black" h="400px"></Box>
+          <Box width="55%" h="500px">
+            <Text fontSize="25">{data.name}</Text>
+
+            <Box pt="15">{data.description}</Box>
+            <Flex gap="40px" mt="30">
+              <Box>Size</Box>
+              <Box textDecor="line-through">S</Box>
+              <Box>M</Box>
+              <Box>L</Box>
+            </Flex>
+
+            <Flex gap="20px" mt="30">
+              <Box>Color</Box>
+              <Box
+                bg="yellow"
+                h="8"
+                w="8"
+                borderRadius="50%"
+                _hover={{ cursor: " pointer" }}
+              ></Box>
+              <Box
+                bg="black"
+                h="8"
+                w="8"
+                borderRadius="50%"
+                _hover={{ cursor: " pointer" }}
+              ></Box>
+              <Box
+                bg="skyBlue"
+                h="8"
+                w="8"
+                borderRadius="50%"
+                _hover={{ cursor: " pointer" }}
+              ></Box>
+            </Flex>
+          </Box>
         </Flex>
-
-        <Box mt="40px" mb="40px">
+        </Box>
+        <Box mt="95" mb="40px">
           <Tabs size="md" variant="enclosed">
             <TabList>
               <Tab> DESCRIPTION </Tab>
@@ -145,13 +201,16 @@ function ProductDetails() {
                 <Text>
                   We are a bunch of millennials focused on building India’s
                   largest mobility solutions provider. <br />
-                  Our focus has led us to build a platform providing rentals    <br />
+                  Our focus has led us to build a platform providing rentals{" "}
+                  <br />
                   spanning across 14 states, 43 cities and 3 international
                   cities.
                   <br />
                   Transportation and mobility solutions is one of the least
-                  understood and most unorganized markets. We see this as an   <br />
-                  unexplored opportunity to build a system that can be trusted   <br />
+                  understood and most unorganized markets. We see this as an{" "}
+                  <br />
+                  unexplored opportunity to build a system that can be trusted{" "}
+                  <br />
                   by everyone beyond barriers. We have no limitations when it
                   comes to two wheelers and enjoy serving everything from a{" "}
                   <br />
@@ -166,8 +225,8 @@ function ProductDetails() {
           </Tabs>
         </Box>
 
-        <Trending/>
-      </Box>
+        <Trending />
+   
     </ChakraProvider>
   );
 }

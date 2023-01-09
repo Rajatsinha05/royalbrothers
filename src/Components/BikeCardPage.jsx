@@ -1,6 +1,7 @@
 import React from 'react'
 import './BikeCardPage.css'
 import AutoComplete from './AutoComplete'
+import { Link } from 'react-router-dom'
 
 
 function BikeCard({img,name,price}) {
@@ -12,7 +13,7 @@ console.log(price)
     <div id="card">
       <span className='zero_dp'><span><img src="https://d36g7qg6pk2cm7.cloudfront.net/assets/zero-deposit-8bf3350f651efc75cb1e263459707c81cdd271347d2ba925cd2eb740243474d5.png" alt="logo" />   </span> <span>Zero deposit</span></span>
     
-    <h3 id="name">{name}</h3>
+    <h3 id="ser_name">{name}</h3>
      
 <div  className='product_img'>
 <img src={img} alt={name}/>
@@ -60,6 +61,10 @@ console.log(price)
   
   
    </span>
+
+
+
+  
 <button className="button-37">Book</button>
 
 

@@ -97,7 +97,7 @@ function NavBar({cityName}) {
                   }}
                 >
                   <p>
-                    <Link to={"/"}>Store</Link>
+                    <Link to={"/store/products"}>Store</Link>
                   </p>
                   <hr />
                   <p>

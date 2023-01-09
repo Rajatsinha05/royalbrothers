@@ -42,7 +42,7 @@ grid-template-columns: repeat(3,1fr);
 gap:10px
    
 }
-#name{
+#ser_name{
     text-align: center;
     font-size: 15px;
     font-weight: bold;

@@ -37,7 +37,7 @@ SetData(dispacth,result)
 
 }
 
-let ck=[3,4,6,6];
+
   
   return (
     <ChakraProvider>
