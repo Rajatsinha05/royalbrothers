@@ -6,7 +6,7 @@ import NavBar from '../Components/NavBar';
 function SignUp() {
   return (
     <div>
-        {/* <NavBar /> */}
+         <NavBar /> 
         <Signup />
         <Footer />
     </div>

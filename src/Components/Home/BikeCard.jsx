@@ -29,7 +29,7 @@ const BikeCard = ({ name, image, priceCharge, charges, addButton }) => {
       }}
     >
       <div><p>View More</p>
-      <i class="fa-solid fa-circle-plus"></i>
+      <i className="fa-solid fa-circle-plus"></i>
     </div>
       </div>
     <div>

@@ -25,7 +25,8 @@
     text-align: center;
     font-weight: 500;
     margin-bottom: 1rem;
-    font-size: 1.6rem;
+    font-size: 1.6rem !important;
+    color: #000;
     margin-top: 15px;
 }
 .login_signup_tabs{
@@ -39,6 +40,9 @@
 }
 .login_signup_otp > li {
     margin-top: -7px;
+    color: #000 !important;
+    font-weight: 500;
+    font-size: 20px;
 }
 .login_signup_otp{
     height: 2.2rem !important;
