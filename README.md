@@ -3,7 +3,6 @@
 
 
 
-
 A bike rental brand intended to offer a range of two-wheelers. The company's portal offers a range of two-wheelers from scooters to superbikes, doorstep delivery options, and inter-city bike rentals which can be rented in 17-plus cities across six states of India, enabling customers to pick up the vehicle in one city and drop it off in another city.
 
 
